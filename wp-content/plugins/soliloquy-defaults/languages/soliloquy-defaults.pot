@@ -1,0 +1,68 @@
+# Copyright (C) 2018 Soliloquy - Defaults Addon
+# This file is distributed under the same license as the Soliloquy - Defaults Addon package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Soliloquy - Defaults Addon 2.2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/soliloquy-defaults\n"
+"POT-Creation-Date: 2018-12-11 19:20:16+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/admin/ajax.php:79
+msgid "Inherit Config from:"
+msgstr ""
+
+#: includes/admin/ajax.php:81
+msgid "(Use Soliloquy Default Settings)"
+msgstr ""
+
+#: includes/admin/ajax.php:92
+msgid "Create Slideshow"
+msgstr ""
+
+#: includes/admin/metaboxes.php:100
+msgid "Default Settings"
+msgstr ""
+
+#: includes/admin/metaboxes.php:117
+msgid "Default Slider Settings"
+msgstr ""
+
+#: includes/admin/metaboxes.php:120
+msgid "This slider and its settings will be used as defaults for any new sliders you create on this site. Any of these settings can be overwritten on an individual slider basis via template tag arguments or shortcode parameters."
+msgstr ""
+
+#: includes/admin/metaboxes.php:128
+msgid "Click here for Defaults Addon documentation."
+msgstr ""
+
+#: includes/admin/table.php:105
+msgid "Create a new Slider"
+msgstr ""
+
+#: soliloquy-defaults.php:195 soliloquy-defaults.php:213
+msgid "Soliloquy Default Settings"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "Soliloquy - Defaults Addon"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://soliloquywp.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Enables defaults to be set and inherited by new Soliloquy sliders."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Soliloquy Teams"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://soliloquywp.com"
+msgstr ""

@@ -1,0 +1,418 @@
+/* Front Page
+-------------------------------------------------- */
+
+// =================================================================
+// START GLOBAL STYLES
+// =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.lcad-tag {
+    max-width: 285px;
+    background-color: $navy;
+    padding: 1em .5em;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.blue-highlight {
+    color: $blue-highlight;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+// =================================================================
+// END GLOBAL STYLES
+// =================================================================
+
+
+// =================================================================
+// START HERO SECTION
+// =================================================================
+
+#home-hero {
+    position: relative;
+    background-color: $navy;
+    padding: 5.28em 0;
+
+    // Start Left Content Cell
+    .content-cell {
+        position: absolute;
+        max-width: 38.89em;
+        top: 50%;
+        left: 5.56em;
+        transform: translateY(-65%);
+        z-index: 10;
+
+        .hero-title {
+            color: $white;
+            font-size: 6.67em;
+        }
+
+        .hero-you {
+            max-width: 308px;
+            max-height: 105px;
+        }
+    }
+    // End Left Content Cell
+
+    // Start Right Slider Cell
+    .slider-cell {
+        max-width: 1600px;
+        left: 581px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            max-width: 500px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #0c1f35 0%, rgba(12,31,53,0) 100%);
+            background-blend-mode: normal;
+            z-index: 1;
+        }
+
+        .slide-image {
+            border-radius: 15px;
+        }
+
+        .slide-caption {
+            padding-top: 2em;
+            color: $white;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 1px
+        }
+
+        .slick-slide {
+            .slide-image {
+                transition: all .8s ease-in-out;
+            }
+        }
+
+        .slick-slide:not(.slick-current) {
+            .slide-image {
+                position: relative;
+                max-height: 500px;
+                transform: translateY(25%);
+                // width     : 100%;
+                object-fit: cover;
+                }
+
+            .slide-caption {
+                display: none;
+            }
+        }
+    }
+    // End Right Slider Cell
+}
+
+// =================================================================
+// END HERO SECTION
+// =================================================================
+
+// =================================================================
+// START EXPERIENCE SECTION
+// =================================================================
+
+#experience {
+    .slick-track {
+        // transform: none !important;
+    }
+
+    .slider {
+        width: 100vw;
+        max-width: 1900px;
+    }
+
+    .content-wrap {
+        padding: 5.5em;
+        background-color: $white;
+    }
+
+    .slide-title-wrap {
+        max-width: 445px;
+        padding-top: 1.95em;
+        padding-bottom: 3.6em;
+
+        h2 {
+            font-size: 60px;
+            font-weight: 600;
+        }
+    }
+}
+
+// =================================================================
+// START EXPERIENCE SECTION
+// =================================================================
+
+// =================================================================
+// START INDUSTRY PRO SECTION
+// =================================================================
+
+#industry-pro {
+    position: relative;
+
+    // .industry-pro-container {
+    //     position: relative;
+    // }
+
+    // Start Left Cell
+    .left-cell {
+        background-image   : url("images/ip-left.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+        padding: 8.33em 8.05em 41.67em 13.33em;
+
+        .left-content-container {
+            max-width: 790px;
+            margin: 0 auto;
+        }
+
+        .industry-pro-tag {
+            background-color: $white;
+            color: $black;
+        }
+
+        .industry-pro-title {
+            padding: 2em 0 3em 0;
+
+            h2 {
+                color: $white;
+                font-size: 60px;
+                font-weight: 600;
+            }
+        }
+
+        .industry-pro-text {
+            max-width: 745px;
+            color: $white;
+        }
+    }
+    // End Left Cell
+
+    // Start Right Cell
+    .right-cell {
+        background-image   : url("images/ip-right.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+
+        .left-content-container {
+            max-width: 450px;
+            padding-top: 13.89em;
+            padding-left: 5.56em;
+        }
+
+        .industry-pro-blurb {
+            p {
+                padding-left: 1.5em;
+                font-size: 18px;
+                line-height: 36px;
+                border-left: 4px solid $dark-green;
+                // border-radius: 2px;
+            }
+
+            // &:before {
+            //     // position: absolute;
+            //     content: '';
+            //     background-color: $dark-green;
+            //     height: 100%;
+            //     width: 4px;
+            //     padding-right: 1.5em;
+            //     // width: 100%;
+            //     // max-width: 500px;
+            //     // top: 0;
+            //     // left: 0;
+            //     // bottom: 0;
+            //     // background: linear-gradient(90deg, #0c1f35 0%, rgba(12,31,53,0) 100%);
+            //     // background-blend-mode: normal;
+            //     // z-index: 1; 
+            //     border-radius: 2px;
+            // }
+        }
+    }
+    // End Right Cell
+
+    // Start Pro Slider
+    .pro-slider-container {
+        position: absolute;
+        width: 100%;
+        max-width: 1440px;
+        left: 50%;
+        bottom: 5.56em;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        .pro-card {
+            position: relative;
+            padding: 0 1.25em;
+        }
+
+        .pro-image-wrap {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 60%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+                background-blend-mode: normal;
+                border-radius: 15px;
+                z-index: 1;
+            }
+        }
+
+        .pro-card-body {
+            position: absolute;
+            bottom: 1.5em;
+            left: 3em;
+            color: $white;
+            z-index: 10;
+        }
+
+        .card-name {
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .card-bio,
+        .card-button {
+            display: none;
+        }
+    }
+    // End Pro Slider
+
+}
+
+// =================================================================
+// START INDUSTRY PRO SECTION
+// =================================================================
+
+// =================================================================
+// START CAROUSEL SECTION
+// =================================================================
+
+#carousel {
+    background-color: $navy;
+    padding: 3em 0;
+
+    .scroll-text-wrap {
+        padding: 5em;
+        color: $white;
+        text-align: center;
+
+        .scroll-text {
+            font-size: 48px;
+            line-height: 120px;
+        }
+
+        .scroll-you {
+            width: 100%;
+            height: auto;
+            max-width: 145px;
+            // max-height: 50px;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .scroll-fade {
+            opacity: .5;
+        }
+    }
+
+    .carousel-top-slider {
+        .slick-list {
+            width: 100vw;
+            margin: 0 -2.78em;
+            border-top-left-radius: 45%;
+            border-top-right-radius: 45%;
+        }
+    }
+
+    .carousel-bottom-slider {
+        .slick-list {
+            margin: 0 -2.78em;
+            border-bottom-left-radius: 45%;
+            border-bottom-right-radius: 45%;
+        }
+    }
+
+    .carousel-slide {
+        position: relative;
+        padding: 0 1.39em;
+    }
+
+    .carousel-image-wrap {
+        position: relative;
+
+        img {
+            object-fit: cover;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 60%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+            background-blend-mode: normal;
+            // border-radius: 15px;
+            z-index: 1;
+        }
+    }
+
+    .carousel-body {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: $white;
+        z-index: 10;
+        padding: 1em 2em;
+    }
+}
+
+// =================================================================
+// START CAROUSEL SECTION
+// =================================================================
+
+// =================================================================
+// START  SECTION
+// =================================================================
+
+#recent-news,
+#student-life,
+#inquiry {
+display: none;
+}
+
+// =================================================================
+// START  SECTION
+// =================================================================
