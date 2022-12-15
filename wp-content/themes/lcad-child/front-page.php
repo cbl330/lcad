@@ -269,8 +269,10 @@
         <div class="row">
         <!-- Start Scroll Content -->
             <?php if (get_field('scroll_list')): ?>
-                <div class="scroll-text-wrap text-wrap row">
-                    <?php the_field('scroll_list') ?>
+                <div class="scroll-text-wrap text-wrap row os__wrapper">
+                    <div class="os__text-container">
+                        <?php the_field('scroll_list') ?>
+                    </div>
                 </div>
             <?php endif; ?>
         <!-- End Scroll Content -->
@@ -317,13 +319,7 @@
 <!-- ========================================================================= -->
 
 <section id="recent-news">
-    <div>
-        <div>
-
-            <!-- Pull in template section for recent news -->
-
-        </div>
-    </div>
+    <?php get_template_part('resources/partials/recent', 'news'); ?>
 </section>
 
 <!-- ========================================================================= -->
@@ -425,31 +421,85 @@
 <!-- ========================================================================= -->
 
 <!-- ========================================================================= -->
-<!-- START INSTAGRAM/INQUIRY SECTION -->
+<!-- START INSTAGRAM SECTION -->
 <!-- ========================================================================= -->
 
-<section id="inquiry">
-    <div>
-        <div>
+<section id="instagram" class="container-fluid">
+    <div class="instagram-container row">
+        <!-- <div> -->
+
+            <!-- Start Social Share -->
+            <?php if ( is_active_sidebar( 'lcad-social-share' ) ) : ?>
+                <div class="lcad-social social-share social-container row align-items-end">
+                    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'lcad-social-share' ); ?>
+                    </div><!-- #primary-sidebar -->
+                </div>
+            <?php endif; ?>
+            <!-- End Social Share -->
 
             <!-- Start Instagram Section -->
-            <div>
+            <div class="instagram-feed-container instagram-feed">
                 <!-- Pull in instagram feed -->
             </div>
             <!-- End Instagram Section -->
 
-            <!-- Start Student Inquiry Container -->
-            <div>
-                <!-- Pull in template section for student inquiry -->
-            </div>
-            <!-- End Student Inquiry Container -->
-
-        </div>
+        <!-- </div> -->
     </div>
 </section>
 
 <!-- ========================================================================= -->
-<!-- END INSTAGRAM/INQUIRY SECTION -->
+<!-- END INSTAGRAM SECTION -->
 <!-- ========================================================================= -->
+
+<!-- ========================================================================= -->
+<!-- START INQUIRY SECTION -->
+<!-- ========================================================================= -->
+
+<?php //if (get_field('enable_student_inquiry_form') == true): ?>
+    <section id="inquiry">
+        <?php //get_template_part('resources/partials/student', 'inquiry'); ?>
+
+        <!-- Start Inquiry Content Cell -->
+        <?php //while (have_rows('form_content')) : the_row();?>
+            <div class="left-cell content-cell col-6">
+                <div class="left-content-container inquiry-content-container">
+                    <!-- Section Tag -->
+                    <?php if (get_sub_field('form_tag')): ?>
+                        <div class="lcad-tag-wrap inquiry-tag">
+                            <h4 class="lcad-tag inquiry-tag"><?php the_sub_field('form_tag') ?></h4>
+                        </div>
+                    <?php endif; ?>
+                    <!-- Section Title -->
+                    <?php if (get_sub_field('form_title')): ?>
+                        <div class="section-title-wrap title-wrap inquiry-title">
+                            <?php the_sub_field('form_title') ?>
+                        </div>
+                    <?php endif; ?>
+                    <!-- Section Content -->
+                    <?php if (get_sub_field('form_text')): ?>
+                        <div class="section-text inquiry-text text">
+                            <?php the_sub_field('form_text') ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php //endwhile ?>
+        <!-- End Inquiry Content Cell -->
+
+        <!-- Start Inquiry Form Cell -->
+        <?php //while (have_rows('section_form')) : the_row();?>
+            <div>
+                <?php the_field('inquiry_form') ?>
+            </div>
+        <?php //endwhile ?>
+        <!-- End Inquiry Form Cell -->
+    </section>
+<?php //endif; ?>
+
+<!-- ========================================================================= -->
+<!-- END INQUIRY SECTION -->
+<!-- ========================================================================= -->
+
 
 <?php get_footer(); ?>

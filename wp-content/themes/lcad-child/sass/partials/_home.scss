@@ -17,18 +17,18 @@ p {
     font-weight: 400;
 }
 
-.lcad-tag {
-    max-width: 285px;
-    background-color: $navy;
-    padding: 1em .5em;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: $white;
-    border-radius: 5px;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 1px;
-}
+// .lcad-tag {
+//     max-width: 285px;
+//     background-color: $navy;
+//     padding: 1em .5em;
+//     font-size: 14px;
+//     text-transform: uppercase;
+//     color: $white;
+//     border-radius: 5px;
+//     font-weight: 600;
+//     text-align: center;
+//     letter-spacing: 1px;
+// }
 
 .blue-highlight {
     color: $blue-highlight;
@@ -342,22 +342,43 @@ p {
         .scroll-fade {
             opacity: .5;
         }
+
+
+        // .scroll-fade{
+        //     display:block;
+        //     width: max-content;
+        //     background-size: 200% auto; 
+        //     background-image: linear-gradient(to right,#fff 50%,#ff0 50%);
+        //     background-position: 0% 0;
+        //     animation-duration: 2s;
+        //     animation-delay: 0s;
+        //     animation-iteration-count: 1;
+        //     animation-fill-mode: forwards;
+        // }
+        // .scroll-fade.active{
+        //     animation-name: highlight;
+        // }
+
+        // @keyframes highlight {
+        //     from {background-position: 0% 0;}
+        //     to {background-position: -100% 0;}
+        // }
     }
 
     .carousel-top-slider {
         .slick-list {
             width: 100vw;
             margin: 0 -2.78em;
-            border-top-left-radius: 45%;
-            border-top-right-radius: 45%;
+            // border-top-left-radius: 45%;
+            // border-top-right-radius: 45%;
         }
     }
 
     .carousel-bottom-slider {
         .slick-list {
             margin: 0 -2.78em;
-            border-bottom-left-radius: 45%;
-            border-bottom-right-radius: 45%;
+            // border-bottom-left-radius: 45%;
+            // border-bottom-right-radius: 45%;
         }
     }
 
@@ -397,6 +418,46 @@ p {
         z-index: 10;
         padding: 1em 2em;
     }
+
+
+
+// .os__wrapper {
+//     display: block;
+//     }
+//     .os__text-container {
+//     text-align: center;
+//     position: -webkit-sticky;
+//     position: sticky;
+//     padding: 0 1rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5rem;
+//     }
+//     .os__text-item {
+//     color: hotpink;
+//     font-size: 3rem;
+//     text-transform: uppercase;
+//     font-family: sans-serif;
+//     font-weight: 600;
+//     opacity: 0.2;
+//     }
+//     .os__text-item--on {
+//     opacity: 1;
+//     }
+//     .os__ghost {
+//     height: var(--ghost-height);
+//     }
+//     .last {
+//     padding-top: 400vh;
+//     }
+//     @keyframes bounce {
+//     from {
+//         transform: translateY(0px);
+//     }
+//     to {
+//         transform: translateY(0.5rem);
+//     }
+//     }
 }
 
 // =================================================================
@@ -404,15 +465,70 @@ p {
 // =================================================================
 
 // =================================================================
-// START  SECTION
+// START INSTAGRAM SECTION SECTION
 // =================================================================
 
-#recent-news,
-#student-life,
-#inquiry {
-display: none;
+#instagram {
+    .lcad-social {
+        height: 100vh;
+        max-height: 240px;
+        margin: 0;
+        padding-right: 4.45em;
+        padding-bottom: 1em;
+        background-image   : url("images/instagram-background.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+    }
+
+    .widget {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        h3 {
+            float: left;
+            padding-right: 1em;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        li {
+            margin: 0!important;
+            padding: .5em!important;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    .instagram-feed {
+        height: 100vh;
+        max-height: 768px;
+        margin: 0;
+        // padding: 0 4.45em;
+        background-image   : url("images/instagram-placeholder.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+    }
 }
 
 // =================================================================
+// END INSTAGRAM SECTION SECTION
+// =================================================================
+
+// =================================================================
 // START  SECTION
+// =================================================================
+
+#student-life {
+    display: none;
+}
+
+// =================================================================
+// END  SECTION
 // =================================================================

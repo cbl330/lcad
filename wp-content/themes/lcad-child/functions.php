@@ -63,11 +63,17 @@ function extras_script()
 	wp_register_script('slick-jquery-1', '//code.jquery.com/jquery-1.11.0.min.js', '', '', true);
 	wp_register_script('slick-jquery-2', '//code.jquery.com/jquery-migrate-1.2.1.min.js', '', '', true);
 	wp_register_script('slick_script', get_stylesheet_directory_uri() . '/lib/slick-slider/slick/slick.min.js', '', '', true);
-    wp_register_script('extras_script', get_stylesheet_directory_uri() . '/extras-script.js', '', '', true);
+    wp_register_script('slider_settings', get_stylesheet_directory_uri() . '/slider-settings.js', '', '', true);
+	wp_register_script('scroll_script', get_stylesheet_directory_uri() . '/opacity-scroller-main/js/scroller.js', '', '', true);
+    wp_register_script('main_script', get_stylesheet_directory_uri() . '/main.js', '', '', true);
+    wp_register_script('font_awesome_script', '//kit.fontawesome.com/a5221f2a14.js', '', '', true);
     // wp_register_script('polyfill_script', '//cdn.polyfill.io/v2/polyfill.min.js', '', '', true);
     // wp_register_script('fontawesome-upgrade', '/wp-content/themes/q4fw-theme/fontawesome4to5-min.js', '', '', true);
     wp_enqueue_script('slick_script');
-    wp_enqueue_script('extras_script');
+    wp_enqueue_script('slider_settings');
+	wp_enqueue_script('scroll_script');
+	wp_enqueue_script('main_script');
+	wp_enqueue_script('font_awesome_script');
     // wp_enqueue_script('slick-jquery-1');
 	// wp_enqueue_script('slick-jquery-2');
     // wp_enqueue_script('fontawesome-upgrade');
@@ -79,12 +85,17 @@ add_action('wp_enqueue_scripts', 'extras_script');
 function setup_custom_image_sizes()
 {
     add_theme_support('post-thumbnails');
+	
+    // Global
+	add_image_size('blog-thumbnail', 450, 450, true);
+    
     // Home Page
 	add_image_size('home-hero-slide', 500, 750, true);
     add_image_size('home-experience-slide', 720, 720, true);
     add_image_size('home-staff-slide', 450, 566, true);
     add_image_size('home-carousel-slide', 360, 360, true);
-	// Alumni Page
+	
+    // Alumni Page
     // add_image_size('tout-image', 446, 270, true);
     // add_image_size('blog-large-custom', 677, 525, true);
     // add_image_size('blog-small-custom', 479, 256, true);
@@ -92,6 +103,13 @@ function setup_custom_image_sizes()
     // add_image_size('acc-image', 425, 370, true);
     // add_image_size('focus-image', 900, 550, true);
     // add_image_size('icon-image', 60, 60, true);
+
+    // Contact Page
+    add_image_size('contact-thumbnail', 256, 256, true);
+
+    // More News Archive
+    // add_image_size('news-thumbnail', 450, 245, true);
+
 }
 
 add_action('after_setup_theme', 'setup_custom_image_sizes');
@@ -330,5 +348,173 @@ function genesis_sample_comments_gravatar( $args ) {
 
 	$args['avatar_size'] = 60;
 	return $args;
+
+}
+
+// Register Custom Widgets
+add_action('widgets_init', function () {
+    $config = [
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ];
+
+	// Social Widget
+    register_sidebar([
+        'name'          => __('Social Widget', 'genesis'),
+        'id'            => 'lcad-social-share'
+    ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Sidebar 2', 'sage'),
+    //     'id'            => 'sidebar-2'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Sidebar 3', 'sage'),
+    //     'id'            => 'sidebar-3'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Sidebar 4', 'sage'),
+    //     'id'            => 'sidebar-4'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Sidebar 5', 'sage'),
+    //     'id'            => 'sidebar-5'
+    // ] + $config);
+
+    // // Footer Widgets 1 - 5
+    // register_sidebar([
+    //     'name'          => __('Footer 1', 'sage'),
+    //     'id'            => 'sidebar-footer-1'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Footer 2', 'sage'),
+    //     'id'            => 'sidebar-footer-2'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Footer 3', 'sage'),
+    //     'id'            => 'sidebar-footer-3'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Footer 4', 'sage'),
+    //     'id'            => 'sidebar-footer-4'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Footer 5', 'sage'),
+    //     'id'            => 'sidebar-footer-5'
+    // ] + $config);
+
+    // // Blog Widgets 1 - 2
+    // register_sidebar([
+    //     'name'          => __('Blog Author', 'sage'),
+    //     'id'            => 'sidebar-blog-1'
+    // ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Blog Social', 'sage'),
+    //     'id'            => 'sidebar-blog-2'
+    // ] + $config);
+});
+
+// Register Custom Menus
+function register_menus() { 
+    register_nav_menus(
+        array(
+            'quick-links' => 'Quick Links',
+            'academics-menu' => 'Academics',
+			'admissions-menu' => 'Admission',
+			'alumni-student-life-menu' => 'Alumni and Student Life',
+        )
+    ); 
+}
+add_action( 'init', 'register_menus' );
+
+// Create Breadcrumb
+function the_breadcrumb() {
+    echo '<ul id="crumbs">';
+if (!is_home()) {
+    echo '<li><a href="';
+    echo get_option('blog');
+    echo '">';
+    echo 'BlogHome';
+    echo "</a></li>";
+    if (is_category() || is_single()) {
+        echo '<li>';
+        the_category(' </li><li> ');
+        if (is_single()) {
+            echo "</li><li>";
+            the_title();
+            echo '</li>';
+        }
+    } elseif (is_page()) {
+        echo '<li>';
+        echo the_title();
+        echo '</li>';
+    }
+}
+elseif (is_tag()) {single_tag_title();}
+elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+echo '</ul>';
+}
+
+// function my_excerpt_length($length){ return 80; } add_filter('excerpt_length', 'my_excerpt_length');
+
+// Pagination Function
+function lcad_pagination() {
+
+    if( is_singular() )
+        return;
+
+    global $wp_query;
+
+    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $max   = intval( $wp_query->max_num_pages );
+
+    /** Add current page to the array */
+    if ( $paged >= 1 )
+        $links[] = $paged;
+
+    /** Add the pages around the current page to the array */
+    if ( $paged >= 5 ) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+    }
+
+    echo '<div class="navigation"><ul>' . "\n";
+
+    /** Previous Post Link */
+    if ( get_previous_posts_link() )
+        printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+
+    /** Link to first page */
+    if ( ! in_array( 1, $links ) ) {
+        $class = 1 == $paged ? ' class="active"' : '';
+
+        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+    }
+
+    /** Link to current page*/
+    sort( $links );
+    foreach ( (array) $links as $link ) {
+        $class = $paged == $link ? ' class="active"' : '';
+    }
+
+    /** Link to last page*/
+    if ( ! in_array( $max, $links ) ) {
+        if ( ! in_array( $max - 1, $links ) )
+            echo '<li>…</li>' . "\n";
+
+        $class = $paged == $max ? ' class="active"' : '';
+    }
+
+    /** Next Post Link */
+    if ( get_next_posts_link() )
+        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+
+    echo '</ul></div>' . "\n";
 
 }

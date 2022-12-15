@@ -210,3 +210,36 @@ img.alignright,
 .entry-content .wp-video {
 	margin: 0 0 30px;
 }
+
+/* Section Tag
+--------------------------------------------- */
+.lcad-tag {
+	width: auto;
+    max-width: 285px;
+    background-color: $navy;
+    padding: .75em 1em;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Archive Page Headers
+--------------------------------------------- */
+#archive-header {
+    height: 100vh;
+    max-height: 725px;
+    margin: 0;
+    background-image   : url("images/hero-background.png");
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+
+    .header-container {
+        padding: 7.22em 5.55em 4.72em 5.55em ;
+        margin: 0 auto;
+    }
+}
