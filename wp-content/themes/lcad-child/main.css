@@ -2637,3 +2637,160 @@ ul {
 #stories-main .post-btn-wrap {
   padding-top: 1em;
 }
+
+#program-hero {
+  position: relative;
+  padding: 0;
+}
+#program-hero .page-tag {
+  position: absolute;
+  top: 180px;
+  left: 0;
+}
+#program-hero .post-title {
+  padding: 0.125em 1em 0.125em 1.5em;
+  background-color: #0C1F35;
+  color: #fff;
+  font-size: 60px;
+  border-radius: 0 8px 8px 0;
+}
+#program-hero .section-background {
+  position: relative;
+}
+#program-hero .section-background:before {
+  position: absolute;
+  content: "";
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+#program-hero .info-card-slider {
+  position: absolute;
+  width: 100%;
+  max-width: 1446px;
+  bottom: 140px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#program-hero .info-card-slide {
+  margin: 0 22px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+#program-hero .slide-image {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  border-radius: 5px 5px 0 0;
+}
+#program-hero .slide-content {
+  padding: 1em;
+}
+#program-hero .card-title,
+#program-hero .card-details {
+  color: #333;
+}
+#program-hero .card-title {
+  padding-bottom: 1em;
+  font-size: 21px;
+}
+#program-hero .card-btn {
+  padding-top: 2em;
+  text-decoration: underline;
+}
+
+#logo-section {
+  text-align: center;
+}
+#logo-section .logo-container {
+  width: 100%;
+  max-width: 1438px;
+  margin: 0 auto;
+}
+#logo-section .logo-title {
+  padding-bottom: 1.5rem;
+  font-size: 48px;
+  font-weight: 600;
+}
+#logo-section .logo-container {
+  padding: 2rem 0 2rem 0;
+}
+#logo-section .column-5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+}
+#logo-section .logo {
+  padding: 1em 0;
+}
+
+#staff-directory .post-wrapper {
+  width: 100%;
+  max-width: 144px;
+  margin: 0 auto;
+}
+#staff-directory .lcad-title {
+  padding-bottom: 3rem;
+  font-size: 48px;
+}
+#staff-directory .lcad-staff {
+  padding: 23px;
+}
+#staff-directory .lcad-staff-container:hover .post-content-container {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#staff-directory .lcad-staff-container:hover .post-content-wrap-hover {
+  display: block;
+}
+#staff-directory .office-hours,
+#staff-directory .staff-email,
+#staff-directory .staff-extension {
+  color: #fff;
+}
+#staff-directory .lcad-staff-container {
+  position: relative;
+  border-radius: 5px;
+}
+#staff-directory .lcad-staff-container:before {
+  position: absolute;
+  content: "";
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+#staff-directory .post-content-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+}
+#staff-directory .post-content-wrap-hover {
+  display: none;
+}
+#staff-directory .entry-title {
+  margin: 0;
+  padding-bottom: 0.75rem;
+  font-size: 21px;
+  color: #fff;
+}
+#staff-directory .staff-department {
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+#staff-directory .post-image-wrap img {
+  width: 100%;
+}

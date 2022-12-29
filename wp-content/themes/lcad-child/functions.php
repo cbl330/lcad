@@ -88,12 +88,19 @@ function setup_custom_image_sizes()
 	
     // Global
 	add_image_size('blog-thumbnail', 450, 450, true);
+	add_image_size('student-work-featured', 620, 375, true);
+    add_image_size('student-work', 250, 154, true);
+    add_image_size('info-card', 450, 275, true);
+    add_image_size('staff-card', 326, 400, true);
     
     // Home Page
 	add_image_size('home-hero-slide', 500, 750, true);
     add_image_size('home-experience-slide', 720, 720, true);
     add_image_size('home-staff-slide', 450, 566, true);
     add_image_size('home-carousel-slide', 360, 360, true);
+
+    // Single - Program
+    add_image_size('program-logo', 250, 99, true);
 	
     // Alumni Page
     // add_image_size('tout-image', 446, 270, true);

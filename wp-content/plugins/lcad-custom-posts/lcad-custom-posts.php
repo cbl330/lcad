@@ -82,7 +82,7 @@ function lcad_staff_post() {
         'rewrite'   => array( 'slug' => 'lcad-staff' ),
             'menu_position' => 5,
         'menu_icon' => 'dashicons-welcome-learn-more',
-        // 'taxonomies' => array('cuisines', 'post_tag') // this is IMPORTANT
+        'taxonomies' => array('category')
         )
     );
 }

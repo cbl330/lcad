@@ -1,0 +1,219 @@
+// =================================================================
+// START HERO SECTION
+// =================================================================
+
+#program-hero {
+    position: relative;
+    padding: 0;
+
+    .page-tag {
+        position: absolute;
+        top: 180px;
+        left: 0;
+    }
+
+    .post-title {
+        padding: .125em 1em .125em 1.5em;
+        background-color: $navy;
+        color: $white;
+        font-size: 60px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .section-background {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            // top: 0;
+            height: 50%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+        }
+    }
+
+    .info-card-slider {
+        position: absolute;
+        width: 100%;
+        max-width: 1446px;
+        bottom: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .info-card-slide {
+        margin: 0 22px;
+        background-color: $white;
+        border-radius: 5px;
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+        max-width: 450px;
+        max-height: 275px;
+        object-fit: cover;
+        padding: 0;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .slide-content {
+        padding: 1em;
+    }
+
+    .card-title,
+    .card-details {
+        color: $dark-grey;
+    }
+
+    .card-title {
+        padding-bottom: 1em;
+        font-size: 21px;
+    }
+
+    .card-btn {
+        padding-top: 2em;
+        text-decoration: underline;
+    }
+}
+
+// =================================================================
+// END HERO SECTION
+// =================================================================
+
+// =================================================================
+// START LOGO SECTION
+// =================================================================
+
+#logo-section {
+    text-align: center;
+
+    .logo-container {
+        width: 100%;
+        max-width: 1438px;
+        margin: 0 auto;
+    }
+
+    .logo-title {
+        padding-bottom: 1.5rem;
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    .logo-container {
+        padding: 2rem 0 2rem 0;
+    }
+
+    .column-5 {
+        flex: 1 0 20%;
+    }
+
+    .logo {
+        padding: 1em 0;
+    }
+}
+
+// =================================================================
+// END LOGO SECTION
+// =================================================================
+
+// =================================================================
+// START STAFF DIRECTORY SECTION
+// =================================================================
+
+#staff-directory {
+
+    .post-wrapper {
+        width: 100%;
+        max-width: 144px;
+        margin: 0 auto;
+    }
+
+    .lcad-title {
+        padding-bottom: 3rem;
+        font-size: 48px;
+    }
+
+    .lcad-staff {
+        padding: 23px;
+    }
+
+    .lcad-staff-container {
+        &:hover {
+            // .entry-title {
+            //     transition: all .3s ease-in-out;
+            //     color: pink;
+            // }
+
+            .post-content-container {
+                transition: all .3s ease-in-out;
+            }
+
+            .post-content-wrap-hover {
+                display: block;
+            }
+        }
+    }
+
+    .office-hours,
+    .staff-email,
+    .staff-extension {
+        color: $white;
+    }
+
+    .lcad-staff-container {
+        position: relative;
+        // padding: 23px;
+        border-radius: 5px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            // top: 0;
+            height: 50%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+        }
+    }
+
+    .post-content-container {
+        position: absolute;
+        // top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2.5rem;
+    }
+
+    .post-content-wrap-hover {
+        display: none;
+    }
+
+    .entry-title {
+        margin: 0;
+        padding-bottom: .75rem;
+        font-size: 21px;
+        color: $white;
+    }
+
+    .staff-department {
+        font-size: 12px;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    .post-image-wrap {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// =================================================================
+// END STAFF DIRECTORY SECTION
+// =================================================================
