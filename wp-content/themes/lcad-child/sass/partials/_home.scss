@@ -140,9 +140,20 @@ p {
     }
 
     .slider {
-        width: 100vw;
-        max-width: 1900px;
+        // width: 100vw;
+        // max-width: 1900px;
     }
+
+    .slick-list{
+        // padding:0 20% 0 0 !important;
+    }
+
+    // .slick-list {
+        
+    //     // div[style*="transform"] {
+    //     //     transform: translate3d(-1290px, 0px, 0px)!important;
+    //     // }
+    // }
 
     .content-wrap {
         padding: 5.5em;
@@ -189,10 +200,10 @@ p {
             margin: 0 auto;
         }
 
-        .industry-pro-tag {
-            background-color: $white;
-            color: $black;
-        }
+        // .industry-pro-tag {
+        //     background-color: $white;
+        //     color: $black;
+        // }
 
         .industry-pro-title {
             padding: 2em 0 3em 0;
@@ -303,6 +314,22 @@ p {
         .card-button {
             display: none;
         }
+
+        .slick-arrow {
+            z-index: 1;
+
+            &:before {
+                font-size: 100px;
+            }
+        }
+
+        .slick-next {
+            &:before {
+                position: absolute;
+                right: 0;
+                // font-size: 100px;
+            }
+        }
     }
     // End Pro Slider
 
@@ -368,7 +395,8 @@ p {
     .carousel-top-slider {
         .slick-list {
             width: 100vw;
-            margin: 0 -2.78em;
+            margin: 0;
+            // margin: 0 -1.39em;
             // border-top-left-radius: 45%;
             // border-top-right-radius: 45%;
         }
@@ -376,21 +404,49 @@ p {
 
     .carousel-bottom-slider {
         .slick-list {
-            margin: 0 -2.78em;
+            margin: 0;
+            // margin: 0 -2.78em;
             // border-bottom-left-radius: 45%;
             // border-bottom-right-radius: 45%;
         }
     }
 
+    // .slick-track {
+    //     .slick-active:first-child {
+    //         padding-left: 0;
+    //     }
+
+    //     .slick-active:last-child {
+    //         padding-right: 0;
+    //     }
+    // }
+
     .carousel-slide {
         position: relative;
         padding: 0 1.39em;
+        // transition: all 1s ease-in-out;
+
+        &:hover {
+            .carousel-body {
+                // display: block;
+                // position: absolute;
+                // bottom: 0;
+                // left: 0;
+                // right: 0;
+                // color: $white;
+                // z-index: 10;
+                // padding: 1em 2.5em;
+                opacity: 1;
+                // transition: all .3s ease-in-out;
+            }
+        }
     }
 
     .carousel-image-wrap {
         position: relative;
 
         img {
+            width: 100%;
             object-fit: cover;
         }
 
@@ -409,16 +465,17 @@ p {
     }
 
     .carousel-body {
-        display: none;
+        // display: none;
+        opacity: 0;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         color: $white;
         z-index: 10;
-        padding: 1em 2em;
+        padding: 1em 2.5em;
+        transition: all .3s ease-in-out;
     }
-
 
 
 // .os__wrapper {
@@ -461,7 +518,71 @@ p {
 }
 
 // =================================================================
-// START CAROUSEL SECTION
+// END CAROUSEL SECTION
+// =================================================================
+
+// =================================================================
+// START STUDENT LIFE SECTION
+// =================================================================
+
+#student-life {
+    height: 1770px;
+    width: 1920px;
+    // max-height: 240px;
+    margin: 0;
+    padding-right: 4.45em;
+    padding-bottom: 1em;
+    background-image   : url("images/masonry-temp.jpg");
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+
+
+
+    // display: none;
+    .student-life-container {
+        display: none;
+    //     display: flex;
+    //     flex-flow: column wrap;
+    //     align-content: space-between;
+    //     /* Your container needs a fixed height, and it 
+    //      * needs to be taller than your tallest column. */
+    //     height: 960px;
+        
+    //     /* Optional */
+    //     background-color: #f7f7f7;
+    //     border-radius: 3px;
+    //     padding: 20px;
+    //     width: 60%;
+    //     margin: 40px auto;
+    //     counter-reset: block;
+    }
+
+    .block {
+        // width: 24%;
+        // /* Optional */
+        // position: relative;
+        // margin-bottom: 2%;
+        // border-radius: 3px;
+        // background-color: #a1cbfa;
+        // border: 1px solid #4290e2;
+        // box-shadow: 0 2px 2px rgba(0,90,250,0.05),
+        // 0 4px 4px rgba(0,90,250,0.05),
+        // 0 8px 8px rgba(0,90,250,0.05),
+        // 0 16px 16px rgba(0,90,250,0.05);
+        // color: #fff;
+        // padding: 15px;
+        // box-sizing: border-box;
+
+        // &:nth-of-type(4n+1) { order: 1; }
+        // &:nth-of-type(4n+2) { order: 2; }
+        // &:nth-of-type(4n+3) { order: 3; }
+        // &:nth-of-type(4n)   { order: 4; }
+    }
+}
+
+// =================================================================
+// END STUDENT LIFE SECTION
 // =================================================================
 
 // =================================================================
@@ -522,13 +643,112 @@ p {
 // =================================================================
 
 // =================================================================
-// START  SECTION
+// INQUIRY SECTION
 // =================================================================
 
-#student-life {
-    display: none;
+#inquiry {
+    padding: 10em 0;
+    background-image   : url("images/inquiry-background-blue.jpg");
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+
+    .inquiry-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .left-cell {
+        padding: 0 6em 0 0;
+    }
+
+    .lcad-tag-wrap {
+        padding-bottom: 1em;
+    }
+
+    .inquiry-title-wrap,
+    .inquiry-text {
+        color: $white;
+    }
+
+    .inquiry-title-wrap {
+        padding-bottom: 1.5em;
+
+        h2 {
+            font-size: 60px;
+            font-weight: 600;
+        }
+    }
+
+    // START GRAVITY FORM
+
+    .form-wrap {
+        input {
+            padding-bottom: 20px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $white;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel] {
+            color: $white;
+        }
+
+        input::placeholder {
+            color: $white;
+            opacity: .2;
+        }
+
+        .form-name {
+            padding-bottom: 2.5em;
+        }
+
+        .lcad-form-btn-wrap,
+        .student-consent {
+            padding-top: 2.5em;
+        }
+
+        .lcad-form-btn-wrap {
+            .form-btn {
+                padding: .5em 1.5em;
+                background-color: $blue-highlight;
+                border-radius: 5px;
+            }
+        }
+
+        .student-consent {
+            color: $white;
+
+            .gfield_consent_label {
+                padding-left: 1em;
+            }
+        }
+
+        .gform_footer {
+            display: none;
+        }
+    }
+
+    // END GRAVITY FORM
 }
 
 // =================================================================
-// END  SECTION
+// INQUIRY SECTION
+// =================================================================
+
+
+
+
+// =================================================================
+// START SECTION
+// =================================================================
+
+#student-life {
+    // display: none;
+}
+
+// =================================================================
+// END SECTION
 // =================================================================

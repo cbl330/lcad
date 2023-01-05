@@ -3,7 +3,7 @@ Contributors: CopyDeletePosts, copydelete
 Tags: Duplicate post, Copy posts, Copy pages, Duplicate posts, Duplicate pages, Clone posts, Clone pages, Delete posts, Delete pages, Duplicator, copy post, copy page
 Requires at least: 4.6
 Tested up to: 6.1.1
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 License: GPLv3
 Requires PHP: 5.6
 
@@ -176,6 +176,11 @@ Vietnamese: [Sao chép bài đăng, sao chép trang, sao chép bài đăng tùy 
 8. Copy from Gutenberg editor
 
 == Changelog ==
+
+= 1.3.7 =
+* Included new module
+* Fixed issues with deactivation feedback
+* Corrected display of arrow
 
 = 1.3.6 =
 * Adjusted PHP compatibility
@@ -381,7 +386,8 @@ Vietnamese: [Sao chép bài đăng, sao chép trang, sao chép bài đăng tùy 
 * Initial release
 
 == Upgrade Notice ==
-= 1.3.6 =
-* Added black-friday theme (only for that period)
-* Tested up to WordPress 6.1.1
-* Adjusted PHP compatibility
+= 1.3.7 =
+What's new in 1.3.7?
+* Included new module
+* Fixed issues with deactivation feedback
+* Corrected display of arrow

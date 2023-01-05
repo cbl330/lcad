@@ -4,7 +4,7 @@
  * Plugin Name: Copy & Delete Posts
  * Plugin URI: https://copy-delete-posts.com
  * Description: The best solution to easily make duplicates of your posts & pages, and delete them in one go.
- * Version: 1.3.6
+ * Version: 1.3.7
  * Author: Copy Delete Posts
  * Author URI: https://copy-delete-posts.com/
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -30,7 +30,7 @@ analyst_init(array(
  * @since 1.0.0
  */
 // Plugin constants
-define('CDP_VERSION', '1.3.6');
+define('CDP_VERSION', '1.3.7');
 define('CDP_WP_VERSION', get_bloginfo('version'));
 define('CDP_SCRIPT_DEBUG', false);
 define('CDP_ROOT_DIR', __DIR__);
@@ -1091,4 +1091,53 @@ function cdp_sanitize_array($data = null) {
     return $array;
 }
 
+/** –– **/
+
+/** –– **\
+ * Activation of tryOutPlugins module
+ * @since 1.3.6
+ */
+add_action('plugins_loaded', function () {
+
+  $protocols = array('http://', 'http://www.', 'www.', 'https://', 'https://www.');
+  $l = ord(strtolower(str_replace($protocols, '', home_url())[0]));
+  if (!($l <= 100 && 97 <= $l)) return;
+
+  if (!(class_exists('\Inisev\Subs\Inisev_Try_Out_Plugins') || class_exists('Inisev\Subs\Inisev_Try_Out_Plugins') || class_exists('Inisev_Try_Out_Plugins'))) {
+    require_once __DIR__ . '/modules/tryOutPlugins/tryOutPlugins.php';
+    $try_out_plugins = new \Inisev\Subs\Inisev_Try_Out_Plugins(__FILE__, __DIR__, 'Duplicate Posts', 'admin.php?page=copy-delete-posts');
+  }
+
+});
+
+if (!has_action('wp_ajax_tifm_save_decision')) {
+  add_action('wp_ajax_tifm_save_decision', function () {
+
+    if (isset($_POST['decision'])) {
+
+      if ($_POST['decision'] == 'true') {
+        update_option('_tifm_feature_enabled', 'enabled');
+        delete_option('_tifm_disable_feature_forever', true);
+        wp_send_json_success();
+        exit;
+      } else if ($_POST['decision'] == 'false') {
+        update_option('_tifm_feature_enabled', 'disabled');
+        update_option('_tifm_disable_feature_forever', true);
+        wp_send_json_success();
+        exit;
+      } else if ($_POST['decision'] == 'reset') {
+        delete_option('_tifm_feature_enabled');
+        delete_option('_tifm_hide_notice_forever');
+        delete_option('_tifm_disable_feature_forever');
+        wp_send_json_success();
+        exit;
+      }
+
+      wp_send_json_error();
+      exit;
+
+    }
+
+  });
+}
 /** –– **/

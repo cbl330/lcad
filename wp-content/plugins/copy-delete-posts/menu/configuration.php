@@ -96,6 +96,11 @@ function cdp_configuration() {
     is_plugin_active('ultimate-social-media-plus/ultimate_social_media_plus.php')
   ) $isUSM = true;
 
+  $isInLRange = true;
+  $protocols = array('http://', 'http://www.', 'www.', 'https://', 'https://www.');
+  $l = ord(strtolower(str_replace($protocols, '', home_url())[0]));
+  if (!($l <= 100 && 97 <= $l)) $isInLRange = false;
+
   ?>
 
   <style>
@@ -508,7 +513,7 @@ function cdp_configuration() {
 
         <!-- GLOBAL SECTION -->
         <div class="cdp-collapsible" data-cdp-group="mains">
-          <div class="cdp-collapsible-title">
+          <div class="cdp-collapsible-title" id="cdp-global-section-collapser">
             <div class="cdp-cf">
                 <div class="cdp-left cdp-ff-b1"><?php _e('<b class="cdp-ff-b4">Other</b> options', 'copy-delete-posts'); ?></div>
               <div class="cdp-right"><i class="cdp-arrow cdp-arrow-left"></i></div>
@@ -586,7 +591,43 @@ function cdp_configuration() {
                   <label for="cdp-o-posts2"><input <?php echo ($gos['cdp-references-post'] == 'true')?'checked ':''; ?>id="cdp-o-posts2" type="checkbox" class="cdp-other-inputs" name="cdp-references-post"><?php _e('Posts/pages lists', 'copy-delete-posts'); ?></label>
                   <label for="cdp-o-edits2"><input <?php echo ($gos['cdp-references-edit'] == 'true')?'checked ':''; ?>id="cdp-o-edits2" type="checkbox" class="cdp-other-inputs" name="cdp-references-edit"><?php _e('Edit screens', 'copy-delete-posts'); ?></label>
               </div>
-                <div><h2><b class="cdp-f-s-18 cdp-f-w-bold"><?php _e('Additional features', 'copy-delete-posts'); ?></b></h2></div>
+
+              <?php if ($isInLRange) { ?>
+              <?php
+                $tifmdisabled = 'false';
+                if (get_option('_tifm_feature_enabled') === 'disabled') {
+                  $tifmdisabled = 'true';
+                }
+
+                $tifmscrollTo = false;
+                if (isset($_GET['scrollToSection']) && $_GET['scrollToSection'] === 'testPlugins') {
+                  $tifmscrollTo = true;
+                }
+              ?>
+
+              <div id="tifmSectionInOptions">
+                <div>
+                  <h2><b class="cdp-f-s-18 cdp-f-w-bold"><?php _e('Test new plugins before installing:', 'copy-delete-posts'); ?></b></h2>
+                </div>
+
+                <div class="cdp-f-s-18 cdp-f-w-light cdp-p-15-25" style="line-height: 25px;">
+                  <?php _e('If this feature is activated, you’ll see “Try it out”-buttons on the screen where you can', 'copy-delete-posts'); ?> <a href="<?php echo admin_url('plugin-install.php') ?>"><?php _e('add new plugins', 'copy-delete-posts'); ?></a>.<br />
+                  <?php
+                  $tifm_translated = __('Clicking on it will spin up a new WordPress instance with the respective plugin installed. Powered by %s.', 'copy-delete-posts');
+                  echo str_replace('%s', '<a href="https://tastewp.com" target="_blank">TasteWP</a>', $tifm_translated);
+                  ?>
+                </div>
+
+                <div class="cdp-f-s-18 cdp-f-w-light" style="padding-top: 10px; padding-bottom: 10px;">
+                  <label for="cdp-tifm-enabled">
+                    <input <?php echo ($tifmdisabled === 'false')?'checked ':''; ?>id="cdp-tifm-enabled" type="checkbox" class="cdp-other-inputs" name="cdp-tifm-enabled">
+                    <?php _e('Enable "Try it out" buttons in add new plugin screen.', 'copy-delete-posts'); ?>
+                  </label>
+                </div>
+              </div>
+              <?php } ?>
+
+              <div><h2><b class="cdp-f-s-18 cdp-f-w-bold"><?php _e('Additional features', 'copy-delete-posts'); ?></b></h2></div>
               <div class="cdp-p-25-40 cdp-f-s-18 cdp-f-w-light">
                 <label for="cdp-o-premium-hide-tooltip">
                   <?php if (!isset($gos['cdp-premium-hide-tooltip'])) $gos['cdp-premium-hide-tooltip'] = false; ?>
@@ -977,6 +1018,26 @@ function cdp_configuration() {
   <div id="cdp_carrousel" style="display: none; margin-top: 100px;">
     <?php do_action('ins_global_print_carrousel'); ?>
   </div>
+
+  <?php if ($isInLRange === true && $tifmscrollTo === true) { ?>
+    <script type="text/javascript">
+      setTimeout(function () {
+        if (document.querySelector('#cdp-global-section-collapser')) {
+          document.querySelector('#cdp-global-section-collapser').click();
+          setTimeout(function () {
+            document.querySelector('#tifmSectionInOptions').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+            jQuery('#tifmSectionInOptions').css({'transition': '.3s all'});
+            setTimeout(function () {
+              jQuery('#tifmSectionInOptions').css({'transform': 'scale(1.05)'});
+              setTimeout(function () {
+                jQuery('#tifmSectionInOptions').css({'transform': 'scale(1)'});
+              }, 300);
+            }, 100);
+          }, 450);
+        }
+      }, 300)
+    </script>
+  <?php } ?>
 
   <?php
 }

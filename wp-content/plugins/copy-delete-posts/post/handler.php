@@ -225,6 +225,18 @@ function cdp_save_plugin_options($areWePro) {
     $entire = ((isset($_POST['entire'])) ? cdp_sanitize_array($_POST['entire']) : false);
     $profile = ((isset($_POST['profile'])) ? sanitize_text_field($_POST['profile']) : false);
 
+    if (isset($entire['others']) && isset($entire['others']['cdp-tifm-enabled'])) {
+      $tifmoption = $entire['others']['cdp-tifm-enabled'];
+      unset($entire['others']['cdp-tifm-enabled']);
+      if ($tifmoption == 'true') {
+        update_option('_tifm_feature_enabled', 'enabled');
+        delete_option('_tifm_disable_feature_forever', true);
+      } else {
+        update_option('_tifm_feature_enabled', 'disabled');
+        update_option('_tifm_disable_feature_forever', true);
+      }
+    }
+
     // Get current options and profiles.
     $a_or = get_option('_cdp_profiles');
     $already = get_option('_cdp_profiles');

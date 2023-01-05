@@ -22,14 +22,14 @@ $(document).ready(function(){
     // Start Home Page - Experience Slider
     // ------------------------------------------
     $('.experience-slider').slick({
-        slidesToShow: 1,
+        slidesToShow: 1.5,
         // slidesToScroll: 1,
         // nextArrow: '<button type="button" class="slick-next">Next</button>',
         speed: 1000,
-        // centerMode: true,
-        centerPadding: "0px",
-        infinite: true,
-        // arrows: true,
+        centerMode: false,
+        // centerPadding: "0px",
+        infinite: false,
+        arrows: false,
         // autoplay: true,
         // autoplaySpeed: 5000,
         // fade: true,

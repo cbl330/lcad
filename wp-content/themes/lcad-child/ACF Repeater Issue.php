@@ -1,27 +1,9 @@
-<?php get_header(); ?>
-
 <!-- ========================================================================= -->
 <!-- START HERO SECTION -->
 <!-- ========================================================================= -->
 
 <section id="program-hero" class="container-fluid">
     <div class="hero-container">
-
-        <!-- Start Image Background -->
-        <div class="section-background">
-            <?php
-                if ( has_post_thumbnail() ) :
-                    the_post_thumbnail();
-                endif;
-            ?>
-        </div>
-        <!-- End Image Background -->
-
-        <!-- Start Post Title -->
-        <div class="page-tag">
-            <h1 class="post-title"><?php the_title(); ?></h1>
-        </div>
-        <!-- End Post Title -->
 
         <!-- Start Info Cards -->
         <?php if( have_rows('information_cards') ): ?>
@@ -63,12 +45,9 @@
                             </a>
                         </div>
                         <!-- End Slide -->
-                        <?php //reset_rows(); ?>
                 <?php endwhile ?>
             </div>
         <?php endif; ?>
-
-        <?php //reset_rows(); ?>
         <!-- End Info Cards -->
 
     </div>
@@ -128,41 +107,6 @@
 <!-- END LOGO SECTION -->
 <!-- ========================================================================= -->
 
-<!-- ========================================================================= -->
-<!-- START STAFF DIRECTORY SECTION -->
-<!-- ========================================================================= -->
-
-<section id="staff-directory">
-    <?php get_template_part('resources/partials/staff', 'directory'); ?>
-</section>
-
-<!-- ========================================================================= -->
-<!-- END STAFF DIRECTORY SECTION -->
-<!-- ========================================================================= -->
-
-<!-- ========================================================================= -->
-<!-- START STUDENT WORK SECTION -->
-<!-- ========================================================================= -->
-
-<section id="student-work">
-    <?php //get_template_part('resources/partials/student', 'work'); ?>
-</section>
-
-<!-- ========================================================================= -->
-<!-- END STUDENT WORK SECTION -->
-<!-- ========================================================================= -->
-
-<!-- ========================================================================= -->
-<!-- START LCAD NEWS SECTION -->
-<!-- ========================================================================= -->
-
-<section id="recent-news">
-    <?php get_template_part('resources/partials/recent', 'news'); ?>
-</section>
-
-<!-- ========================================================================= -->
-<!-- END LCAD NEWS SECTION -->
-<!-- ========================================================================= -->
 
 <!-- ========================================================================= -->
 <!-- START FAQ SECTION -->
@@ -170,82 +114,55 @@
 
 <section id="lcad-faq">
 
-<?php
+    <?php
 
-
-// *Repeater
-// bootstrap_accordion_repeater
-// *Sub-Fields
-// accordion_header
-// accordion_content
-
-// check if the repeater field has rows of data
-if( have_rows('faq_repeater') ):
-	$i = 1; // Set the increment variable
-	
-	echo '<div id="accordion">';
-
- 	// loop through the rows of data for the tab header
-    while ( have_rows('faq_repeater') ) : the_row();
-		
-		$header = get_sub_field('question');
-		$content = get_sub_field('answer');
-
-	?>
-		
-        <div class="card">
-
-            <div class="card-header" id="heading-<?php echo $i;?>">
-                <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-<?php echo $i;?>" aria-expanded="true" aria-controls="collapse-<?php echo $i;?>">
-                    <?php echo $header; ?>
-                </button>
-                </h5>
-            </div>
+    // check if the repeater field has rows of data
+    if( have_rows('faq_repeater') ):
+        $i = 1; // Set the increment variable
         
-            <div id="collapse-<?php echo $i;?>" class="collapse" aria-labelledby="heading-<?php echo $i;?>" data-parent="#accordion">
-                <div class="card-body">
-                <?php echo $content; ?>
+        echo '<div id="accordion">';
+
+        // loop through the rows of data for the tab header
+        while ( have_rows('faq_repeater') ) : the_row();
+            
+            $header = get_sub_field('question');
+            $content = get_sub_field('answer');
+
+        ?>
+            
+            <div class="card">
+
+                <div class="card-header" id="heading-<?php echo $i;?>">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-<?php echo $i;?>" aria-expanded="true" aria-controls="collapse-<?php echo $i;?>">
+                        <?php echo $header; ?>
+                    </button>
+                    </h5>
                 </div>
-            </div>
-        </div>    
-		
-		
-	<?php $i++; // Increment the increment variable
-		
-	endwhile; //End the loop 
-	
-	echo '</div>';
+            
+                <div id="collapse-<?php echo $i;?>" class="collapse" aria-labelledby="heading-<?php echo $i;?>" data-parent="#accordion">
+                    <div class="card-body">
+                    <?php echo $content; ?>
+                    </div>
+                </div>
+            </div>    
+            
+            
+        <?php $i++; // Increment the increment variable
+            
+        endwhile; //End the loop 
+        
+        echo '</div>';
 
 else :
 
-    // no rows found
-    echo 'Come back tomorrow';
+        // no rows found
+        echo 'Come back tomorrow';
 
-endif;
-
-// var_dump('faq_repeater');
-// var_dump('faq_repeater');
-
-?>
-
-    <?php //get_template_part('resources/partials/general', 'faq'); ?>
+    endif;
+    ?>
 </section>
 
 <!-- ========================================================================= -->
 <!-- END FAQ SECTION -->
 <!-- ========================================================================= -->
-
-<!-- ========================================================================= -->
-<!-- START INQUIRY SECTION -->
-<!-- ========================================================================= -->
-
-<section id="recent-news">
-    <?php //get_template_part('resources/partials/recent', 'news'); ?>
-</section>
-
-<!-- ========================================================================= -->
-<!-- END INQUIRY SECTION -->
-<!-- ========================================================================= -->
-
-<?php get_footer(); ?>

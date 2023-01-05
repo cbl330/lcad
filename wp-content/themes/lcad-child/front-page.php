@@ -14,7 +14,7 @@
                 <div class="hero-title-wrap title-wrap">
                     <?php if (get_sub_field('hero_header')): ?>
                         <?php the_sub_field('hero_header') ?>
-                    <?php endif ?>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Button Wrap -->
@@ -24,7 +24,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-        <?php endwhile ?>
+        <?php endwhile; ?>
         <!-- End Content Cell -->
 
         <!-- Start Slider Cell -->
@@ -49,7 +49,7 @@
                         </div>
                         <!-- End Slide -->
 
-                <?php endwhile ?>
+                <?php endwhile; ?>
             </div>
         <?php endif; ?>
         <!-- End Slider Cell -->
@@ -104,7 +104,7 @@
                                             <button type="button" class="slick-next">Next</button>
                                         </div> -->
                                     </div>
-                                <?php endwhile ?>
+                                <?php endwhile; ?>
                                 <!-- End Content Wrap -->
 
                                 <!-- Start Image Wrap -->
@@ -118,7 +118,7 @@
                         </div>
                         <!-- End Slide -->
 
-                <?php endwhile ?>
+                <?php endwhile; ?>
             </div>
         <?php endif; ?>
         <!-- End Slider Cell -->
@@ -145,7 +145,7 @@
                         <!-- Section Tag -->
                         <?php if (get_sub_field('section_tag')): ?>
                             <div class="lcad-tag-wrap">
-                                <h4 class="lcad-tag industry-pro-tag"><?php the_sub_field('section_tag') ?></h4>
+                                <h4 class="lcad-tag lcad-tag-dk industry-pro-tag"><?php the_sub_field('section_tag') ?></h4>
                             </div>
                         <?php endif; ?>
                         <!-- Section Title -->
@@ -162,7 +162,7 @@
                         <?php endif; ?>
                     </div>
                 </div>
-            <?php endwhile ?>
+            <?php endwhile; ?>
             <!-- End Left Cell -->
 
             <!-- Start Right Cell -->
@@ -177,7 +177,7 @@
                         <?php endif; ?>
                     </div>
                 </div>
-            <?php endwhile ?>
+            <?php endwhile; ?>
             <!-- End Right Cell -->
 
     </div>
@@ -215,11 +215,11 @@
                                 <a href="#">Read Full Bio</a>
                             </div>
                         </div>
-                    <?php endwhile ?>
+                    <?php endwhile; ?>
                     <!-- End Slider Caption -->
                 </div>
 
-            <?php endwhile ?>
+            <?php endwhile; ?>
         </div>
     <?php endif; ?>
     <!-- End Staff Slider -->
@@ -261,7 +261,7 @@
                         <!-- End Slider Caption -->
                     </div>
 
-                <?php endwhile ?>
+                <?php endwhile; ?>
             </div>
         <?php endif; ?>
         <!-- End Top Slider -->
@@ -302,7 +302,7 @@
                         <!-- End Slider Caption -->
                     </div>
 
-                <?php endwhile ?>
+                <?php endwhile; ?>
             </div>
         <?php endif; ?>
         <!-- End Bottom Slider -->
@@ -331,88 +331,250 @@
 <!-- ========================================================================= -->
 
 <section id="student-life" class="container-fluid">
-    <div class="row">
-        <!-- <div> -->
+    <div class="student-life-container">
 
-            <!-- Start Section Header Container -->
-            <?php while (have_rows('content_repeater')) : the_row();?>
-                <div>
-                    <!-- Section Tag -->
-                    <?php if (get_sub_field('student_life_tag')): ?>
-                        <div>
-                            <h4 class="lcad-tag"><?php the_sub_field('student_life_tag') ?></h4>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Section Title -->
-                    <?php if (get_sub_field('student_life_header')): ?>
-                        <div>
-                            <h2><?php the_sub_field('student_life_header') ?></h2>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Section Content -->
-                    <?php if (get_sub_field('student_life_text')): ?>
-                        <div>
-                            <p><?php the_sub_field('student_life_text') ?></p>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            <?php endwhile ?>
-            <!-- End Section Header Container -->
+        <!-- Start Section Header Container -->
+        <!-- ------------------------------ -->
 
-            <!-- Start Flex Content Container -->
-            <?php while (have_rows('content_repeater')) : the_row();?>
-                <div>
-                    <!-- Title -->
-                    <?php if (get_sub_field('block_header')): ?>
-                        <div>
-                            <h2><?php the_sub_field('block_header') ?></h2>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Content -->
-                    <?php if (get_sub_field('block_text')): ?>
-                        <div>
-                            <p><?php the_sub_field('block_text') ?></p>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Button -->
-                    <div>
-                        <?php the_sub_field('slide_caption') ?>
-                    </div>
-                </div>
-            <?php endwhile ?>
-            <!-- End Flex Content Container -->
-
-            <!-- Start Flex Image Container -->
-            <?php while (have_rows('content_repeater')) : the_row();?>
-                <div>
-                    <!-- Image -->
-                    <div>
-                        <?php $image = get_sub_field('block_image'); ?>
-                        <img src="<?php the_sub_field('block_image'); ?>"> 
-                    </div>
-                    <!-- Block Tag -->
-                    <?php if (get_sub_field('block_tag')): ?>
-                        <div>
-                            <h2><?php the_sub_field('block_tag') ?></h2>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Block Link -->
-                    <?php if (get_sub_field('block_link')): ?>
-                        <div>
-                            <p><?php the_sub_field('block_link') ?></p>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Button -->
-                <?php if (get_sub_field('block_link')): ?>
-                    <div>
-                        <a href="<?php the_sub_field('block_link') ?>">Icon</a>
+        <?php while (have_rows('section_header')) : the_row();?>
+            <div class="student-life-header header-block block-one block">
+                <!-- Section Tag -->
+                <?php if (get_sub_field('student_life_tag')): ?>
+                    <div class="header-tag-wrap">
+                        <h4 class="header-tag lcad-tag"><?php the_sub_field('student_life_tag') ?></h4>
                     </div>
                 <?php endif; ?>
-                </div>
-            <?php endwhile ?>
-            <!-- End Flex Image Container -->
+                <!-- Section Title -->
+                <?php if (get_sub_field('student_life_header')): ?>
+                    <div class="header-title-wrap">
+                        <h2 class="block-title title"><?php the_sub_field('student_life_header') ?></h2>
+                    </div>
+                <?php endif; ?>
+                <!-- Section Content -->
+                <?php if (get_sub_field('student_life_text')): ?>
+                    <div class="header-text-wrap text">
+                        <?php the_sub_field('student_life_text') ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
 
-        <!-- </div> -->
+        <!-- ---------------------------- -->
+        <!-- End Section Header Container -->
+
+        
+        <!-- Start Image Block - Block 1 -->
+        <!-- --------------------------- -->
+
+        <?php while (have_rows('block_1')) : the_row();?>
+            <div class="block-container block-1-container block-1 block-image">
+                <!-- Block Image -->
+                <div class="block-image-wrap block-1-image-wrap">
+                    <img class="block-image block-1-image" src="<?php the_sub_field('block_1_image'); ?>"> 
+                </div>
+                <!-- Block Tag -->
+                <?php if (get_sub_field('block_1_tag')): ?>
+                    <div class="block-tag-wrap block-1-tag-wrap">
+                        <h4 class="block-tag block-1-tag"><?php the_sub_field('block_1_tag') ?></h4>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Button -->
+                <?php if (get_sub_field('block_1_link')): ?>
+                    <div class="block-btn-wrap block-1-btn-wrap">
+                        <a class="block-btn block-1-btn" href="<?php the_sub_field('block_1_link') ?>">Icon</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+        
+        <!-- ------------------------- -->
+        <!-- End Image Block - Block 1 -->
+
+
+        <!-- Start Content Block - Block 2 -->
+        <!-- ----------------------------- -->
+
+        <?php while (have_rows('block_2')) : the_row();?>
+            <div class="block-container block-2-container block-2 block-content">
+                <!-- Block Title -->
+                <?php if (get_sub_field('block_2_title')): ?>
+                    <div class="block-title-wrap block-2-title-wrap">
+                        <h2 class="block-title block-2-title"><?php the_sub_field('block_2_title') ?></h2>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Content -->
+                <?php if (get_sub_field('block_2_text')): ?>
+                    <div class="block-text-wrap block-2-text-wrap">
+                        <?php the_sub_field('block_2_text') ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+
+        <!-- --------------------------- -->
+        <!-- End Content Block - Block 2 -->
+
+
+        <!-- Start Image Block - Block 3 -->
+        <!-- --------------------------- -->
+
+        <?php while (have_rows('block_3')) : the_row();?>
+            <div class="block-container block-3-container block-3 block-image">
+                <!-- Block Image -->
+                <div class="block-image-wrap block-3-image-wrap">
+                    <img class="block-image block-3-image" src="<?php the_sub_field('block_3_image'); ?>"> 
+                </div>
+                <!-- Block Tag -->
+                <?php if (get_sub_field('block_3_tag')): ?>
+                    <div class="block-tag-wrap block-3-tag-wrap">
+                        <h4 class="block-tag block-3-tag"><?php the_sub_field('block_3_tag') ?></h4>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Button -->
+                <?php if (get_sub_field('block_3_link')): ?>
+                    <div class="block-btn-wrap block-3-btn-wrap">
+                        <a class="block-btn block-3-btn" href="<?php the_sub_field('block_3_link') ?>">Icon</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+        
+        <!-- ------------------------- -->
+        <!-- End Image Block - Block 3 -->
+
+        
+        <!-- Start Image Block - Block 4 -->
+        <!-- --------------------------- -->
+
+        <?php while (have_rows('block_4')) : the_row();?>
+            <div class="block-container block-4-container block-4 block-image">
+                <!-- Block Image -->
+                <div class="block-image-wrap block-4-image-wrap">
+                    <img class="block-image block-4-image" src="<?php the_sub_field('block_4_image'); ?>"> 
+                </div>
+                <!-- Block Tag -->
+                <?php if (get_sub_field('block_4_tag')): ?>
+                    <div class="block-tag-wrap block-4-tag-wrap">
+                        <h4 class="block-tag block-4-tag"><?php the_sub_field('block_4_tag') ?></h4>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Button -->
+                <?php if (get_sub_field('block_4_link')): ?>
+                    <div class="block-btn-wrap block-4-btn-wrap">
+                        <a class="block-btn block-4-btn" href="<?php the_sub_field('block_4_link') ?>">Icon</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+        
+        <!-- ------------------------- -->
+        <!-- End Image Block - Block 4 -->
+
+
+        <!-- Start Content Block - Block 5 -->
+        <!-- ----------------------------- -->
+
+        <?php while (have_rows('block_5')) : the_row();?>
+            <div class="block-container block-5-container block-5 block-content">
+                <!-- Block Title -->
+                <?php if (get_sub_field('block_5_title')): ?>
+                    <div class="block-title-wrap block-5-title-wrap">
+                        <h2 class="block-title block-5-title"><?php the_sub_field('block_5_title') ?></h2>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Content -->
+                <?php if (get_sub_field('block_5_text')): ?>
+                    <div class="block-text-wrap block-5-text-wrap">
+                        <?php the_sub_field('block_5_text') ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+
+        <!-- --------------------------- -->
+        <!-- End Content Block - Block 5 -->
+
+
+        <!-- Start Image Block - Block 6 -->
+        <!-- --------------------------- -->
+
+        <?php while (have_rows('block_6')) : the_row();?>
+            <div class="block-container block-6-container block-6 block-image">
+                <!-- Block Image -->
+                <div class="block-image-wrap block-6-image-wrap">
+                    <img class="block-image block-6-image" src="<?php the_sub_field('block_6_image'); ?>"> 
+                </div>
+                <!-- Block Tag -->
+                <?php if (get_sub_field('block_6_tag')): ?>
+                    <div class="block-tag-wrap block-6-tag-wrap">
+                        <h4 class="block-tag block-6-tag"><?php the_sub_field('block_6_tag') ?></h4>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Button -->
+                <?php if (get_sub_field('block_6_link')): ?>
+                    <div class="block-btn-wrap block-6-btn-wrap">
+                        <a class="block-btn block-6-btn" href="<?php the_sub_field('block_6_link') ?>">Icon</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+        
+        <!-- ------------------------- -->
+        <!-- End Image Block - Block 6 -->
+
+
+        <!-- Start Content Block - Block 7 -->
+        <!-- ----------------------------- -->
+
+        <?php while (have_rows('block_7')) : the_row();?>
+            <div class="block-container block-7-container block-7 block-content">
+                <!-- Block Title -->
+                <?php if (get_sub_field('block_7_title')): ?>
+                    <div class="block-title-wrap block-7-title-wrap">
+                        <h2 class="block-title block-7-title"><?php the_sub_field('block_7_title') ?></h2>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Content -->
+                <?php if (get_sub_field('block_7_text')): ?>
+                    <div class="block-text-wrap block-7-text-wrap">
+                        <?php the_sub_field('block_7_text') ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+
+        <!-- --------------------------- -->
+        <!-- End Content Block - Block 7 -->
+
+
+        <!-- Start Image Block - Block 8 -->
+        <!-- --------------------------- -->
+
+        <?php while (have_rows('block_8')) : the_row();?>
+            <div class="block-container block-8-container block-8 block-image">
+                <!-- Block Image -->
+                <div class="block-image-wrap block-8-image-wrap">
+                    <img class="block-image block-8-image" src="<?php the_sub_field('block_8_image'); ?>"> 
+                </div>
+                <!-- Block Tag -->
+                <?php if (get_sub_field('block_8_tag')): ?>
+                    <div class="block-tag-wrap block-8-tag-wrap">
+                        <h4 class="block-tag block-8-tag"><?php the_sub_field('block_8_tag') ?></h4>
+                    </div>
+                <?php endif; ?>
+                <!-- Block Button -->
+                <?php if (get_sub_field('block_8_link')): ?>
+                    <div class="block-btn-wrap block-8-btn-wrap">
+                        <a class="block-btn block-8-btn" href="<?php the_sub_field('block_8_link') ?>">Icon</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+        
+        <!-- ------------------------- -->
+        <!-- End Image Block - Block 8 -->
+
+
     </div>
 </section>
 
@@ -456,46 +618,51 @@
 <!-- START INQUIRY SECTION -->
 <!-- ========================================================================= -->
 
-<?php //if (get_field('enable_student_inquiry_form') == true): ?>
-    <section id="inquiry">
-        <?php //get_template_part('resources/partials/student', 'inquiry'); ?>
+<?php //get_template_part('resources/partials/student', 'inquiry'); ?>
+
+
+<section id="inquiry" class="">
+    <div class="inquiry-container row">
 
         <!-- Start Inquiry Content Cell -->
-        <?php //while (have_rows('form_content')) : the_row();?>
-            <div class="left-cell content-cell col-6">
-                <div class="left-content-container inquiry-content-container">
-                    <!-- Section Tag -->
-                    <?php if (get_sub_field('form_tag')): ?>
-                        <div class="lcad-tag-wrap inquiry-tag">
-                            <h4 class="lcad-tag inquiry-tag"><?php the_sub_field('form_tag') ?></h4>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Section Title -->
-                    <?php if (get_sub_field('form_title')): ?>
-                        <div class="section-title-wrap title-wrap inquiry-title">
-                            <?php the_sub_field('form_title') ?>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Section Content -->
-                    <?php if (get_sub_field('form_text')): ?>
-                        <div class="section-text inquiry-text text">
-                            <?php the_sub_field('form_text') ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
+        <?php while (have_rows('left_cell')) : the_row();?>
+        <div class="left-cell content-cell col-6">
+            <div class="left-content-container inquiry-content-container">
+                <!-- Section Tag -->
+                <?php if (get_sub_field('form_tag_alt')): ?>
+                    <div class="lcad-tag-wrap inquiry-tag">
+                        <h4 class="lcad-tag lcad-tag-dk inquiry-tag"><?php the_sub_field('form_tag_alt') ?></h4>
+                    </div>
+                <?php endif; ?>
+                <!-- Section Title -->
+                <?php if (get_sub_field('form_title_alt')): ?>
+                    <div class="section-title-wrap inquiry-title-wrap title-wrap">
+                        <?php the_sub_field('form_title_alt') ?>
+                    </div>
+                <?php endif; ?>
+                <!-- Section Content -->
+                <?php if (get_sub_field('form_content_alt')): ?>
+                    <div class="section-text inquiry-text">
+                        <?php the_sub_field('form_content_alt') ?>
+                    </div>
+                <?php endif; ?>
             </div>
-        <?php //endwhile ?>
-        <!-- End Inquiry Content Cell -->
+        </div>
+    <?php endwhile; ?>
+    <!-- End Inquiry Content Cell -->
 
-        <!-- Start Inquiry Form Cell -->
-        <?php //while (have_rows('section_form')) : the_row();?>
-            <div>
-                <?php the_field('inquiry_form') ?>
+    <!-- Start Inquiry Form Cell -->
+    <?php //while (have_rows('section_form')) : the_row();?>
+        <div class="right-cell col-6">
+            <div class="form-wrap">
+                <?php the_field('inquiry_form_alt') ?>
             </div>
-        <?php //endwhile ?>
-        <!-- End Inquiry Form Cell -->
-    </section>
-<?php //endif; ?>
+        </div>
+    <?php //endwhile ?>
+    <!-- End Inquiry Form Cell -->
+
+    </div>
+</section>
 
 <!-- ========================================================================= -->
 <!-- END INQUIRY SECTION -->

@@ -227,6 +227,20 @@ img.alignright,
     letter-spacing: 1px;
 }
 
+.lcad-tag-dk {
+	width: auto;
+    max-width: 285px;
+    background-color: $white;
+    padding: .75em 1em;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $navy;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 /* Archive Page Headers
 --------------------------------------------- */
 #archive-header {

@@ -48,6 +48,7 @@ if( have_rows('faq_repeater') ):
 	?>
 		
         <div class="card">
+
             <div class="card-header" id="heading-<?php echo $i;?>">
                 <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-<?php echo $i;?>" aria-expanded="true" aria-controls="collapse-<?php echo $i;?>">
@@ -76,3 +77,6 @@ else :
     echo 'Come back tomorrow';
 
 endif;
+
+// var_dump('faq_repeater');
+// var_dump('faq_repeater');
