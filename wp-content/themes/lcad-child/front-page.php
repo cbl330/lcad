@@ -373,251 +373,258 @@
 <!-- START STUDENT LIFE SECTION -->
 <!-- ========================================================================= -->
 
-<section id="student-life" class="container-fluid">
-    <div class="student-life-container">
+<section id="student-life">
+    <div class="student-life-container container-fluid post-container">
+        <div class="row">
+            <!-- Start Section Header Container -->
+            <!-- ------------------------------ -->
 
-        <!-- Start Section Header Container -->
-        <!-- ------------------------------ -->
-
-        <?php while (have_rows('section_header')) : the_row();?>
-            <div class="student-life-header header-block block-one block">
-                <!-- Section Tag -->
-                <?php if (get_sub_field('student_life_tag')): ?>
-                    <div class="header-tag-wrap">
-                        <h4 class="header-tag lcad-tag"><?php the_sub_field('student_life_tag') ?></h4>
+            <div class="col-6">
+                <?php while (have_rows('section_header')) : the_row();?>
+                    <div class="student-life-header header-block block-one block">
+                        <!-- Section Tag -->
+                        <?php if (get_sub_field('student_life_tag')): ?>
+                            <div class="header-tag-wrap">
+                                <h4 class="header-tag lcad-tag"><?php the_sub_field('student_life_tag') ?></h4>
+                            </div>
+                        <?php endif; ?>
+                        <!-- Section Title -->
+                        <?php if (get_sub_field('student_life_header')): ?>
+                            <div class="header-title-wrap">
+                                <h2 class="block-title title"><?php the_sub_field('student_life_header') ?></h2>
+                            </div>
+                        <?php endif; ?>
+                        <!-- Section Content -->
+                        <?php if (get_sub_field('student_life_text')): ?>
+                            <div class="header-text-wrap text">
+                                <?php the_sub_field('student_life_text') ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
-                <!-- Section Title -->
-                <?php if (get_sub_field('student_life_header')): ?>
-                    <div class="header-title-wrap">
-                        <h2 class="block-title title"><?php the_sub_field('student_life_header') ?></h2>
+                <?php endwhile; ?>
+
+                <!-- ---------------------------- -->
+                <!-- End Section Header Container -->
+
+                
+                <div class="row">
+                    <div class="col-6">
+                        <!-- Start Image Block - Block 1 -->
+                        <!-- --------------------------- -->
+
+                        <?php while (have_rows('block_1')) : the_row();?>
+                            <div class="block-container block-1-container block-1 block-image">
+                                <!-- Block Image -->
+                                <div class="block-image-wrap block-1-image-wrap">
+                                    <img class="block-image block-1-image" src="<?php the_sub_field('block_1_image'); ?>"> 
+                                </div>
+                                <!-- Block Tag -->
+                                <?php if (get_sub_field('block_1_tag')): ?>
+                                    <div class="block-tag-wrap block-1-tag-wrap">
+                                        <h4 class="block-tag block-1-tag"><?php the_sub_field('block_1_tag') ?></h4>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- Block Button -->
+                                <?php if (get_sub_field('block_1_link')): ?>
+                                    <div class="block-btn-wrap block-1-btn-wrap">
+                                        <a class="block-btn block-1-btn" href="<?php the_sub_field('block_1_link') ?>">Icon</a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
+                        
+                        <!-- ------------------------- -->
+                        <!-- End Image Block - Block 1 -->
+
+
+                        <!-- Start Content Block - Block 2 -->
+                        <!-- ----------------------------- -->
+
+                        <?php while (have_rows('block_2')) : the_row();?>
+                            <div class="block-container block-2-container block-2 block-content">
+                                <!-- Block Title -->
+                                <?php if (get_sub_field('block_2_title')): ?>
+                                    <div class="block-title-wrap block-2-title-wrap">
+                                        <h2 class="block-title block-2-title"><?php the_sub_field('block_2_title') ?></h2>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- Block Content -->
+                                <?php if (get_sub_field('block_2_text')): ?>
+                                    <div class="block-text-wrap block-2-text-wrap">
+                                        <?php the_sub_field('block_2_text') ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
+
+                        <!-- --------------------------- -->
+                        <!-- End Content Block - Block 2 -->
+
+
+                        <!-- Start Image Block - Block 3 -->
+                        <!-- --------------------------- -->
+
+                        <?php while (have_rows('block_3')) : the_row();?>
+                            <div class="block-container block-3-container block-3 block-image">
+                                <!-- Block Image -->
+                                <div class="block-image-wrap block-3-image-wrap">
+                                    <img class="block-image block-3-image" src="<?php the_sub_field('block_3_image'); ?>"> 
+                                </div>
+                                <!-- Block Tag -->
+                                <?php if (get_sub_field('block_3_tag')): ?>
+                                    <div class="block-tag-wrap block-3-tag-wrap">
+                                        <h4 class="block-tag block-3-tag"><?php the_sub_field('block_3_tag') ?></h4>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- Block Button -->
+                                <?php if (get_sub_field('block_3_link')): ?>
+                                    <div class="block-btn-wrap block-3-btn-wrap">
+                                        <a class="block-btn block-3-btn" href="<?php the_sub_field('block_3_link') ?>">Icon</a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
+                        
+                        <!-- ------------------------- -->
+                        <!-- End Image Block - Block 3 -->
                     </div>
-                <?php endif; ?>
-                <!-- Section Content -->
-                <?php if (get_sub_field('student_life_text')): ?>
-                    <div class="header-text-wrap text">
-                        <?php the_sub_field('student_life_text') ?>
+
+                    <div class="col-6">
+                        <!-- Start Image Block - Block 4 -->
+                        <!-- --------------------------- -->
+
+                        <?php while (have_rows('block_4')) : the_row();?>
+                            <div class="block-container block-4-container block-4 block-image">
+                                <!-- Block Image -->
+                                <div class="block-image-wrap block-4-image-wrap">
+                                    <img class="block-image block-4-image" src="<?php the_sub_field('block_4_image'); ?>"> 
+                                </div>
+                                <!-- Block Tag -->
+                                <?php if (get_sub_field('block_4_tag')): ?>
+                                    <div class="block-tag-wrap block-4-tag-wrap">
+                                        <h4 class="block-tag block-4-tag"><?php the_sub_field('block_4_tag') ?></h4>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- Block Button -->
+                                <?php if (get_sub_field('block_4_link')): ?>
+                                    <div class="block-btn-wrap block-4-btn-wrap">
+                                        <a class="block-btn block-4-btn" href="<?php the_sub_field('block_4_link') ?>">Icon</a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
+                        
+                        <!-- ------------------------- -->
+                        <!-- End Image Block - Block 4 -->
+
+
+                        <!-- Start Content Block - Block 5 -->
+                        <!-- ----------------------------- -->
+
+                        <?php while (have_rows('block_5')) : the_row();?>
+                        <div class="card block-container block-5-container block-5 block-content" style="width: 18rem;">
+	<div class="card-body">
+		<!-- Block Title -->
+		<?php if (get_sub_field('block_5_title')): ?>
+			<h5 class="card-title"><?php the_sub_field('block_5_title') ?></h5>
+		<?php endif; ?>
+		<!-- Block Content -->
+		<?php if (get_sub_field('block_5_text')): ?>
+			<p class="card-text"><?php the_sub_field('block_5_text') ?></p>
+		<?php endif; ?>
+		<a href="#" class="card-link">Card link</a>
+		<a href="#" class="card-link">Another link</a>
+	 </div>
+</div>
+                        <?php endwhile; ?>
+
+                        <!-- --------------------------- -->
+                        <!-- End Content Block - Block 5 -->
                     </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-
-        <!-- ---------------------------- -->
-        <!-- End Section Header Container -->
-
-        
-        <!-- Start Image Block - Block 1 -->
-        <!-- --------------------------- -->
-
-        <?php while (have_rows('block_1')) : the_row();?>
-            <div class="block-container block-1-container block-1 block-image">
-                <!-- Block Image -->
-                <div class="block-image-wrap block-1-image-wrap">
-                    <img class="block-image block-1-image" src="<?php the_sub_field('block_1_image'); ?>"> 
                 </div>
-                <!-- Block Tag -->
-                <?php if (get_sub_field('block_1_tag')): ?>
-                    <div class="block-tag-wrap block-1-tag-wrap">
-                        <h4 class="block-tag block-1-tag"><?php the_sub_field('block_1_tag') ?></h4>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Button -->
-                <?php if (get_sub_field('block_1_link')): ?>
-                    <div class="block-btn-wrap block-1-btn-wrap">
-                        <a class="block-btn block-1-btn" href="<?php the_sub_field('block_1_link') ?>">Icon</a>
-                    </div>
-                <?php endif; ?>
             </div>
-        <?php endwhile; ?>
-        
-        <!-- ------------------------- -->
-        <!-- End Image Block - Block 1 -->
 
+            <div class="col-6">
+                <!-- Start Image Block - Block 6 -->
+                <!-- --------------------------- -->
 
-        <!-- Start Content Block - Block 2 -->
-        <!-- ----------------------------- -->
-
-        <?php while (have_rows('block_2')) : the_row();?>
-            <div class="block-container block-2-container block-2 block-content">
-                <!-- Block Title -->
-                <?php if (get_sub_field('block_2_title')): ?>
-                    <div class="block-title-wrap block-2-title-wrap">
-                        <h2 class="block-title block-2-title"><?php the_sub_field('block_2_title') ?></h2>
+                <?php while (have_rows('block_6')) : the_row();?>
+                    <div class="block-container block-6-container block-6 block-image">
+                        <!-- Block Image -->
+                        <div class="block-image-wrap block-6-image-wrap">
+                            <img class="block-image block-6-image" src="<?php the_sub_field('block_6_image'); ?>"> 
+                        </div>
+                        <!-- Block Tag -->
+                        <?php if (get_sub_field('block_6_tag')): ?>
+                            <div class="block-tag-wrap block-6-tag-wrap">
+                                <h4 class="block-tag block-6-tag"><?php the_sub_field('block_6_tag') ?></h4>
+                            </div>
+                        <?php endif; ?>
+                        <!-- Block Button -->
+                        <?php if (get_sub_field('block_6_link')): ?>
+                            <div class="block-btn-wrap block-6-btn-wrap">
+                                <a class="block-btn block-6-btn" href="<?php the_sub_field('block_6_link') ?>">Icon</a>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
-                <!-- Block Content -->
-                <?php if (get_sub_field('block_2_text')): ?>
-                    <div class="block-text-wrap block-2-text-wrap">
-                        <?php the_sub_field('block_2_text') ?>
+                <?php endwhile; ?>
+                
+                <!-- ------------------------- -->
+                <!-- End Image Block - Block 6 -->
+
+
+                <!-- Start Content Block - Block 7 -->
+                <!-- ----------------------------- -->
+
+                <?php while (have_rows('block_7')) : the_row();?>
+                    <div class="block-container block-7-container block-7 block-content">
+                        <!-- Block Title -->
+                        <?php if (get_sub_field('block_7_title')): ?>
+                            <div class="block-title-wrap block-7-title-wrap">
+                                <h2 class="block-title block-7-title"><?php the_sub_field('block_7_title') ?></h2>
+                            </div>
+                        <?php endif; ?>
+                        <!-- Block Content -->
+                        <?php if (get_sub_field('block_7_text')): ?>
+                            <div class="block-text-wrap block-7-text-wrap">
+                                <?php the_sub_field('block_7_text') ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
+                <?php endwhile; ?>
+
+                <!-- --------------------------- -->
+                <!-- End Content Block - Block 7 -->
+
+
+                <!-- Start Image Block - Block 8 -->
+                <!-- --------------------------- -->
+
+                <?php while (have_rows('block_8')) : the_row();?>
+                    <div class="block-container block-8-container block-8 block-image">
+                        <!-- Block Image -->
+                        <div class="block-image-wrap block-8-image-wrap">
+                            <img class="block-image block-8-image" src="<?php the_sub_field('block_8_image'); ?>"> 
+                        </div>
+                        <!-- Block Tag -->
+                        <?php if (get_sub_field('block_8_tag')): ?>
+                            <div class="block-tag-wrap block-8-tag-wrap">
+                                <h4 class="block-tag block-8-tag"><?php the_sub_field('block_8_tag') ?></h4>
+                            </div>
+                        <?php endif; ?>
+                        <!-- Block Button -->
+                        <?php if (get_sub_field('block_8_link')): ?>
+                            <div class="block-btn-wrap block-8-btn-wrap">
+                                <a class="block-btn block-8-btn" href="<?php the_sub_field('block_8_link') ?>">Icon</a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+                
+                <!-- ------------------------- -->
+                <!-- End Image Block - Block 8 -->
             </div>
-        <?php endwhile; ?>
-
-        <!-- --------------------------- -->
-        <!-- End Content Block - Block 2 -->
-
-
-        <!-- Start Image Block - Block 3 -->
-        <!-- --------------------------- -->
-
-        <?php while (have_rows('block_3')) : the_row();?>
-            <div class="block-container block-3-container block-3 block-image">
-                <!-- Block Image -->
-                <div class="block-image-wrap block-3-image-wrap">
-                    <img class="block-image block-3-image" src="<?php the_sub_field('block_3_image'); ?>"> 
-                </div>
-                <!-- Block Tag -->
-                <?php if (get_sub_field('block_3_tag')): ?>
-                    <div class="block-tag-wrap block-3-tag-wrap">
-                        <h4 class="block-tag block-3-tag"><?php the_sub_field('block_3_tag') ?></h4>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Button -->
-                <?php if (get_sub_field('block_3_link')): ?>
-                    <div class="block-btn-wrap block-3-btn-wrap">
-                        <a class="block-btn block-3-btn" href="<?php the_sub_field('block_3_link') ?>">Icon</a>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-        
-        <!-- ------------------------- -->
-        <!-- End Image Block - Block 3 -->
-
-        
-        <!-- Start Image Block - Block 4 -->
-        <!-- --------------------------- -->
-
-        <?php while (have_rows('block_4')) : the_row();?>
-            <div class="block-container block-4-container block-4 block-image">
-                <!-- Block Image -->
-                <div class="block-image-wrap block-4-image-wrap">
-                    <img class="block-image block-4-image" src="<?php the_sub_field('block_4_image'); ?>"> 
-                </div>
-                <!-- Block Tag -->
-                <?php if (get_sub_field('block_4_tag')): ?>
-                    <div class="block-tag-wrap block-4-tag-wrap">
-                        <h4 class="block-tag block-4-tag"><?php the_sub_field('block_4_tag') ?></h4>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Button -->
-                <?php if (get_sub_field('block_4_link')): ?>
-                    <div class="block-btn-wrap block-4-btn-wrap">
-                        <a class="block-btn block-4-btn" href="<?php the_sub_field('block_4_link') ?>">Icon</a>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-        
-        <!-- ------------------------- -->
-        <!-- End Image Block - Block 4 -->
-
-
-        <!-- Start Content Block - Block 5 -->
-        <!-- ----------------------------- -->
-
-        <?php while (have_rows('block_5')) : the_row();?>
-            <div class="block-container block-5-container block-5 block-content">
-                <!-- Block Title -->
-                <?php if (get_sub_field('block_5_title')): ?>
-                    <div class="block-title-wrap block-5-title-wrap">
-                        <h2 class="block-title block-5-title"><?php the_sub_field('block_5_title') ?></h2>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Content -->
-                <?php if (get_sub_field('block_5_text')): ?>
-                    <div class="block-text-wrap block-5-text-wrap">
-                        <?php the_sub_field('block_5_text') ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-
-        <!-- --------------------------- -->
-        <!-- End Content Block - Block 5 -->
-
-
-        <!-- Start Image Block - Block 6 -->
-        <!-- --------------------------- -->
-
-        <?php while (have_rows('block_6')) : the_row();?>
-            <div class="block-container block-6-container block-6 block-image">
-                <!-- Block Image -->
-                <div class="block-image-wrap block-6-image-wrap">
-                    <img class="block-image block-6-image" src="<?php the_sub_field('block_6_image'); ?>"> 
-                </div>
-                <!-- Block Tag -->
-                <?php if (get_sub_field('block_6_tag')): ?>
-                    <div class="block-tag-wrap block-6-tag-wrap">
-                        <h4 class="block-tag block-6-tag"><?php the_sub_field('block_6_tag') ?></h4>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Button -->
-                <?php if (get_sub_field('block_6_link')): ?>
-                    <div class="block-btn-wrap block-6-btn-wrap">
-                        <a class="block-btn block-6-btn" href="<?php the_sub_field('block_6_link') ?>">Icon</a>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-        
-        <!-- ------------------------- -->
-        <!-- End Image Block - Block 6 -->
-
-
-        <!-- Start Content Block - Block 7 -->
-        <!-- ----------------------------- -->
-
-        <?php while (have_rows('block_7')) : the_row();?>
-            <div class="block-container block-7-container block-7 block-content">
-                <!-- Block Title -->
-                <?php if (get_sub_field('block_7_title')): ?>
-                    <div class="block-title-wrap block-7-title-wrap">
-                        <h2 class="block-title block-7-title"><?php the_sub_field('block_7_title') ?></h2>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Content -->
-                <?php if (get_sub_field('block_7_text')): ?>
-                    <div class="block-text-wrap block-7-text-wrap">
-                        <?php the_sub_field('block_7_text') ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-
-        <!-- --------------------------- -->
-        <!-- End Content Block - Block 7 -->
-
-
-        <!-- Start Image Block - Block 8 -->
-        <!-- --------------------------- -->
-
-        <?php while (have_rows('block_8')) : the_row();?>
-            <div class="block-container block-8-container block-8 block-image">
-                <!-- Block Image -->
-                <div class="block-image-wrap block-8-image-wrap">
-                    <img class="block-image block-8-image" src="<?php the_sub_field('block_8_image'); ?>"> 
-                </div>
-                <!-- Block Tag -->
-                <?php if (get_sub_field('block_8_tag')): ?>
-                    <div class="block-tag-wrap block-8-tag-wrap">
-                        <h4 class="block-tag block-8-tag"><?php the_sub_field('block_8_tag') ?></h4>
-                    </div>
-                <?php endif; ?>
-                <!-- Block Button -->
-                <?php if (get_sub_field('block_8_link')): ?>
-                    <div class="block-btn-wrap block-8-btn-wrap">
-                        <a class="block-btn block-8-btn" href="<?php the_sub_field('block_8_link') ?>">Icon</a>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-        
-        <!-- ------------------------- -->
-        <!-- End Image Block - Block 8 -->
-
-
+        </div>
     </div>
 </section>
 

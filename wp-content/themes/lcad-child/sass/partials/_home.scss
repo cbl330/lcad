@@ -535,22 +535,23 @@ p {
 // =================================================================
 
 #student-life {
-    height: 1770px;
-    width: 1920px;
-    // max-height: 240px;
-    margin: 0;
-    padding-right: 4.45em;
-    padding-bottom: 1em;
-    background-image   : url("images/masonry-temp.jpg");
-    background-repeat  : no-repeat;
-    background-size    : cover;
-    background-position: center;
+    // height: 1770px;
+    // width: 1920px;
+    // // max-height: 240px;
+    // margin: 0;
+    // padding-right: 4.45em;
+    // padding-bottom: 1em;
+    // background-image   : url("images/masonry-temp.jpg");
+    // background-repeat  : no-repeat;
+    // background-size    : cover;
+    // background-position: center;
+    background-color: lightgray;
 
 
 
     // display: none;
     .student-life-container {
-        display: none;
+        // display: none;
     //     display: flex;
     //     flex-flow: column wrap;
     //     align-content: space-between;
