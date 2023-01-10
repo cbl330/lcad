@@ -309,10 +309,10 @@
 
         <div class="os__wrapper">
             <div class="os__text-container">
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 1</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 2</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 3</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 4</p>
                 <p class="os__text-item"><img class="scroll-you" src="http://lcad.local/wp-content/uploads/2022/12/Group-10.png" alt="you" /> are recognized for your individuality</p>
             </div>
         </div>
