@@ -2062,6 +2062,59 @@ p {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+#carousel .os__wrapper {
+  display: block;
+}
+#carousel .os__text-container {
+  text-align: center;
+  position: sticky;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+#carousel .os__text-item {
+  color: hotpink;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 600;
+  opacity: 0.2;
+}
+#carousel .os__text-item--on {
+  opacity: 1;
+}
+#carousel .os__ghost {
+  height: var(--ghost-height);
+}
+#carousel .last {
+  padding-top: 400vh;
+}
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
 
 #student-life {
   height: 1770px;

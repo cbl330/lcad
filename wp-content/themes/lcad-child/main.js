@@ -21,3 +21,25 @@
 
 // // ------------------------------------------
 // // End Highlight Function
+
+
+// // Start Scroll Trigger
+// // ------------------------------------------
+
+// console.clear();
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// gsap.to("#triggered-element", {
+//     scrollTrigger: {
+//     trigger: "#trigger",
+//     start: "bottom bottom",
+//     markers: true,
+//     toggleActions: "play none none none"
+//     },
+//     duration: 5,
+//     opacity: 0
+// });
+
+// // ------------------------------------------
+// // End Scroll Trigger
