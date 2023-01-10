@@ -1814,6 +1814,10 @@ p {
   height: auto;
 }
 
+:root {
+  --ghost-height: 50vh;
+}
+
 #home-hero {
   position: relative;
   background-color: #0C1F35;
@@ -2013,9 +2017,6 @@ p {
      object-fit: cover;
   vertical-align: middle;
 }
-#carousel .scroll-text-wrap .scroll-fade {
-  opacity: 0.5;
-}
 #carousel .carousel-top-slider .slick-list {
   width: 100vw;
   margin: 0;
@@ -2079,7 +2080,7 @@ p {
   gap: 0.5rem;
 }
 #carousel .os__text-item {
-  color: hotpink;
+  color: #fff;
   font-size: 3rem;
   text-transform: uppercase;
   font-family: sans-serif;

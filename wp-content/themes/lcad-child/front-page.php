@@ -234,6 +234,16 @@
 <!-- START CAROUSEL SECTION -->
 <!-- ========================================================================= -->
 
+<!-- <div class="os__wrapper">
+    <div class="os__text-container">
+        <p class="os__text-item">LCAD is an all-inclusive environment in which 1</p>
+        <p class="os__text-item">LCAD is an all-inclusive environment in which 2</p>
+        <p class="os__text-item">LCAD is an all-inclusive environment in which 3</p>
+        <p class="os__text-item">LCAD is an all-inclusive environment in which 4</p>
+        <p class="os__text-item">You are recognized for your individuality</p>
+    </div>
+</div> -->
+
 <section id="carousel" class="container-fluid">
     <div class="carousel-container">
 
@@ -266,56 +276,50 @@
         <?php endif; ?>
         <!-- End Top Slider -->
 
-        <!-- <div class="row os__wrapper"> -->
+        <div class="row">
         <!-- Start Scroll Content -->
             <?php //if (get_field('scroll_list')): ?>
-                <!-- <div class="scroll-text-wrap text-wrap os__text-container"> -->
-                    <!-- <div class="text-wrap"> -->
+                <div class="scroll-text-wrap os__wrapper">
+                    <div class="text-wrap os__text-container">
                         <?php //the_field('scroll_list') ?>
-                    <!-- </div> -->
-                    <!-- <span class="scroll-fade scroll-text os__text-item">LCAD is an all-inclusive environment in which</span>
-                    <span class="scroll-fade scroll-text os__text-item"><img class="scroll-you" src="http://lcad.local/wp-content/uploads/2022/12/Group-10.png" alt="you" /> are recognized for your individuality</span>
-                    <span class="scroll-fade scroll-text os__text-item">amongst students and faculty, as well as a</span>
-                    <span class="scroll-fade scroll-text os__text-item">collaborative team. <img class="scroll-you" src="http://lcad.local/wp-content/uploads/2022/12/Group-75.png" alt="you" /> are celebrated</span>
-                    <span class="scroll-fade scroll-text os__text-item">for your unique individuality and creative expression.</span> -->
-                <!-- </div> -->
+
+                        <p class="scroll-fade scroll-text os__text-item">LCAD is an all-inclusive environment in which</p>
+                        <p class="scroll-fade scroll-text os__text-item"><img class="scroll-you" src="http://lcad.local/wp-content/uploads/2022/12/Group-10.png" alt="you" /> are recognized for your individuality</p>
+                        <p class="scroll-fade scroll-text os__text-item">amongst students and faculty, as well as a</p>
+                        <p class="scroll-fade scroll-text os__text-item">collaborative team. <img class="scroll-you" src="http://lcad.local/wp-content/uploads/2022/12/Group-75.png" alt="you" /> are celebrated</p>
+                        <p class="scroll-fade scroll-text os__text-item">for your unique individuality and creative expression.</p>
+
+                    </div>
+                </div>
             <?php //endif; ?>
         <!-- End Scroll Content -->
 
+
+
         <!-- <div class="os__wrapper">
-            <div class="os__text-container">
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-            </div>
-        </div>
-
-        <div class="os__wrapper">
-            <div class="os__text-container">
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-            </div>
-        </div>
-
-        <div class="os__wrapper">
-            <div class="os__text-container">
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-            </div>
-        </div>
-
-        <div class="os__wrapper">
-            <div class="os__text-container">
-                <p class="os__text-item">LCAD is an all-inclusive environment in which</p>
-            </div>
-        </div> -->
-
-
-        <div class="os__wrapper">
             <div class="os__text-container">
                 <p class="os__text-item">LCAD is an all-inclusive environment in which 1</p>
                 <p class="os__text-item">LCAD is an all-inclusive environment in which 2</p>
                 <p class="os__text-item">LCAD is an all-inclusive environment in which 3</p>
                 <p class="os__text-item">LCAD is an all-inclusive environment in which 4</p>
-                <p class="os__text-item"><img class="scroll-you" src="http://lcad.local/wp-content/uploads/2022/12/Group-10.png" alt="you" /> are recognized for your individuality</p>
+                <p class="os__text-item">You are recognized for your individuality</p>
             </div>
+        </div> -->
+
+
+
+
         </div>
+
+        <!-- <div class="os__wrapper">
+            <div class="os__text-container">
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 1</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 2</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 3</p>
+                <p class="os__text-item">LCAD is an all-inclusive environment in which 4</p>
+                <p class="os__text-item">You are recognized for your individuality</p>
+            </div>
+        </div> -->
 
         <!-- Start Bottom Slider -->
         <?php if( have_rows('bottom_slider') ): ?>
