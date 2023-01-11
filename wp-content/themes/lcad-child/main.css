@@ -2118,8 +2118,126 @@ p {
 }
 
 #student-life {
-  background-color: lightgray;
+  background-image: url("images/student-life-background.png");
 }
+#student-life .student-life-header {
+  margin: 2rem;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#student-life .custom-bg {
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#student-life .custom-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#student-life .custom-radius {
+  margin: 2rem;
+  border-radius: 10px;
+}
+#student-life .custom-block {
+  height: 30rem;
+  width: 91%;
+}
+#student-life .custom-block-2 {
+  color: white;
+  height: 35rem;
+  width: 91%;
+  padding: 0 4rem 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#student-life .custom-block-4 {
+  height: 70rem;
+  width: 91%;
+}
+#student-life .custom-block-5 {
+  height: 26.5rem;
+  width: 91%;
+  padding: 0 4rem 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#student-life .custom-block-6 {
+  height: 62rem;
+  width: 91%;
+}
+#student-life .custom-block-7 {
+  color: white;
+  height: 30.7rem;
+  padding: 0 4rem 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#student-life .custom-block-8 {
+  height: 30.7rem;
+}
+#student-life .custom-border {
+  margin: 2rem;
+  border-bottom: 2px solid #2BAAD3;
+  padding-bottom: 6px;
+}
+#student-life .block-tag {
+  color: white;
+}
+#student-life .block-btn-wrap {
+  margin: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+@media (max-width: 600px) {
+  #student-life .custom-block-4 {
+    height: 30rem;
+  }
+  #student-life .custom-block-6 {
+    height: 30rem;
+  }
+}
+
 #instagram .lcad-social {
   height: 100vh;
   max-height: 240px;

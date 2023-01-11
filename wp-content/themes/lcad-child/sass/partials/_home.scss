@@ -541,11 +541,11 @@ p {
     // margin: 0;
     // padding-right: 4.45em;
     // padding-bottom: 1em;
-    // background-image   : url("images/masonry-temp.jpg");
+    background-image   : url("images/student-life-background.png");
     // background-repeat  : no-repeat;
     // background-size    : cover;
     // background-position: center;
-    background-color: lightgray;
+    // background-color: lightgray;
 
 
 
@@ -568,6 +568,14 @@ p {
     //     counter-reset: block;
     }
 
+    .student-life-header {
+        margin: 2rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
     .block {
         // width: 24%;
         // /* Optional */
@@ -588,6 +596,88 @@ p {
         // &:nth-of-type(4n+2) { order: 2; }
         // &:nth-of-type(4n+3) { order: 3; }
         // &:nth-of-type(4n)   { order: 4; }
+    }
+
+    .custom-bg {
+        background-position: center;
+        background-size: cover;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .custom-flex {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    .custom-radius {
+        margin: 2rem;
+        border-radius: 10px;
+    }
+    .custom-block {
+        height: 30rem;
+        width: 91%;
+        // background-image: url(http://lcad.local/wp-content/uploads/2022/12/2549a9e291fa0ac3e4e3e4de6e47e73d1aa212a0-1.png);
+    }
+    .custom-block-2 {
+        color: white;
+        height: 35rem;
+        width: 91%;
+        padding: 0 4rem 0 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // background-image: url(http://lcad.local/wp-content/uploads/2022/12/2549a9e291fa0ac3e4e3e4de6e47e73d1aa212a0-1.png);
+    }
+    .custom-block-4 {
+        height: 70rem;
+        width: 91%;
+        // background-image: url(http://lcad.local/wp-content/uploads/2022/12/2549a9e291fa0ac3e4e3e4de6e47e73d1aa212a0-1.png);
+    }
+    .custom-block-5 {
+        height: 26.5rem;
+        width: 91%;
+        padding: 0 4rem 0 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // background-image: url(http://lcad.local/wp-content/uploads/2022/12/2549a9e291fa0ac3e4e3e4de6e47e73d1aa212a0-1.png);
+    }
+    .custom-block-6 {
+        height: 62rem;
+        width: 91%
+    }
+    .custom-block-7 {
+        color: white;
+        height: 30.7rem;
+        padding: 0 4rem 0 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .custom-block-8 {
+        height: 30.7rem;
+    }
+    .custom-border {
+        margin: 2rem;
+        border-bottom: 2px solid #2BAAD3;
+        padding-bottom: 6px;
+    }
+    .block-tag {
+        color: white;
+    }
+    .block-btn-wrap {
+        margin: 2rem;
+        background-color: white;
+        border-radius: 50%;
+        padding: .4rem;
+    }
+
+    @media (max-width: 600px) {
+        .custom-block-4 {
+            height: 30rem;
+        }
+        .custom-block-6 {
+            height: 30rem;
+        }
     }
 }
 

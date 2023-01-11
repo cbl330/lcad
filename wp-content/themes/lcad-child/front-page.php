@@ -379,7 +379,7 @@
             <!-- Start Section Header Container -->
             <!-- ------------------------------ -->
 
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <?php while (have_rows('section_header')) : the_row();?>
                     <div class="student-life-header header-block block-one block">
                         <!-- Section Tag -->
@@ -408,26 +408,26 @@
 
                 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <!-- Start Image Block - Block 1 -->
                         <!-- --------------------------- -->
 
                         <?php while (have_rows('block_1')) : the_row();?>
-                            <div class="block-container block-1-container block-1 block-image">
+                            <div class="block-container block-1-container block-1 block-image custom-block custom-bg custom-flex custom-radius" style="background-image:linear-gradient(to bottom, transparent 60%, black 100%),url(<?php the_sub_field('block_1_image'); ?>);">
                                 <!-- Block Image -->
-                                <div class="block-image-wrap block-1-image-wrap">
+                                <!-- <div class="block-image-wrap block-1-image-wrap">
                                     <img class="block-image block-1-image" src="<?php the_sub_field('block_1_image'); ?>"> 
-                                </div>
+                                </div> -->
                                 <!-- Block Tag -->
                                 <?php if (get_sub_field('block_1_tag')): ?>
-                                    <div class="block-tag-wrap block-1-tag-wrap">
+                                    <div class="block-tag-wrap block-1-tag-wrap custom-border">
                                         <h4 class="block-tag block-1-tag"><?php the_sub_field('block_1_tag') ?></h4>
                                     </div>
                                 <?php endif; ?>
                                 <!-- Block Button -->
                                 <?php if (get_sub_field('block_1_link')): ?>
                                     <div class="block-btn-wrap block-1-btn-wrap">
-                                        <a class="block-btn block-1-btn" href="<?php the_sub_field('block_1_link') ?>">Icon</a>
+                                        <a class="block-btn block-1-btn" href="<?php the_sub_field('block_1_link') ?>"><span class="dashicons dashicons-arrow-right-alt"></span></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -441,7 +441,7 @@
                         <!-- ----------------------------- -->
 
                         <?php while (have_rows('block_2')) : the_row();?>
-                            <div class="block-container block-2-container block-2 block-content">
+                            <div class="block-container block-2-container block-2 block-content custom-block-2 custom-radius" style="background-color: #2BAAD3;">
                                 <!-- Block Title -->
                                 <?php if (get_sub_field('block_2_title')): ?>
                                     <div class="block-title-wrap block-2-title-wrap">
@@ -465,21 +465,21 @@
                         <!-- --------------------------- -->
 
                         <?php while (have_rows('block_3')) : the_row();?>
-                            <div class="block-container block-3-container block-3 block-image">
+                            <div class="block-container block-3-container block-3 block-image custom-block custom-bg custom-flex custom-radius" style="background-image:linear-gradient(to bottom, transparent 60%, black 100%),url(<?php the_sub_field('block_3_image'); ?>);">
                                 <!-- Block Image -->
-                                <div class="block-image-wrap block-3-image-wrap">
+                                <!-- <div class="block-image-wrap block-3-image-wrap">
                                     <img class="block-image block-3-image" src="<?php the_sub_field('block_3_image'); ?>"> 
-                                </div>
+                                </div> -->
                                 <!-- Block Tag -->
                                 <?php if (get_sub_field('block_3_tag')): ?>
-                                    <div class="block-tag-wrap block-3-tag-wrap">
+                                    <div class="block-tag-wrap block-3-tag-wrap custom-border">
                                         <h4 class="block-tag block-3-tag"><?php the_sub_field('block_3_tag') ?></h4>
                                     </div>
                                 <?php endif; ?>
                                 <!-- Block Button -->
                                 <?php if (get_sub_field('block_3_link')): ?>
                                     <div class="block-btn-wrap block-3-btn-wrap">
-                                        <a class="block-btn block-3-btn" href="<?php the_sub_field('block_3_link') ?>">Icon</a>
+                                        <a class="block-btn block-3-btn" href="<?php the_sub_field('block_3_link') ?>"><span class="dashicons dashicons-arrow-right-alt"></span></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -489,26 +489,26 @@
                         <!-- End Image Block - Block 3 -->
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <!-- Start Image Block - Block 4 -->
                         <!-- --------------------------- -->
 
                         <?php while (have_rows('block_4')) : the_row();?>
-                            <div class="block-container block-4-container block-4 block-image">
+                            <div class="block-container block-4-container block-4 block-image custom-block-4 custom-bg custom-flex custom-radius" style="background-image:linear-gradient(to bottom, transparent 60%, black 100%),url(<?php the_sub_field('block_4_image'); ?>);">
                                 <!-- Block Image -->
-                                <div class="block-image-wrap block-4-image-wrap">
+                                <!-- <div class="block-image-wrap block-4-image-wrap">
                                     <img class="block-image block-4-image" src="<?php the_sub_field('block_4_image'); ?>"> 
-                                </div>
+                                </div> -->
                                 <!-- Block Tag -->
                                 <?php if (get_sub_field('block_4_tag')): ?>
-                                    <div class="block-tag-wrap block-4-tag-wrap">
+                                    <div class="block-tag-wrap block-4-tag-wrap custom-border">
                                         <h4 class="block-tag block-4-tag"><?php the_sub_field('block_4_tag') ?></h4>
                                     </div>
                                 <?php endif; ?>
                                 <!-- Block Button -->
                                 <?php if (get_sub_field('block_4_link')): ?>
                                     <div class="block-btn-wrap block-4-btn-wrap">
-                                        <a class="block-btn block-4-btn" href="<?php the_sub_field('block_4_link') ?>">Icon</a>
+                                        <a class="block-btn block-4-btn" href="<?php the_sub_field('block_4_link') ?>"><span class="dashicons dashicons-arrow-right-alt"></span></a>
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -522,20 +522,20 @@
                         <!-- ----------------------------- -->
 
                         <?php while (have_rows('block_5')) : the_row();?>
-                        <div class="card block-container block-5-container block-5 block-content" style="width: 18rem;">
-	<div class="card-body">
-		<!-- Block Title -->
-		<?php if (get_sub_field('block_5_title')): ?>
-			<h5 class="card-title"><?php the_sub_field('block_5_title') ?></h5>
-		<?php endif; ?>
-		<!-- Block Content -->
-		<?php if (get_sub_field('block_5_text')): ?>
-			<p class="card-text"><?php the_sub_field('block_5_text') ?></p>
-		<?php endif; ?>
-		<a href="#" class="card-link">Card link</a>
-		<a href="#" class="card-link">Another link</a>
-	 </div>
-</div>
+                            <div class="block-container block-5-container block-5 block-content custom-block-5 custom-radius" style="background-color: #eee;">
+                                <!-- Block Title -->
+                                <?php if (get_sub_field('block_5_title')): ?>
+                                    <div class="block-title-wrap block-5-title-wrap">
+                                        <h2 class="block-title block-5-title"><?php the_sub_field('block_5_title') ?></h2>
+                                    </div>
+                                <?php endif; ?>
+                                <!-- Block Content -->
+                                <?php if (get_sub_field('block_5_text')): ?>
+                                    <div class="block-text-wrap block-5-text-wrap">
+                                        <?php the_sub_field('block_5_text') ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                         <?php endwhile; ?>
 
                         <!-- --------------------------- -->
@@ -544,26 +544,26 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <!-- Start Image Block - Block 6 -->
                 <!-- --------------------------- -->
 
                 <?php while (have_rows('block_6')) : the_row();?>
-                    <div class="block-container block-6-container block-6 block-image">
+                    <div class="block-container block-6-container block-6 block-image custom-bg custom-flex custom-radius custom-block-6" style="background-image:linear-gradient(to bottom, transparent 60%, black 100%),url(<?php the_sub_field('block_6_image'); ?>);">
                         <!-- Block Image -->
-                        <div class="block-image-wrap block-6-image-wrap">
+                        <!-- <div class="block-image-wrap block-6-image-wrap">
                             <img class="block-image block-6-image" src="<?php the_sub_field('block_6_image'); ?>"> 
-                        </div>
+                        </div> -->
                         <!-- Block Tag -->
                         <?php if (get_sub_field('block_6_tag')): ?>
-                            <div class="block-tag-wrap block-6-tag-wrap">
+                            <div class="block-tag-wrap block-6-tag-wrap custom-border">
                                 <h4 class="block-tag block-6-tag"><?php the_sub_field('block_6_tag') ?></h4>
                             </div>
                         <?php endif; ?>
                         <!-- Block Button -->
                         <?php if (get_sub_field('block_6_link')): ?>
                             <div class="block-btn-wrap block-6-btn-wrap">
-                                <a class="block-btn block-6-btn" href="<?php the_sub_field('block_6_link') ?>">Icon</a>
+                                <a class="block-btn block-6-btn" href="<?php the_sub_field('block_6_link') ?>"><span class="dashicons dashicons-arrow-right-alt"></span></a>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -577,7 +577,7 @@
                 <!-- ----------------------------- -->
 
                 <?php while (have_rows('block_7')) : the_row();?>
-                    <div class="block-container block-7-container block-7 block-content">
+                    <div class="block-container block-7-container block-7 block-content custom-radius custom-block-7" style="background-color: #395590;">
                         <!-- Block Title -->
                         <?php if (get_sub_field('block_7_title')): ?>
                             <div class="block-title-wrap block-7-title-wrap">
@@ -601,21 +601,21 @@
                 <!-- --------------------------- -->
 
                 <?php while (have_rows('block_8')) : the_row();?>
-                    <div class="block-container block-8-container block-8 block-image">
+                    <div class="block-container block-8-container block-8 block-image custom-bg custom-flex custom-radius custom-block-8" style="background-image:linear-gradient(to bottom, transparent 60%, black 100%),url(<?php the_sub_field('block_8_image'); ?>);">
                         <!-- Block Image -->
-                        <div class="block-image-wrap block-8-image-wrap">
+                        <!-- <div class="block-image-wrap block-8-image-wrap">
                             <img class="block-image block-8-image" src="<?php the_sub_field('block_8_image'); ?>"> 
-                        </div>
+                        </div> -->
                         <!-- Block Tag -->
                         <?php if (get_sub_field('block_8_tag')): ?>
-                            <div class="block-tag-wrap block-8-tag-wrap">
+                            <div class="block-tag-wrap block-8-tag-wrap custom-border">
                                 <h4 class="block-tag block-8-tag"><?php the_sub_field('block_8_tag') ?></h4>
                             </div>
                         <?php endif; ?>
                         <!-- Block Button -->
                         <?php if (get_sub_field('block_8_link')): ?>
                             <div class="block-btn-wrap block-8-btn-wrap">
-                                <a class="block-btn block-8-btn" href="<?php the_sub_field('block_8_link') ?>">Icon</a>
+                                <a class="block-btn block-8-btn" href="<?php the_sub_field('block_8_link') ?>"><span class="dashicons dashicons-arrow-right-alt"></span></a>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -630,38 +630,6 @@
 
 <!-- ========================================================================= -->
 <!-- END STUDENT LIFE SECTION -->
-<!-- ========================================================================= -->
-
-<!-- ========================================================================= -->
-<!-- START INSTAGRAM SECTION -->
-<!-- ========================================================================= -->
-
-<section id="instagram" class="container-fluid">
-    <div class="instagram-container row">
-        <!-- <div> -->
-
-            <!-- Start Social Share -->
-            <?php if ( is_active_sidebar( 'lcad-social-share' ) ) : ?>
-                <div class="lcad-social social-share social-container row align-items-end">
-                    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-                        <?php dynamic_sidebar( 'lcad-social-share' ); ?>
-                    </div><!-- #primary-sidebar -->
-                </div>
-            <?php endif; ?>
-            <!-- End Social Share -->
-
-            <!-- Start Instagram Section -->
-            <div class="instagram-feed-container instagram-feed">
-                <!-- Pull in instagram feed -->
-            </div>
-            <!-- End Instagram Section -->
-
-        <!-- </div> -->
-    </div>
-</section>
-
-<!-- ========================================================================= -->
-<!-- END INSTAGRAM SECTION -->
 <!-- ========================================================================= -->
 
 <!-- ========================================================================= -->
@@ -718,5 +686,36 @@
 <!-- END INQUIRY SECTION -->
 <!-- ========================================================================= -->
 
+<!-- ========================================================================= -->
+<!-- START INSTAGRAM SECTION -->
+<!-- ========================================================================= -->
+
+<section id="instagram" class="container-fluid">
+    <div class="instagram-container">
+        <!-- <div> -->
+
+            <!-- Start Social Share -->
+            <?php if ( is_active_sidebar( 'lcad-social-share' ) ) : ?>
+                <div class="lcad-social social-share social-container row align-items-end">
+                    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'lcad-social-share' ); ?>
+                    </div><!-- #primary-sidebar -->
+                </div>
+            <?php endif; ?>
+            <!-- End Social Share -->
+
+            <!-- Start Instagram Section -->
+            <div class="instagram-feed-container instagram-feed">
+                <!-- Pull in instagram feed -->
+            </div>
+            <!-- End Instagram Section -->
+
+        <!-- </div> -->
+    </div>
+</section>
+
+<!-- ========================================================================= -->
+<!-- END INSTAGRAM SECTION -->
+<!-- ========================================================================= -->
 
 <?php get_footer(); ?>
