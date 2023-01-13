@@ -624,6 +624,7 @@
 
 
 <!-- ========================================================================= -->
+<<<<<<< HEAD
 <!-- START INSTAGRAM SECTION -->
 <!-- ========================================================================= -->
 
@@ -657,6 +658,8 @@
 <!-- ========================================================================= -->
 
 <!-- ========================================================================= -->
+=======
+>>>>>>> d2e2c26639c9c5580e005ad751f486f5bc5688db
 <!-- START INQUIRY SECTION -->
 <!-- ========================================================================= -->
 
@@ -710,5 +713,36 @@
 <!-- END INQUIRY SECTION -->
 <!-- ========================================================================= -->
 
+<!-- ========================================================================= -->
+<!-- START INSTAGRAM SECTION -->
+<!-- ========================================================================= -->
+
+<section id="instagram" class="container-fluid">
+    <div class="instagram-container">
+        <!-- <div> -->
+
+            <!-- Start Social Share -->
+            <?php if ( is_active_sidebar( 'lcad-social-share' ) ) : ?>
+                <div class="lcad-social social-share social-container row align-items-end">
+                    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'lcad-social-share' ); ?>
+                    </div><!-- #primary-sidebar -->
+                </div>
+            <?php endif; ?>
+            <!-- End Social Share -->
+
+            <!-- Start Instagram Section -->
+            <div class="instagram-feed-container instagram-feed">
+                <!-- Pull in instagram feed -->
+            </div>
+            <!-- End Instagram Section -->
+
+        <!-- </div> -->
+    </div>
+</section>
+
+<!-- ========================================================================= -->
+<!-- END INSTAGRAM SECTION -->
+<!-- ========================================================================= -->
 
 <?php get_footer(); ?>
