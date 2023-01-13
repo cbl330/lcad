@@ -15,6 +15,35 @@ $(document).ready(function(){
     autoplay: false,
     autoplaySpeed: 5000,
     infinite: true,
+    responsive: [
+        // {
+        //     breakpoint: 1024,
+        //     settings: {
+        //     slidesToShow: 3,
+        //     slidesToScroll: 3,
+        //     infinite: true,
+        //     dots: true
+        //     }
+        // },
+        // {
+        //     breakpoint: 600,
+        //     settings: {
+        //     slidesToShow: 2,
+        //     slidesToScroll: 2
+        //     }
+        // },
+        {
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerPadding: "60px"
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+        ]
     });
     // ------------------------------------------
     // End Home Page - Hero Slider
@@ -34,6 +63,37 @@ $(document).ready(function(){
         // autoplaySpeed: 5000,
         // fade: true,
         // cssEase: 'linear',
+        responsive: [
+            // {
+            //     breakpoint: 1024,
+            //     settings: {
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     infinite: true,
+            //     dots: true
+            //     }
+            // },
+            // {
+            //     breakpoint: 600,
+            //     settings: {
+            //     slidesToShow: 2,
+            //     slidesToScroll: 2
+            //     }
+            // },
+            {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "0px",
+                infinite: true,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+            ]
     });
     // ------------------------------------------
     // End Home Page - Experience Slider
@@ -49,6 +109,37 @@ $(document).ready(function(){
         autoplay: false,
         autoplaySpeed: 3000,
         infinite: true,
+        responsive: [
+            // {
+            //     breakpoint: 1024,
+            //     settings: {
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     infinite: true,
+            //     dots: true
+            //     }
+            // },
+            // {
+            //     breakpoint: 600,
+            //     settings: {
+            //     slidesToShow: 2,
+            //     slidesToScroll: 2
+            //     }
+            // },
+            {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // centerMode: true,
+                centerPadding: "0px",
+                // infinite: true,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+            ]
     });
     // ------------------------------------------
     // End Home Page - Industry Professionals Slider
@@ -64,6 +155,35 @@ $(document).ready(function(){
         autoplay: false,
         autoplaySpeed: 3000,
         infinite: true,
+        responsive: [
+            // {
+            //     breakpoint: 1024,
+            //     settings: {
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     infinite: true,
+            //     dots: true
+            //     }
+            // },
+            // {
+            //     breakpoint: 600,
+            //     settings: {
+            //     slidesToShow: 2,
+            //     slidesToScroll: 2
+            //     }
+            // },
+            {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: "60px"
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+            ]
     });
     // ------------------------------------------
     // End Home Page - Carousel Slider Top
@@ -80,6 +200,35 @@ $(document).ready(function(){
         autoplaySpeed: 3000,
         infinite: true,
         // rtl: true,
+        responsive: [
+            // {
+            //     breakpoint: 1024,
+            //     settings: {
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     infinite: true,
+            //     dots: true
+            //     }
+            // },
+            // {
+            //     breakpoint: 600,
+            //     settings: {
+            //     slidesToShow: 2,
+            //     slidesToScroll: 2
+            //     }
+            // },
+            {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: "60px"
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+            ]
     });
     // ------------------------------------------
     // End Home Page - Carousel Slider Bottom

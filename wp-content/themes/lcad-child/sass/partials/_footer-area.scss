@@ -1,6 +1,35 @@
+
+.footer-temp {
+	width: 100%;
+	height: 100%;
+	// max-height: 786px;
+	max-width: 1920px;
+	// background-color: $navy;
+	background-image   : url("images/footer-desktop.jpg");
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center;
+
+
+	@media only screen and (max-width: 767px) {
+		// width: 100%;
+		height: 1750px;
+		// max-height: 1601px;
+		max-width: 767px;
+		// background-color: $navy;
+		background-image   : url("images/footer-mobile.jpg");
+		// background-repeat  : no-repeat;
+		// background-size    : cover;
+		// background-position: center;
+	}
+}
+
+
+
 /* Footer Widgets
 -------------------------------------------------- */
 .footer-widgets {
+	display: none;
 	clear: both;
 	padding: 60px 0;
 	border-top: $border-width $border-style $border-color;

@@ -10,11 +10,11 @@
 
             <div class="header-container row">
                 <!-- Section Title -->
-                <div class="lcad-title-wrap recent-news-title-wrap col">
+                <div class="lcad-title-wrap recent-news-title-wrap col-md-6 col-xs-12">
                     <h2 class="lcad-title recent-news-title">Recent News</h2>
                 </div>
-                <!-- Button -->
-                <div class="view-more-wrap col">
+                <!-- Button - Desktop -->
+                <div class="view-more-wrap view-more-desktop-wrap col-md-6">
                     <a class="view-more-btn" href="#">View More News</a>
                 </div>
             </div>
@@ -24,6 +24,11 @@
         <!-- Pull in recent news articles -->
         <div class="recent-news-container row">
             <?php get_template_part('resources/components/lcad', 'news'); ?>
+        </div>
+
+        <!-- Button - Mobile -->
+        <div class="view-more-wrap view-more-mobile-wrap col-12">
+            <a class="view-more-btn" href="#">View More News</a>
         </div>
 
     </div>

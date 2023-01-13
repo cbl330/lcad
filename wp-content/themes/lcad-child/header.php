@@ -1,20 +1,11 @@
 <?php do_action('wp_head'); ?>
 
-<header class="bg-dark">
-    <!-- Start Navbar -->
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-            <div class="quick-links">
-                <?php wp_nav_menu( array( 'theme_location' => 'quick-links', 'menu_class' => 'quick-links', 'menu' => 'menu-1', 'container' => '' ) ); ?>
-            </div>
-        
-        </div>
-    </nav>
-    <!-- End Navbar -->
-
-    
-
+<header class="header-temp">
 </header>
 
 

@@ -14,7 +14,7 @@
             $arr_posts->the_post();
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="recent-news recent-post col-4" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="recent-news recent-post col-md-4 col-6" <?php post_class(); ?>>
 
     <?php
         // $postImage = get_the_post_thumbnail();
