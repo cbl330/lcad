@@ -16,28 +16,28 @@
             display: inline;
         }
 
-        #crumbs:last-child {
-            li {
-                &:before {
-                    // position: absolute;
-                    content: '>>';
-                    width: 100%;
-                    height: 100%;
-                    padding: 1em;
-                    // top: 0;
-                    // bottom: 0;
-                    // right: 0;
-                    // left: 0;
-                    color: $white;
-                }
-            }
-        }
+        // #crumbs:last-child {
+        //     li {
+        //         &:before {
+        //             // position: absolute;
+        //             content: '>>';
+        //             width: 100%;
+        //             height: 100%;
+        //             padding: 1em;
+        //             // top: 0;
+        //             // bottom: 0;
+        //             // right: 0;
+        //             // left: 0;
+        //             color: $white;
+        //         }
+        //     }
+        // }
     }
 
-    .title {
-        font-size: 3.33em;
-        color: $white;
-    }
+    // .title {
+    //     font-size: 3.33em;
+    //     color: $white;
+    // }
 }
 
 // =================================================================
@@ -49,7 +49,7 @@
 // =================================================================
 
 #news-main {
-    margin-top: -16.67em;
+    margin-top: -26em;
 
     .content-container {
         max-width: 1440px;
@@ -92,12 +92,46 @@
         }
     }
 
-    .title {
-        padding-bottom: .5em;
-        color: $dark-grey;
-        font-size: 21px;
-        font-weight: 600;
+//     #archive-header {
+//     height: 100vh;
+//     max-height: 725px;
+//     margin: 0;
+//     background-image   : url("images/hero-background.png");
+//     background-repeat  : no-repeat;
+//     background-size    : cover;
+//     background-position: center;
+
+//     .header-container {
+//         padding: 7.22em 5.55em 4.72em 5.55em ;
+//         margin: 0 auto;
+//     }
+// }
+
+    // .title {
+    //     padding-bottom: .5em;
+    //     color: $dark-grey;
+    //     font-size: 21px;
+    //     font-weight: 600;
+    // }
+
+        // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+
     }
+
+    // Start Margin Adjustment - Mobile
+    @media only screen and (max-width:350px) {margin-top: -9em;}
+    @media (min-width:351px) and (max-width:360px) {margin-top: -11em;}
+    @media (min-width:361px) and (max-width:430px) {margin-top: -13em;}
+    @media (min-width:431px) and (max-width:480px) {margin-top: -16em;}
+    @media (min-width:481px) and (max-width:520px) {margin-top: -18em;}
+    @media (min-width:521px) and (max-width:580px) {margin-top: -20em;}
+    @media (min-width:581px) and (max-width:620px) {margin-top: -24em;}
+    @media (min-width:621px) and (max-width:680px) {margin-top: -26em;}
+    @media (min-width:681px) and (max-width:767px) {margin-top: -28em;}
+    // End Margin Adjustment - Mobile
 }
 
 // =================================================================

@@ -8,13 +8,13 @@
         'post_type'      => 'post',
         'category_name'  => 'lcad news',
         'orderby'        => 'date',
-        'posts_per_page' => -1,
+        'posts_per_page' => 12,
         'paged' => $paged
     ) ); 
 ?>
 
 <section id="archive-header" class="container-fluid">
-    <div class="header-container row">
+    <div class="archive-header-container row">
         
         <!-- Breadcrumbs -->
         <div class="news-breadcrumbs breadcrumbs">
@@ -22,8 +22,8 @@
         </div>
 
         <!-- Page Title -->
-        <div class="news-title-wrap title-wrap col-8">
-            <h1 class="news-title title"><?php echo esc_html( get_the_title() ); ?></h1>
+        <div class="news-title-wrap archive-title-wrap title-wrap col-8">
+            <h1 class="news-title archive-title title"><?php echo esc_html( get_the_title() ); ?></h1>
         </div>
 
         <!-- Page Filter -->

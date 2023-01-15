@@ -2,7 +2,7 @@
 <!-- START HERO SECTION -->
 <!-- ========================================================================= -->
 
-<section>
+<section id="about-hero" class="container-fluid">
     <div>
         <div>
 
@@ -12,21 +12,21 @@
                 <!-- Title Wrap -->
                 <div>
                     <?php if (get_sub_field('hero_header')): ?>
-                    <h1><?php the_sub_field('hero_header') ?></h1>
+                        <h1><?php the_sub_field('hero_header') ?></h1>
                     <?php endif ?>
                 </div>
 
                 <!-- Text Wrap -->
                 <div>
-                    <?php if (get_sub_field('hero_header')): ?>
-                    <h1><?php the_sub_field('hero_header') ?></h1>
+                    <?php if (get_sub_field('hero_details')): ?>
+                    <h1><?php the_sub_field('hero_details') ?></h1>
                     <?php endif ?>
                 </div>
 
                 <!-- Button Wrap -->
-                <?php if (get_sub_field('button_text') && get_sub_field('button_link')): ?>
+                <?php if (get_sub_field('hero_button_text') && get_sub_field('hero_button_link')): ?>
                     <div>
-                        <a href="<?php the_sub_field('button_link') ?>"><?php the_sub_field('button_text') ?></a>
+                        <a href="<?php the_sub_field('hero_button_link') ?>"><?php the_sub_field('hero_button_text') ?></a>
                     </div>
                 <?php endif; ?>
             </div>

@@ -1,6 +1,21 @@
 /* Common Classes
 ---------------------------------------*/
 
+/* Global
+--------------------------------------------- */
+body {
+	overflow-x: hidden;
+}
+
+// main {
+// 	padding: 0;
+// }
+
+// .container-fluid {
+// 	padding-right: 0;
+// 	padding-left: 0;
+// }
+
 /* Avatar
 --------------------------------------------- */
 
@@ -252,8 +267,41 @@ img.alignright,
     background-size    : cover;
     background-position: center;
 
-    .header-container {
-        padding: 7.22em 5.55em 4.72em 5.55em ;
+    .archive-header-container {
+        width: 100%;
+        max-width: 1440px;
+        padding: 7.22em 0 4.72em 0;
         margin: 0 auto;
+    }
+
+    .title {
+        font-size: 3.33em;
+        color: $white;
+    }
+    
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        .archive-header-container {
+            padding: 7.22em 1.25em 4.72em;
+        }
+    }
+
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        max-height: 100vw;
+        padding: 0 1em;
+        background-position: left;
+    
+        .archive-header-container {
+            padding: 3.5em 0;
+        }
+    
+        .title {
+            font-size: 48px;
+        }
     }
 }
