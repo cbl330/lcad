@@ -40,7 +40,7 @@
     <!-- End Navbar -->
 
     <!-- Start Nav Toggle Content -->
-    <div class="collapse custom-menu show" id="navbarToggleExternalContent">
+    <div class="collapse custom-menu" id="navbarToggleExternalContent">
         <div class="custom-items row">
             <div class="accordion-with-social col-12 col-md-6">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
