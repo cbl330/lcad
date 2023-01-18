@@ -94,12 +94,162 @@
 
 
 header {
+	border-bottom: 1px solid $white;
+	nav.navbar{
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	 }
+	 
+	 .navbar-inverse {
+		background-color:rgba(0,0,0,0);
+		
+		 //border-color: #080808;
+	 }
+	 
+	 nav.navbar.transparent {
+		background-color: #0c1f35;
+	 }
+	nav {
+		padding: 1.5rem 6rem 1.5rem 6rem !important;
+		.lcad-accent {
+			color: #217ea1;
+		}
+		.navbar-toggler {
+			margin-right: 1.5rem;
+		}
+		.navbar-logo, .navbar-title, .menu-nav-button {
+			display: flex;
+			align-items: center;
+		}
+		.navbar-title a {
+			background-color: #217ea1;
+			color: $white;
+		}
+		.navbar-title a:hover {
+			background-color: #217ea1;
+			color: $white;
+		}
+		.navbar-title a:link {
+			background-color: #217ea1;
+			color: $white;
+		}
+		.navbar-title a:visited {
+			background-color: #217ea1;
+			color: $white;
+		}
+		.navbar-title a:hover {
+			background-color: #217ea1;
+			color: $white;
+		}
+		.navbar-title a:active {
+			background-color: #217ea1;
+			color: $white;
+		}
+	}
 	.quick-links li {
 		display: inline;
 		padding: .5em 1.5em;
 		
 		a {
 			color: $white;
+		}
+	}
+	h6, .navbar-toggler {
+		color: $white;
+	}
+	.dashicons {
+		margin-right: 1rem;
+	}
+	.custom-menu {
+		height: 100vh !important;
+	}
+	.custom-items {
+		height: 100%;
+		background-color: #0c1f35;
+		padding: 7rem;
+		overflow: scroll;
+		-webkit-overflow-scrolling:touch;
+		.accordion, .accordion-item {
+			background-color: transparent !important;
+			--bs-accordion-bg: transparent !important;
+		}
+		.accordion-item {
+			border-bottom: 1px solid #4f5356 !important;
+		}
+		.accordion-header {
+			padding: 2rem 0 2rem 0;;
+		}
+		.accordion-button {
+			color: $white;
+			font-size: 4rem !important;
+			padding-left: 0;
+			justify-content: space-between;
+		}
+		.accordion-button:not(.collapsed) {
+			background-color: #0c1f35;
+			outline: none !important;
+			box-shadow: none;
+		}
+		.accordion-button:focus, .accordion-button:hover {
+			color: #fff;
+			background-color: #0c1f35;
+		}
+		.accordion-button::after {
+			display: none !important;
+			color: white;
+		}
+		.accordion-body a {
+			color: $white;
+		}
+		.lcad-social {
+			margin-top: 3rem;
+			section {
+				justify-content: flex-start;
+			}
+		}
+		.widget {
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			h3 {
+				float: left;
+				padding-right: 1em;
+				font-size: 14px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: $white;
+			}
+			li {
+				margin: 0!important;
+				padding: .5em!important;
+			}
+			a {
+				color: $white;
+			}
+		}
+		#quick-links-section {
+			.inner-wrapper {
+				@media screen and (min-width: 768px) {
+					margin-left: 12rem;
+				}
+			}
+			.quick-links-title {
+				background-color: #fff;
+			}
+			li {
+				margin-bottom: 1rem;
+			}
+			a {
+				color: $white;
+				border-bottom: 1px solid #217ea1;
+				padding-bottom: 0.4rem;
+			}
+			#line-spacer {
+				width: 5rem;
+				height: 4rem;
+				border-left: 1px solid #fff;
+				margin: 2rem 1.2rem 2rem 1.2rem;
+			}
 		}
 	}
 }

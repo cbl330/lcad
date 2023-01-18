@@ -1271,12 +1271,173 @@ img.alignright,
   word-wrap: normal !important;
 }
 
+header {
+  border-bottom: 1px solid #fff;
+}
+header nav.navbar {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+header .navbar-inverse {
+  background-color: rgba(0, 0, 0, 0);
+}
+header nav.navbar.transparent {
+  background-color: #0c1f35;
+}
+header nav {
+  padding: 1.5rem 6rem 1.5rem 6rem !important;
+}
+header nav .lcad-accent {
+  color: #217ea1;
+}
+header nav .navbar-toggler {
+  margin-right: 1.5rem;
+}
+header nav .navbar-logo, header nav .navbar-title, header nav .menu-nav-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .navbar-title a {
+  background-color: #217ea1;
+  color: #fff;
+}
+header nav .navbar-title a:hover {
+  background-color: #217ea1;
+  color: #fff;
+}
+header nav .navbar-title a:link {
+  background-color: #217ea1;
+  color: #fff;
+}
+header nav .navbar-title a:visited {
+  background-color: #217ea1;
+  color: #fff;
+}
+header nav .navbar-title a:hover {
+  background-color: #217ea1;
+  color: #fff;
+}
+header nav .navbar-title a:active {
+  background-color: #217ea1;
+  color: #fff;
+}
 header .quick-links li {
   display: inline;
   padding: 0.5em 1.5em;
 }
 header .quick-links li a {
   color: #fff;
+}
+header h6, header .navbar-toggler {
+  color: #fff;
+}
+header .dashicons {
+  margin-right: 1rem;
+}
+header .custom-menu {
+  height: 100vh !important;
+}
+header .custom-items {
+  height: 100%;
+  background-color: #0c1f35;
+  padding: 7rem;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+header .custom-items .accordion, header .custom-items .accordion-item {
+  background-color: transparent !important;
+  --bs-accordion-bg: transparent !important;
+}
+header .custom-items .accordion-item {
+  border-bottom: 1px solid #4f5356 !important;
+}
+header .custom-items .accordion-header {
+  padding: 2rem 0 2rem 0;
+}
+header .custom-items .accordion-button {
+  color: #fff;
+  font-size: 4rem !important;
+  padding-left: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .custom-items .accordion-button:not(.collapsed) {
+  background-color: #0c1f35;
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+header .custom-items .accordion-button:focus, header .custom-items .accordion-button:hover {
+  color: #fff;
+  background-color: #0c1f35;
+}
+header .custom-items .accordion-button::after {
+  display: none !important;
+  color: white;
+}
+header .custom-items .accordion-body a {
+  color: #fff;
+}
+header .custom-items .lcad-social {
+  margin-top: 3rem;
+}
+header .custom-items .lcad-social section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+header .custom-items .widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .custom-items .widget h3 {
+  float: left;
+  padding-right: 1em;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+header .custom-items .widget li {
+  margin: 0 !important;
+  padding: 0.5em !important;
+}
+header .custom-items .widget a {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  header .custom-items #quick-links-section .inner-wrapper {
+    margin-left: 12rem;
+  }
+}
+header .custom-items #quick-links-section .quick-links-title {
+  background-color: #fff;
+}
+header .custom-items #quick-links-section li {
+  margin-bottom: 1rem;
+}
+header .custom-items #quick-links-section a {
+  color: #fff;
+  border-bottom: 1px solid #217ea1;
+  padding-bottom: 0.4rem;
+}
+header .custom-items #quick-links-section #line-spacer {
+  width: 5rem;
+  height: 4rem;
+  border-left: 1px solid #fff;
+  margin: 2rem 1.2rem 2rem 1.2rem;
 }
 
 /* Site Navigation

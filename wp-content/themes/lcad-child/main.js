@@ -43,3 +43,23 @@
 
 // // ------------------------------------------
 // // End Scroll Trigger
+
+// Nav bar
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+        $('nav').addClass('transparent');
+    } else {
+        $('nav').removeClass('transparent');
+    }
+});
+
+// Function to toggle the plus menu into minus 
+function myParentElem(y) {
+    if (y.getAttribute('aria-expanded') === 'true') {
+        y.firstElementChild.classList.remove("dashicons-plus-alt2");
+        y.firstElementChild.classList.add("dashicons-minus")
+    } else {
+        y.firstElementChild.classList.remove("dashicons-minus")
+        y.firstElementChild.classList.add("dashicons-plus-alt2")
+    }
+}
