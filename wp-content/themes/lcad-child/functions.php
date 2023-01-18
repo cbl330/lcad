@@ -295,10 +295,28 @@ unregister_sidebar( 'header-right' );
 // Removes secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
 
-// Removes site layouts.
+// // Removes site layouts.
+// genesis_unregister_layout( 'content-sidebar-sidebar' );
+// genesis_unregister_layout( 'sidebar-content-sidebar' );
+// genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+// Remove unused sidebars
+unregister_sidebar( 'sidebar' );
+unregister_sidebar( 'sidebar-alt' );
+
+// Remove layouts
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+genesis_unregister_layout( 'sidebar-content' );
+genesis_unregister_layout( 'content-sidebar' );
+
+// Remove layout metaboxes
+remove_theme_support( 'genesis-inpost-layouts' );
+remove_theme_support( 'genesis-archive-layouts' );
+
+// Use full width layout 
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -435,42 +453,42 @@ function register_menus() {
 }
 add_action( 'init', 'register_menus' );
 
-// Create Breadcrumb
-function the_breadcrumb() {
-    echo '<ul id="crumbs">';
+// // Create Breadcrumb
+// function the_breadcrumb() {
+//     echo '<ul id="crumbs">';
 
-    if (!is_home()) {
-        echo '<li><a href="';
-        echo get_option('blog');
-        echo '">';
-        echo 'BlogHome';
-        echo "</a>";
-        echo "<span class='arrow-1 dashicons dashicons-arrow-right-alt2'></span><span class='arrow-2 dashicons dashicons-arrow-right-alt2'></span>";
-        echo "</li>";
-        if (is_category() || is_single()) {
-            echo '<li>';
-            the_category(' </li><li> ');
-            if (is_single()) {
-                echo "</li><li>";
-                the_title();
-                echo '</li>';
-            }
-        } elseif (is_page()) {
-            echo '<li>';
-            echo the_title();
-            echo '</li>';
-        }
-    }
+//     if (!is_home()) {
+//         echo '<li><a href="';
+//         echo get_option('blog');
+//         echo '">';
+//         echo 'BlogHome';
+//         echo "</a>";
+//         echo "<span class='arrow-1 dashicons dashicons-arrow-right-alt2'></span><span class='arrow-2 dashicons dashicons-arrow-right-alt2'></span>";
+//         echo "</li>";
+//         if (is_category() || is_single()) {
+//             echo '<li>';
+//             the_category(' </li><li> ');
+//             if (is_single()) {
+//                 echo "</li><li>";
+//                 the_title();
+//                 echo '</li>';
+//             }
+//         } elseif (is_page()) {
+//             echo '<li>';
+//             echo the_title();
+//             echo '</li>';
+//         }
+//     }
 
-    elseif (is_tag()) {single_tag_title();}
-    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
-    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
-    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
-    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
-    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
-    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
-    echo '</ul>';
-}
+//     elseif (is_tag()) {single_tag_title();}
+//     elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+//     elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+//     elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+//     elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+//     elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+//     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+//     echo '</ul>';
+// }
 
 // function my_excerpt_length($length){ return 80; } add_filter('excerpt_length', 'my_excerpt_length');
 
@@ -529,3 +547,5 @@ function lcad_pagination() {
     echo '</ul></div>' . "\n";
 
 }
+
+// include('register-blocks.php');

@@ -28,9 +28,9 @@
     <div class="header-container">
         
         <!-- Breadcrumbs -->
-        <div class="news-breadcrumbs breadcrumbs">
-            <?php the_breadcrumb(); ?>
-        </div>
+        <!-- <div class="news-breadcrumbs breadcrumbs"> -->
+            <?php //the_breadcrumb(); ?>
+        <!-- </div> -->
 
         <!-- Page Title -->
         <div class="news-title-wrap title-wrap">

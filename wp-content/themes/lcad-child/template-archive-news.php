@@ -17,9 +17,9 @@
     <div class="archive-header-container row">
         
         <!-- Breadcrumbs -->
-        <div class="news-breadcrumbs breadcrumbs">
-            <?php the_breadcrumb(); ?>
-        </div>
+        <!-- <div class="news-breadcrumbs breadcrumbs"> -->
+            <?php //the_breadcrumb(); ?>
+        <!-- </div> -->
 
         <!-- Page Title -->
         <div class="news-title-wrap archive-title-wrap title-wrap col-8">
