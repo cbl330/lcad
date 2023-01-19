@@ -1287,11 +1287,57 @@ header nav.navbar.transparent {
 header nav {
   padding: 1.5rem 6rem 1.5rem 6rem !important;
 }
+header nav .navbar-toggler:focus, header nav .navbar-toggler:hover {
+  background-color: transparent !important;
+}
+header nav .navbar-toggler:hover {
+  color: #217ea1;
+}
 header nav .lcad-accent {
   color: #217ea1;
 }
 header nav .navbar-toggler {
   margin-right: 1.5rem;
+  border: none !important;
+}
+header nav .navbar-toggler .icon-wrapper {
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .navbar-toggler .icon-wrapper .bar-1, header nav .navbar-toggler .icon-wrapper .bar-2 {
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header nav .navbar-toggler .icon-wrapper .blue-line {
+  width: 20px;
+  height: 2px;
+  background-color: #217ea1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header nav .navbar-toggler .change .bar-1 {
+  -webkit-transform: translate(0, 8px) rotate(-45deg);
+          transform: translate(0, 8px) rotate(-45deg);
+}
+header nav .navbar-toggler .change .blue-line {
+  opacity: 0;
+}
+header nav .navbar-toggler .change .bar-2 {
+  -webkit-transform: translate(0, -8px) rotate(45deg);
+          transform: translate(0, -8px) rotate(45deg);
 }
 header nav .navbar-logo, header nav .navbar-title, header nav .menu-nav-button {
   display: -webkit-box;
@@ -1382,6 +1428,29 @@ header .custom-items .accordion-button::after {
 }
 header .custom-items .accordion-body a {
   color: #fff;
+}
+@media screen and (min-width: 1279px) {
+  header .custom-items .accordion-body .academics-menu, header .custom-items .accordion-body .admissions-menu, header .custom-items .accordion-body .alumni-student-life-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 13rem;
+  }
+}
+@media screen and (min-width: 874px) and (max-width: 1278px) {
+  header .custom-items .accordion-body .academics-menu, header .custom-items .accordion-body .admissions-menu, header .custom-items .accordion-body .alumni-student-life-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 6rem;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  header .custom-items .accordion-body .academics-menu, header .custom-items .accordion-body .admissions-menu, header .custom-items .accordion-body .alumni-student-life-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 header .custom-items .lcad-social {
   margin-top: 3rem;
