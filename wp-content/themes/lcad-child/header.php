@@ -23,9 +23,15 @@
 
             <div class="menu-nav-button">
                 <!-- Start Navbar Toggle Button -->
-                <button class="navbar-toggler d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="dashicons dashicons-menu-alt3"></span>MENU
-                </button>
+                <div onclick="myFunction(this)" class="navbar-toggler d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="dashicons dashicons-menu-alt3"></span> -->
+                    <div class="icon-wrapper">
+                        <div class="bar-1"></div>
+                        <div class="blue-line"></div>
+                        <div class="bar-2"></div>
+                    </div>
+                    <span id="menu-button">MENU</span>
+                </div>
                 <!-- End Navbar Toggle Button -->
 
                 <!-- Start Navbar Button -->
@@ -50,7 +56,7 @@
                         <h2 class="accordion-header" id="flush-headingOne">
                             <div onclick="myParentElem(this)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Academics
-                                <span class="dashicons dashicons-plus-alt2"></span>
+                                <span id="academics" class="academics-span dashicons dashicons-plus-alt2"></span>
                 </div>
                         </h2>
                         <!-- Accordion Body -->
@@ -68,7 +74,7 @@
                         <h2 class="accordion-header" id="flush-headingTwo">
                             <div onclick="myParentElem(this)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                 Admissions
-                                <span class="dashicons dashicons-plus-alt2"></span>
+                                <span id="admissions" class="admissions-span dashicons dashicons-plus-alt2"></span>
                             </div>
                         </h2>
                         <!-- Accordion Body -->
@@ -86,7 +92,7 @@
                         <h2 class="accordion-header" id="flush-headingThree">
                             <div onclick="myParentElem(this)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                 Alumni & Student Life
-                                <span class="dashicons dashicons-plus-alt2"></span>
+                                <span id="alumni" class="alumni-span dashicons dashicons-plus-alt2"></span>
                             </div>
                         </h2>
                         <!-- Accordion Body -->
