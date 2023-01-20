@@ -1207,29 +1207,29 @@ p {
         background-position: center;
     }
 
-    .widget {
-        display: flex;
-        justify-content: end;
-        align-items: center;
+    // .widget {
+    //     display: flex;
+    //     justify-content: end;
+    //     align-items: center;
 
-        h3 {
-            float: left;
-            padding-right: 1em;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: $white;
-        }
+    //     h3 {
+    //         float: left;
+    //         padding-right: 1em;
+    //         font-size: 14px;
+    //         font-weight: 600;
+    //         text-transform: uppercase;
+    //         color: $white;
+    //     }
 
-        li {
-            margin: 0!important;
-            padding: .5em!important;
-        }
+    //     li {
+    //         margin: 0!important;
+    //         padding: .5em!important;
+    //     }
 
-        a {
-            color: $white;
-        }
-    }
+    //     a {
+    //         color: $white;
+    //     }
+    // }
 
     .instagram-feed {
         padding: 0;

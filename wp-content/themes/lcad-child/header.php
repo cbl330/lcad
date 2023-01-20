@@ -1,5 +1,9 @@
 <?php do_action('wp_head'); ?>
 
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
 <header class="fixed-top">
     <!-- Start Navbar -->
     <nav class="navbar navbar-inverse">
@@ -17,7 +21,7 @@
 
             <!-- Start Navbar Title -->
             <div class="navbar-title d-none d-md-block">
-                <h6>LAGUNA COLLEGE OF ART <span class="lcad-accent">+</span> DESIGN</h6>
+                <h6 class="title">LAGUNA COLLEGE OF ART <span class="lcad-accent">+</span> DESIGN</h6>
             </div>
             <!-- End Navbar Title -->
 
@@ -36,7 +40,8 @@
 
                 <!-- Start Navbar Button -->
                 <div class="navbar-title d-none d-md-block">
-                    <a class="btn btn-lg" href="#">SCHEDULE A TOUR</a>
+                    <!-- <a class="btn" href="#">SCHEDULE A TOUR</a> -->
+                    <?php wp_nav_menu( array( 'theme_location' => 'header-btn', 'menu_class' => 'header-btn tour-btn', 'menu' => 'menu-8', 'container' => '' ) ); ?>
                 </div>
                 <!-- End Navbar Button -->
             </div>

@@ -256,6 +256,49 @@ img.alignright,
     letter-spacing: 1px;
 }
 
+/* Social Share
+--------------------------------------------- */
+// .lcad-social {
+// 	height: 100vh;
+// 	max-height: 240px;
+// 	margin: 0;
+// 	padding-right: 4.45em;
+// 	padding-bottom: 1em;
+// 	background-image   : url("images/instagram-background.jpg");
+// 	background-repeat  : no-repeat;
+// 	background-size    : cover;
+// 	background-position: center;
+// }
+
+.simple-social-icons {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+
+	h3 {
+		float: left;
+		padding-right: 1em;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	li {
+		margin: 0!important;
+		padding: .5em!important;
+	}
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $blue-highlight;
+		}
+	}
+}
+
+
 /* Archive Page Headers
 --------------------------------------------- */
 #archive-header {

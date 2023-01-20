@@ -302,7 +302,7 @@ unregister_sidebar( 'sidebar-alt' );
 
 // Remove unused sidebars
 unregister_sidebar( 'sidebar' );
-unregister_sidebar( 'sidebar-alt' );
+// unregister_sidebar( 'sidebar-alt' );
 
 // Remove layouts
 genesis_unregister_layout( 'content-sidebar-sidebar' );
@@ -385,9 +385,39 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
 
-	// Social Widget
+    // Footer Widgets
     register_sidebar([
-        'name'          => __('Social Widget', 'genesis'),
+        'name'          => __('Footer | Logo', 'genesis'),
+        'id'            => 'sidebar-footer-logo'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer | Contact', 'genesis'),
+        'id'            => 'sidebar-footer-contact'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer | Form', 'genesis'),
+        'id'            => 'sidebar-footer-search'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer | Nav - General', 'genesis'),
+        'id'            => 'sidebar-footer-nav-general'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer | Nav - Admission', 'genesis'),
+        'id'            => 'sidebar-footer-nav-admission'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer | Nav - Programs', 'genesis'),
+        'id'            => 'sidebar-footer-nav-programs'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer | Bottom Row', 'genesis'),
+        'id'            => 'sidebar-footer-bottom-row'
+    ] + $config);
+
+    // Social Widget
+    register_sidebar([
+        'name'          => __('Social Share', 'genesis'),
         'id'            => 'lcad-social-share'
     ] + $config);
     // register_sidebar([
@@ -407,28 +437,6 @@ add_action('widgets_init', function () {
     //     'id'            => 'sidebar-5'
     // ] + $config);
 
-    // // Footer Widgets 1 - 5
-    // register_sidebar([
-    //     'name'          => __('Footer 1', 'sage'),
-    //     'id'            => 'sidebar-footer-1'
-    // ] + $config);
-    // register_sidebar([
-    //     'name'          => __('Footer 2', 'sage'),
-    //     'id'            => 'sidebar-footer-2'
-    // ] + $config);
-    // register_sidebar([
-    //     'name'          => __('Footer 3', 'sage'),
-    //     'id'            => 'sidebar-footer-3'
-    // ] + $config);
-    // register_sidebar([
-    //     'name'          => __('Footer 4', 'sage'),
-    //     'id'            => 'sidebar-footer-4'
-    // ] + $config);
-    // register_sidebar([
-    //     'name'          => __('Footer 5', 'sage'),
-    //     'id'            => 'sidebar-footer-5'
-    // ] + $config);
-
     // // Blog Widgets 1 - 2
     // register_sidebar([
     //     'name'          => __('Blog Author', 'sage'),
@@ -444,10 +452,14 @@ add_action('widgets_init', function () {
 function register_menus() { 
     register_nav_menus(
         array(
+            'header-btn' => 'Header Button',
             'quick-links' => 'Quick Links',
             'academics-menu' => 'Academics',
 			'admissions-menu' => 'Admission',
 			'alumni-student-life-menu' => 'Alumni and Student Life',
+            'footer-general-menu' => 'Footer - General',
+            'footer-admissions-menu' => 'Footer - Admissions',
+            'footer-programs-menu' => 'Footer - Programs',
         )
     ); 
 }

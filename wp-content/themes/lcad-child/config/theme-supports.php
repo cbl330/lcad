@@ -33,8 +33,8 @@ return [
 		'search-form',
 		'skip-links',
 	],
-	'genesis-after-entry-widget-area' => '',
-	'genesis-footer-widgets'          => 3,
+	// 'genesis-after-entry-widget-area' => '',
+	// 'genesis-footer-widgets'          => 6,
 	'genesis-menus'                   => [
 		'primary'   => __( 'Header Menu', 'genesis-sample' ),
 		'secondary' => __( 'Footer Menu', 'genesis-sample' ),

@@ -1,84 +1,281 @@
 
-.footer-temp {
-	width: 100%;
-	height: 100%;
-	// max-height: 786px;
-	max-width: 1920px;
-	// background-color: $navy;
-	background-image   : url("images/footer-desktop.jpg");
-	background-repeat  : no-repeat;
-	background-size    : cover;
-	background-position: center;
+// .footer-temp {
+// 	width: 100%;
+// 	height: 100%;
+// 	// max-height: 786px;
+// 	max-width: 1920px;
+// 	// background-color: $navy;
+// 	background-image   : url("images/footer-desktop.jpg");
+// 	background-repeat  : no-repeat;
+// 	background-size    : cover;
+// 	background-position: center;
 
 
-	@media only screen and (max-width: 767px) {
-		// width: 100%;
-		height: 1750px;
-		// max-height: 1601px;
-		max-width: 767px;
-		// background-color: $navy;
-		background-image   : url("images/footer-mobile.jpg");
-		// background-repeat  : no-repeat;
-		// background-size    : cover;
-		// background-position: center;
+// 	@media only screen and (max-width: 767px) {
+// 		// width: 100%;
+// 		height: 1750px;
+// 		// max-height: 1601px;
+// 		max-width: 767px;
+// 		// background-color: $navy;
+// 		background-image   : url("images/footer-mobile.jpg");
+// 		// background-repeat  : no-repeat;
+// 		// background-size    : cover;
+// 		// background-position: center;
+// 	}
+// }
+
+
+
+// /* Footer Widgets
+// -------------------------------------------------- */
+// .footer-widgets {
+// 	display: none;
+// 	clear: both;
+// 	padding: 60px 0;
+// 	border-top: $border-width $border-style $border-color;
+// 	background-color: $footer-widgets--background-color;
+// 	font-size: $footer-widgets--font-size;
+
+// 	.wrap {
+// 		margin-right: auto;
+// 		margin-left: auto;
+
+// 		@media only screen and (min-width: $standard-screen-width) {
+// 			max-width: 1140px;
+// 		}
+// 	}
+
+// 	.widget:last-child {
+// 		margin-bottom: 0;
+// 	}
+// }
+
+// .footer-widget-area {
+// 	margin-bottom: 40px;
+// 	padding-right: 30px;
+// 	padding-left: 30px;
+
+// 	@media only screen and (min-width: $standard-screen-width) {
+// 		float: left;
+// 		width: 33.33%; /* fallback for older browsers */
+// 		width: calc(100% / 3);
+// 		margin-bottom: 0;
+// 	}
+
+// 	&:last-child {
+// 		margin-bottom: 0;
+// 	}
+// }
+
+// /* Site Footer
+// --------------------------------------------------- */
+
+// .site-footer {
+// 	padding: 30px;
+// 	border-top: $border-width $border-style $border-color;
+// 	background-color: #fff;
+// 	font-size: $site-footer--font-size;
+// 	line-height: $line-height--medium;
+// 	text-align: center;
+
+// 	p {
+// 		margin-bottom: 0;
+// 	}
+// }
+
+#lcad-footer {
+	padding: 4em 0 6em;
+	background-color: $black;
+
+	.footer-container {
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
 	}
-}
 
+	.logo-wrap {
+		max-width: 110px;
+		max-height: 43px;
+		padding-bottom: 4.5em;
+	}
 
+	.contact-wrap {
+		max-width: 228px;
+	}
 
-/* Footer Widgets
--------------------------------------------------- */
-.footer-widgets {
-	display: none;
-	clear: both;
-	padding: 60px 0;
-	border-top: $border-width $border-style $border-color;
-	background-color: $footer-widgets--background-color;
-	font-size: $footer-widgets--font-size;
+	.social-wrap {
+		padding: 2em 0 5em;
+	}
 
-	.wrap {
-		margin-right: auto;
-		margin-left: auto;
+	.lcad-address,
+	.lcad-phone {
+		display: flex;
+		padding: .5em 0;
+	}
 
-		@media only screen and (min-width: $standard-screen-width) {
-			max-width: 1140px;
+	.address,
+	.phone {
+		padding-left: 1em;
+		color: $light-grey;
+	}
+
+	.dashicons {
+		font-size: 1.5em;
+	}
+
+	.simple-social-icons {
+		justify-content: start;
+	}
+
+	.gform_wrapper {
+		max-width: 640px;
+	}
+
+	.gform_widget {
+		h3 {
+			padding-bottom: 1.5em;
+			font-size: 16px;
+			color: $light-grey;
 		}
 	}
 
-	.widget:last-child {
-		margin-bottom: 0;
-	}
-}
-
-.footer-widget-area {
-	margin-bottom: 40px;
-	padding-right: 30px;
-	padding-left: 30px;
-
-	@media only screen and (min-width: $standard-screen-width) {
-		float: left;
-		width: 33.33%; /* fallback for older browsers */
-		width: calc(100% / 3);
-		margin-bottom: 0;
+	.gform_footer {
+		display: none;
 	}
 
-	&:last-child {
-		margin-bottom: 0;
+	input {
+		padding-bottom: 20px;
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid $light-grey;
 	}
-}
 
-/* Site Footer
---------------------------------------------------- */
-
-.site-footer {
-	padding: 30px;
-	border-top: $border-width $border-style $border-color;
-	background-color: #fff;
-	font-size: $site-footer--font-size;
-	line-height: $line-height--medium;
-	text-align: center;
-
-	p {
-		margin-bottom: 0;
+	input[type=text],
+	input[type=email],
+	input[type=tel] {
+		color: $white;
 	}
+
+	input::placeholder {
+		color: $white;
+		opacity: .2;
+	}
+
+	.lcad-form-btn-wrap {
+		.form-btn {
+			width: 100%;
+			height: 100%;
+			padding: .5em 1.5em;
+			background-color: $white;
+			color: $black;
+			font-weight: 600;
+			border-radius: 5px;
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				background-color: $blue-highlight;
+				color: $white;
+			}
+		}
+	}
+
+	.nav-wrap {
+		li {
+			margin-bottom: .75em;
+		}
+
+		a {
+			font-size: 16px;
+			color: $light-grey;
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				color: $blue-highlight;
+			}
+		}
+	}
+
+	.widget_nav_menu {
+		h3 {
+			padding-bottom: 1em;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 2px;
+		}
+	}
+
+	.general-nav-wrap {
+		padding-bottom: 1.5em;
+	}
+
+	.bottom-row-container {
+		max-width: 500px;
+		color: $light-grey;
+	}
+
+	.copyright {
+		padding-bottom: 1.5em;
+	}
+
+	.textwidget {
+		a {
+			color: $light-grey;
+			text-decoration: underline;
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				color: $blue-highlight;
+			}
+		}
+	}
+	
+	// ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {
+		padding: 4em 2em;
+
+		.bottom-row-container {
+			max-width: 100vw;
+		}
+    }
+
+	// ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+		padding: 4em 1.5em;
+	
+		.footer-container {
+			max-width: 100vw;
+		}
+	
+		.social-wrap {
+			padding: 2em 0 2em;
+		}
+	
+		.simple-social-icons {
+			display: block;
+			justify-content: start;
+
+			.aligncenter {
+				padding-top: .5em;
+				text-align: left;
+			}
+
+			li {
+				margin: 0!important;
+				padding: 0 .75em 0 0!important;
+			}
+		}
+	
+		.lcad-form-btn-wrap {
+			padding-top: 1em;
+		}
+
+		.general-nav-wrap,
+		.programs-nav-wrap {
+			padding-top: 2em;
+		}
+    }
 }
