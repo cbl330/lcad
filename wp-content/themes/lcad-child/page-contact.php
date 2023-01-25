@@ -11,7 +11,7 @@
 
             <!-- Start Content Container -->
             <?php while (have_rows('hero_content')) : the_row();?>
-                <div class="hero-content-container content-container col-9">
+                <div class="hero-content-container content-container col-md-12 col-lg-9">
                     <!-- Title Wrap -->
                     <div class="hero-title-wrap title-wrap">
                         <?php if (get_sub_field('hero_section_header')): ?>
@@ -32,7 +32,7 @@
 
             <!-- Start Contact Info Container -->
             <?php while (have_rows('hero_contact')) : the_row();?>
-                <div class="hero-info-container info-container col-3 ms-auto">
+                <div class="hero-info-container info-container col-md-12 col-lg-3 ms-auto">
                     
                     <!-- Address Wrap -->
                     <?php if (get_sub_field('lcad_address')): ?>
@@ -104,7 +104,7 @@
                 <!-- Start Card -->
                 <?php while (have_rows('contacts_repeater')) : the_row();?>
                     <!-- <div class="contact-card-container col-3 align-items-center"> -->
-                    <div class="contact-card-container col-3">
+                    <div class="contact-card-container col-xs-12 col-md-4 col-lg-3">
                         <div class="contact-card row">
 
                             <!-- Start Department Wrap -->

@@ -1,4 +1,4 @@
-<div id="lcad-news" class="recent-news-container post-container container-fluid">
+<section id="recent-news" class="recent-news-container post-container container-fluid">
     <div clas="post-wrapper">
 
         <!-- Start Recent News Header -->
@@ -32,4 +32,4 @@
         </div>
 
     </div>
-</div>
+</section>

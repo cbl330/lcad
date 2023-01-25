@@ -26,31 +26,47 @@
         &:before {
             position: absolute;
             content: '';
-            // top: 0;
             height: 50%;
             bottom: 0;
             right: 0;
             left: 0;
             background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #ffffff 100%);
         }
+
+        img {
+            max-height: 1080px;
+            object-fit: cover;
+        }
     }
 
-    .info-card-slider {
+    .info-card-container {
         position: absolute;
         width: 100%;
         max-width: 1446px;
-        bottom: 140px;
+        top: 370px;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .info-card-slide {
-        margin: 0 22px;
+    .info-card {
+        width: auto;
+        max-width: 450px;
+        padding: 0;
         background-color: $white;
         border-radius: 5px;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+        }
     }
 
-    .slide-image {
+    .card-link {
+        padding: 0;
+    }
+
+    .card-image {
         width: 100%;
         height: 100%;
         max-width: 450px;
@@ -60,8 +76,8 @@
         border-radius: 5px 5px 0 0;
     }
 
-    .slide-content {
-        padding: 1em;
+    .card-content {
+        padding: 1.5em;
     }
 
     .card-title,
@@ -72,11 +88,79 @@
     .card-title {
         padding-bottom: 1em;
         font-size: 21px;
+        font-weight: 600;
+    }
+
+    .card-details {
+        color: $mid-grey;
     }
 
     .card-btn {
+        margin-top: auto;
         padding-top: 2em;
         text-decoration: underline;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {    
+        .page-tag {
+            top: 180px;
+        }
+    
+        .info-card-container {
+            max-width: 100%;
+            top: 370px;
+            left: 0;
+            transform: translateX(2%);
+        }
+    
+        .info-card {
+            max-width: 550px;
+            margin: 1em auto;
+        }
+    
+        .card-image {
+            max-width: 550px;
+            max-height: 350px;
+        }
+    
+        .card-content {
+            padding: 2.25em;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        .page-tag {
+            top: 120px;
+        }
+    
+        .post-title {
+            padding: .25em .5em;
+        }
+    
+        .section-background {    
+            img {
+                height: 100vh;
+            }
+        }
+    
+        .info-card-container {
+            width: 100%;
+            max-width: 100%;
+            top: 310px;
+            padding: 0 1em;
+            left: 0;
+            transform: translateX(2%);
+        }
+    
+        .info-card {
+            height: 100%;
+            max-width: 100%;
+            margin: 1em auto;
+        }
     }
 }
 
@@ -98,21 +182,57 @@
     }
 
     .logo-title {
-        padding-bottom: 1.5rem;
+        padding-bottom: 1em;
         font-size: 48px;
         font-weight: 600;
     }
 
     .logo-container {
-        padding: 2rem 0 2rem 0;
+        padding: 3em 0;
     }
 
-    .column-5 {
+    .column {
         flex: 1 0 20%;
     }
 
     .logo {
         padding: 1em 0;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {
+        margin-top: 107em;
+        padding: 0 1em;
+
+        .logo-container {
+            max-width: 100%;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        margin-top: 70em;
+        padding: 0 1em;
+
+        .logo-container {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+        .logo-title {
+            padding-bottom: 1em;
+            font-size: 36px;
+        }
+    
+        .logo-container {
+            padding: 3em 0;
+        }
+    
+        .column {
+            flex: 1 0 50%;
+        }
     }
 }
 
@@ -120,100 +240,114 @@
 // END LOGO SECTION
 // =================================================================
 
-// =================================================================
-// START STAFF DIRECTORY SECTION
-// =================================================================
+// // =================================================================
+// // START STAFF DIRECTORY SECTION
+// // =================================================================
 
-#staff-directory {
+// #staff-directory {
 
-    .post-wrapper {
-        width: 100%;
-        max-width: 144px;
-        margin: 0 auto;
-    }
+//     .post-wrapper {
+//         width: 100%;
+//         max-width: 144px;
+//         margin: 0 auto;
+//     }
 
-    .lcad-title {
-        padding-bottom: 3rem;
-        font-size: 48px;
-    }
+//     .lcad-title {
+//         padding-bottom: 3rem;
+//         font-size: 48px;
+//     }
 
-    .lcad-staff {
-        padding: 23px;
-    }
+//     .lcad-staff {
+//         padding: 23px;
+//     }
 
-    .lcad-staff-container {
-        &:hover {
-            // .entry-title {
-            //     transition: all .3s ease-in-out;
-            //     color: pink;
-            // }
+//     .lcad-staff-container {
+//         &:hover {
+//             // .entry-title {
+//             //     transition: all .3s ease-in-out;
+//             //     color: pink;
+//             // }
 
-            .post-content-container {
-                transition: all .3s ease-in-out;
-            }
+//             .post-content-container {
+//                 transition: all .3s ease-in-out;
+//             }
 
-            .post-content-wrap-hover {
-                display: block;
-            }
-        }
-    }
+//             .post-content-wrap-hover {
+//                 display: block;
+//             }
+//         }
+//     }
 
-    .office-hours,
-    .staff-email,
-    .staff-extension {
-        color: $white;
-    }
+//     .office-hours,
+//     .staff-email,
+//     .staff-extension {
+//         color: $white;
+//     }
 
-    .lcad-staff-container {
-        position: relative;
-        // padding: 23px;
-        border-radius: 5px;
+//     .lcad-staff-container {
+//         position: relative;
+//         // padding: 23px;
+//         border-radius: 5px;
 
-        &:before {
-            position: absolute;
-            content: "";
-            // top: 0;
-            height: 50%;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
-        }
-    }
+//         &:before {
+//             position: absolute;
+//             content: "";
+//             // top: 0;
+//             height: 50%;
+//             bottom: 0;
+//             right: 0;
+//             left: 0;
+//             background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+//         }
+//     }
 
-    .post-content-container {
-        position: absolute;
-        // top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 2.5rem;
-    }
+//     .post-content-container {
+//         position: absolute;
+//         // top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         padding: 2.5rem;
+//     }
 
-    .post-content-wrap-hover {
-        display: none;
-    }
+//     .post-content-wrap-hover {
+//         display: none;
+//     }
 
-    .entry-title {
-        margin: 0;
-        padding-bottom: .75rem;
-        font-size: 21px;
-        color: $white;
-    }
+//     .entry-title {
+//         margin: 0;
+//         padding-bottom: .75rem;
+//         font-size: 21px;
+//         color: $white;
+//     }
 
-    .staff-department {
-        font-size: 12px;
-        color: $white;
-        text-transform: uppercase;
-    }
+//     .staff-department {
+//         font-size: 12px;
+//         color: $white;
+//         text-transform: uppercase;
+//     }
 
-    .post-image-wrap {
-        img {
-            width: 100%;
-        }
-    }
-}
+//     .post-image-wrap {
+//         img {
+//             width: 100%;
+//         }
+//     }
 
-// =================================================================
-// END STAFF DIRECTORY SECTION
-// =================================================================
+//     // ---------------------------------------------------------------------------
+//     // Tablet
+//     // ---------------------------------------------------------------------------
+//     @media (min-width:768px) and (max-width:1300px) {    
+
+//     }
+
+//     // ---------------------------------------------------------------------------
+//     // Mobile
+//     // ---------------------------------------------------------------------------
+//     @media only screen and (max-width:767px) {
+
+//     }
+// }
+
+// // =================================================================
+// // END STAFF DIRECTORY SECTION
+// // =================================================================

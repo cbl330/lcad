@@ -1,8 +1,11 @@
-<?php 
+<?php
+    // $categoryName = 'sculpture';
+    $categoryName = 'staff-member';
+    
     $args = array(
         'post_type' => 'staff',
         'post_status' => 'publish',
-        'category_name' => 'staff member',
+        'category_name' => $categoryName,
         'posts_per_page' => 8,
     );
 
@@ -14,7 +17,7 @@
             $arr_posts->the_post();
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="lcad-staff staff-directory col-3" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="lcad-staff staff-directory col-xs-12 col-md-6 col-lg-3" <?php post_class(); ?>>
 
     <div class="lcad-staff-container">
         <!-- Start Post Image -->
@@ -31,9 +34,9 @@
             <!-- Start Post Content - Visible -->
             <div class="post-content-wrap">
                 <!-- Post Title -->
-                <header class="entry-header">
+                <div class="entry-header">
                     <h1 class="entry-title"><?php the_title(); ?></h1>
-                </header>
+                </d>
                 <!-- Department -->
                 <?php if (get_field('degree_department')): ?>
                     <div class="staff-department department">

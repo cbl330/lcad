@@ -25,21 +25,21 @@
 
         <!-- Start Info Cards -->
         <?php if( have_rows('information_cards') ): ?>
-            <div class="slider-cell info-card-slider row">
+            <div class="card-cell info-card-container row">
                 <?php while (have_rows('information_cards')) : the_row(); ?>
                 
-                        <!-- Start Slide -->
-                        <div class="info-card-slide slide container-fluid col">
-                            <a href="<?php the_field('card_link') ?>" class="card-link">
-                                <!-- Slide Image -->
-                                <div class="slide-image-wrap row">
+                        <!-- Start Card -->
+                        <div class="info-card container-fluid col-xs-12 col-lg-3 d-flex flex-column">
+                            <!-- <a href="<?php //the_field('card_link') ?>" class="card-link"> -->
+                                <!-- Card Image -->
+                                <div class="card-image-wrap">
                                     <?php $image = get_sub_field('card_image'); ?>
-                                    <img class="slide-image" src="<?php echo $image['sizes']['info-card']; ?>">
+                                    <img class="card-image" src="<?php echo $image['sizes']['info-card']; ?>">
                                 </div>
 
-                                <!-- Slide Content -->
+                                <!-- Card Content -->
                                 <?php while (have_rows('card_content')) : the_row();?>
-                                    <div class="slide-content row">
+                                    <div class="card-content d-flex flex-column flex-grow-1">
                                         <!-- Card Header -->
                                         <?php if( get_sub_field('card_header') ): ?>
                                             <div class="card-title">
@@ -49,21 +49,20 @@
                                         <!-- Card Details -->
                                         <?php if( get_sub_field('card_details') ): ?>
                                             <div class="card-details">
-                                            <?php the_sub_field('card_details') ?>
+                                                <?php the_sub_field('card_details') ?>
                                             </div>
                                         <?php endif; ?>
                                         <!-- Card Button -->
                                         <?php if( get_sub_field('card_button_text') ): ?>
-                                            <div class="card-btn">
+                                            <a href="<?php the_field('card_link') ?>" class="card-link card-btn">
                                                 <?php the_sub_field('card_button_text') ?>
-                                            </div>
+                                            </a>
                                         <?php endif; ?>
                                     </div>
                                 <?php endwhile ?>
-                            </a>
+                            <!-- </a> -->
                         </div>
-                        <!-- End Slide -->
-                        <?php //reset_rows(); ?>
+                        <!-- End Card -->
                 <?php endwhile ?>
             </div>
         <?php endif; ?>
@@ -89,15 +88,15 @@
         <div class="logo-header">
             <!-- Title -->
             <?php if (get_field('logo_section_header')) : ?>
-                <div class="logo-title">
+                <h2 class="logo-title">
                     <?php the_field('logo_section_header'); ?>
-                </div>
+                </h2>
             <?php endif; ?>
             <!-- Sub Title -->
             <?php if (get_field('logo_section_header')) : ?>
-                <div class="logo-sub-title">
+                <h3 class="logo-sub-title">
                     <?php the_field('logo_section_sub_header'); ?>
-                </div>
+                </h3>
             <?php endif; ?>
         </div>
         <!-- End Section Header -->
@@ -107,7 +106,7 @@
             <div class="logo-container row align-items-center">
                 <?php while (have_rows('logo_repeater')) : the_row();?>
                     <!-- Logos -->
-                    <div class="logo-wrap column-5">
+                    <div class="logo-wrap column">
                         <?php $image = get_sub_field('logo'); ?>
                         <img class="logo" src="<?php echo $image['sizes']['program-logo']; ?>">
                     </div>
@@ -132,9 +131,7 @@
 <!-- START STAFF DIRECTORY SECTION -->
 <!-- ========================================================================= -->
 
-<section id="staff-directory">
-    <?php get_template_part('resources/partials/staff', 'directory'); ?>
-</section>
+<?php get_template_part('resources/partials/staff', 'directory'); ?>
 
 <!-- ========================================================================= -->
 <!-- END STAFF DIRECTORY SECTION -->
@@ -156,9 +153,7 @@
 <!-- START LCAD NEWS SECTION -->
 <!-- ========================================================================= -->
 
-<section id="recent-news">
-    <?php get_template_part('resources/partials/recent', 'news'); ?>
-</section>
+<?php get_template_part('resources/partials/recent', 'news'); ?>
 
 <!-- ========================================================================= -->
 <!-- END LCAD NEWS SECTION -->
@@ -168,69 +163,7 @@
 <!-- START FAQ SECTION -->
 <!-- ========================================================================= -->
 
-<section id="lcad-faq">
-
-<?php
-
-
-// *Repeater
-// bootstrap_accordion_repeater
-// *Sub-Fields
-// accordion_header
-// accordion_content
-
-// check if the repeater field has rows of data
-if( have_rows('faq_repeater') ):
-	$i = 1; // Set the increment variable
-	
-	echo '<div id="accordion">';
-
- 	// loop through the rows of data for the tab header
-    while ( have_rows('faq_repeater') ) : the_row();
-		
-		$header = get_sub_field('question');
-		$content = get_sub_field('answer');
-
-	?>
-		
-        <div class="card">
-
-            <div class="card-header" id="heading-<?php echo $i;?>">
-                <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-<?php echo $i;?>" aria-expanded="true" aria-controls="collapse-<?php echo $i;?>">
-                    <?php echo $header; ?>
-                </button>
-                </h5>
-            </div>
-        
-            <div id="collapse-<?php echo $i;?>" class="collapse" aria-labelledby="heading-<?php echo $i;?>" data-parent="#accordion">
-                <div class="card-body">
-                <?php echo $content; ?>
-                </div>
-            </div>
-        </div>    
-		
-		
-	<?php $i++; // Increment the increment variable
-		
-	endwhile; //End the loop 
-	
-	echo '</div>';
-
-else :
-
-    // no rows found
-    echo 'Come back tomorrow';
-
-endif;
-
-// var_dump('faq_repeater');
-// var_dump('faq_repeater');
-
-?>
-
-    <?php //get_template_part('resources/partials/general', 'faq'); ?>
-</section>
+<?php //get_template_part('resources/partials/general', 'faq'); ?>
 
 <!-- ========================================================================= -->
 <!-- END FAQ SECTION -->
@@ -240,9 +173,7 @@ endif;
 <!-- START INQUIRY SECTION -->
 <!-- ========================================================================= -->
 
-<section id="recent-news">
-    <?php //get_template_part('resources/partials/recent', 'news'); ?>
-</section>
+<?php get_template_part('resources/partials/student', 'inquiry'); ?>
 
 <!-- ========================================================================= -->
 <!-- END INQUIRY SECTION -->

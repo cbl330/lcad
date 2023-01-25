@@ -351,9 +351,7 @@
 <!-- START RECENT NEWS SECTION -->
 <!-- ========================================================================= -->
 
-<section id="recent-news">
-    <?php get_template_part('resources/partials/recent', 'news'); ?>
-</section>
+<?php get_template_part('resources/partials/recent', 'news'); ?>
 
 <!-- ========================================================================= -->
 <!-- END RECENT NEWS SECTION -->

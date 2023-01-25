@@ -1,32 +1,4 @@
-<!-- <div id="general-faq" class="faq-container container-fluid">
-    <div clas="faq-wrap row align-items-center">
-        
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-
-                    </button>
-                </h2>
-
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> -->
-
-
-
-
-
 <?php
-
-
 // *Repeater
 // bootstrap_accordion_repeater
 // *Sub-Fields
@@ -36,47 +8,61 @@
 // check if the repeater field has rows of data
 if( have_rows('faq_repeater') ):
 	$i = 1; // Set the increment variable
+?>
 	
-	echo '<div id="accordion">';
+    <section id="lcad-faq" class="container-fluid">
+        <div class="faq-container">
 
- 	// loop through the rows of data for the tab header
-    while ( have_rows('faq_repeater') ) : the_row();
-		
-		$header = get_sub_field('question');
-		$content = get_sub_field('answer');
+            <!-- Start Accordion -->
+            <div id="accordion-general" class="accordion row">
 
-	?>
-		
-        <div class="card">
+                <?php
+                // loop through the rows of data for the tab header
+                while ( have_rows('faq_repeater') ) : the_row();
+                    $header = get_sub_field('question');
+                    $content = get_sub_field('answer');
 
-            <div class="card-header" id="heading-<?php echo $i;?>">
-                <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-<?php echo $i;?>" aria-expanded="true" aria-controls="collapse-<?php echo $i;?>">
-                    <?php echo $header; ?>
-                </button>
-                </h5>
+                    if ( $i <= 5 ) {
+                        $class = 'left-panel';
+                        // $textAlign = 'flex-sm-end';
+                        // $textOrder = 'flex-sm-first';
+                        // $imageOrder = 'flex-sm-last';
+                    } else {
+                        $class = 'right-panel';
+                        // $textAlign = 'flex-sm-start';
+                        // $textOrder = 'flex-sm-last';
+                        // $imageOrder = 'flex-sm-first';
+                    }
+                ?>
+                
+                <!-- Start Left Panel -->
+                <div class="accordion-item col-6 <?php echo $class; ?>">
+
+                    <h5 id="heading-<?php echo $i; ?>" class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $i; ?>">
+                            <?php echo $header; ?>
+                        </button>
+                    </h5>
+                
+                    <div id="collapse-<?php echo $i; ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordion-general">
+                        <div class="accordion-body">
+                            <?php echo $content; ?>
+                        </div>
+                    </div>
+
+                </div> 
+                <!-- End Left Panel -->
+                
+                
+                <?php
+                    $i++; // Increment the increment variable
+                    endwhile; //End the loop
+                // endif;
+                ?>
+
             </div>
-        
-            <div id="collapse-<?php echo $i;?>" class="collapse" aria-labelledby="heading-<?php echo $i;?>" data-parent="#accordion">
-                <div class="card-body">
-                <?php echo $content; ?>
-                </div>
-            </div>
-        </div>    
-		
-		
-	<?php $i++; // Increment the increment variable
-		
-	endwhile; //End the loop 
-	
-	echo '</div>';
+            <!-- End Accordion -->
 
-else :
-
-    // no rows found
-    echo 'Come back tomorrow';
-
-endif;
-
-// var_dump('faq_repeater');
-// var_dump('faq_repeater');
+        </div>
+    </section>
+<?php endif; ?>
