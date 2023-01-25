@@ -154,8 +154,53 @@
                 <!-- End Slider Caption -->
 
             </div>
-        <?php endwhile ?>
+        <?php endwhile; ?>
         <!-- End Navigation Cards -->
+
+                <!-- Start Info Cards -->
+                <?php if( have_rows('information_cards_admissions') ): ?>
+            <div class="card-cell info-card-container row">
+                <?php while (have_rows('information_cards_admissions')) : the_row(); ?>
+                
+                        <!-- Start Card -->
+                        <div class="info-card container-fluid col-xs-12 col-lg-3 d-flex flex-column">
+                            <!-- <a href="<?php //the_field('card_link') ?>" class="card-link"> -->
+                                <!-- Card Image -->
+                                <div class="card-image-wrap">
+                                    <?php $image = get_sub_field('card_image_admissions'); ?>
+                                    <img class="card-image" src="<?php echo $image['sizes']['info-card']; ?>">
+                                </div>
+
+                                <!-- Card Content -->
+                                <?php while (have_rows('card_content_admissions')) : the_row();?>
+                                    <div class="card-content d-flex flex-column flex-grow-1">
+                                        <!-- Card Header -->
+                                        <?php if( get_sub_field('card_header_admissions') ): ?>
+                                            <div class="card-title">
+                                                <?php the_sub_field('card_header_admissions') ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <!-- Card Details -->
+                                        <?php if( get_sub_field('card_details_admissions') ): ?>
+                                            <div class="card-details">
+                                                <?php the_sub_field('card_details_admissions') ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <!-- Card Button -->
+                                        <?php if( get_sub_field('card_button_text_admissions') ): ?>
+                                            <a href="<?php the_field('card_link_admissions') ?>" class="card-link card-btn">
+                                                <?php the_sub_field('card_button_text_admissions') ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endwhile ?>
+                            <!-- </a> -->
+                        </div>
+                        <!-- End Card -->
+                <?php endwhile ?>
+            </div>
+        <?php endif; ?>
+        <!-- End Info Cards -->
     </div>
 </section>
 
@@ -167,40 +212,7 @@
 <!-- START FAQ SECTION -->
 <!-- ========================================================================= -->
 
-<section>
-    <div>
-        <div>
-
-            <!-- Start Section Header Container -->
-            <?php while (have_rows('experience_content')) : the_row();?>
-                <div>
-                    <!-- Section Tag -->
-                    <?php if (get_sub_field('experience_tag')): ?>
-                        <div>
-                            <h4><?php the_sub_field('experience_tag') ?></h4>
-                        </div>
-                    <?php endif; ?>
-                    <!-- Section Title -->
-                    <?php if (get_sub_field('experience_header')): ?>
-                        <div>
-                            <h2><?php the_sub_field('experience_header') ?></h2>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            <?php endwhile ?>
-            <!-- End Section Header Container -->
-
-            <!-- Start Accordion Container -->
-            <?php while (have_rows('experience_content')) : the_row();?>
-                <div>
-                    <!-- Accordion -->
-                </div>
-            <?php endwhile ?>
-            <!-- End Accordion Container -->
-
-        </div>
-    </div>
-</section>
+<?php get_template_part('resources/partials/general', 'faq'); ?>
 
 <!-- ========================================================================= -->
 <!-- END FAQ SECTION -->

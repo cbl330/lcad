@@ -4566,6 +4566,63 @@ ul {
   border-left: 1px solid #fff;
   margin: 2rem 1.2rem 2rem 1.2rem;
 }
+#admissions-hero .info-card-container {
+  position: absolute;
+  width: 100%;
+  max-width: 1446px;
+  top: 370px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#admissions-hero .info-card {
+  width: auto;
+  max-width: 450px;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.06);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#admissions-hero .info-card:hover {
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+#admissions-hero .card-link {
+  padding: 0;
+}
+#admissions-hero .card-image {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  border-radius: 5px 5px 0 0;
+}
+#admissions-hero .card-content {
+  padding: 1.5em;
+}
+#admissions-hero .card-title,
+#admissions-hero .card-details {
+  color: #333;
+}
+#admissions-hero .card-title {
+  padding-bottom: 1em;
+  font-size: 21px;
+  font-weight: 600;
+}
+#admissions-hero .card-details {
+  color: #777;
+}
+#admissions-hero .card-btn {
+  margin-top: auto;
+  padding-top: 2em;
+  text-decoration: underline;
+}
 
 div::-webkit-scrollbar {
   width: 3px;

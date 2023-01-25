@@ -66,8 +66,6 @@
                 <?php endwhile ?>
             </div>
         <?php endif; ?>
-
-        <?php //reset_rows(); ?>
         <!-- End Info Cards -->
 
     </div>
