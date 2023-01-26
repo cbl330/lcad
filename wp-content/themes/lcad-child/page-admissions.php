@@ -158,38 +158,38 @@
         <!-- End Navigation Cards -->
 
                 <!-- Start Info Cards -->
-                <?php if( have_rows('information_cards_admissions') ): ?>
+                <?php if( have_rows('information_cards_admissions_1') ): ?>
             <div class="card-cell info-card-container row">
-                <?php while (have_rows('information_cards_admissions')) : the_row(); ?>
+                <?php while (have_rows('information_cards_admissions_1')) : the_row(); ?>
                 
                         <!-- Start Card -->
                         <div class="info-card container-fluid col-xs-12 col-lg-3 d-flex flex-column">
                             <!-- <a href="<?php //the_field('card_link') ?>" class="card-link"> -->
                                 <!-- Card Image -->
                                 <div class="card-image-wrap">
-                                    <?php $image = get_sub_field('card_image_admissions'); ?>
+                                    <?php $image = get_sub_field('card_image_admissions_1'); ?>
                                     <img class="card-image" src="<?php echo $image['sizes']['info-card']; ?>">
                                 </div>
 
                                 <!-- Card Content -->
-                                <?php while (have_rows('card_content_admissions')) : the_row();?>
+                                <?php while (have_rows('card_content_admissions_1')) : the_row();?>
                                     <div class="card-content d-flex flex-column flex-grow-1">
                                         <!-- Card Header -->
-                                        <?php if( get_sub_field('card_header_admissions') ): ?>
+                                        <?php if( get_sub_field('card_header_admissions_1') ): ?>
                                             <div class="card-title">
-                                                <?php the_sub_field('card_header_admissions') ?>
+                                                <?php the_sub_field('card_header_admissions_1') ?>
                                             </div>
                                         <?php endif; ?>
                                         <!-- Card Details -->
-                                        <?php if( get_sub_field('card_details_admissions') ): ?>
+                                        <?php if( get_sub_field('card_details_admissions_1') ): ?>
                                             <div class="card-details">
-                                                <?php the_sub_field('card_details_admissions') ?>
+                                                <?php the_sub_field('card_details_admissions_1') ?>
                                             </div>
                                         <?php endif; ?>
                                         <!-- Card Button -->
-                                        <?php if( get_sub_field('card_button_text_admissions') ): ?>
-                                            <a href="<?php the_field('card_link_admissions') ?>" class="card-link card-btn">
-                                                <?php the_sub_field('card_button_text_admissions') ?>
+                                        <?php if( get_sub_field('card_button_text_admissions_1') ): ?>
+                                            <a href="<?php the_field('card_link_admissions_1') ?>" class="card-link card-btn">
+                                                <?php the_sub_field('card_button_text_admissions_1') ?>
                                             </a>
                                         <?php endif; ?>
                                     </div>

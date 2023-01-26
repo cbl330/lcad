@@ -95,21 +95,22 @@
 
 header {
 	border-bottom: 1px solid $white;
-	nav.navbar{
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s ease;
-	}
-	.navbar-inverse {
-		background-color:rgba(0,0,0,0);
-	}
-	nav.navbar.transparent {
-		background-color: #0c1f35;
-	}
+	// nav.navbar{
+	// 	-webkit-transition: all 0.4s ease;
+	// 	transition: all 0.4s ease;
+	// }
+	// .navbar-inverse {
+	// 	background-color:rgba(0,0,0,0);
+	// }
+	// nav.navbar.transparent {
+	// 	background-color: #0c1f35;
+	// }
 	nav {
+		background-color:#0c1f35 !important; // remove this in the future for transparency
 		padding: 1.5rem 6rem 1.5rem 6rem !important;
-		.navbar-toggler:focus, .navbar-toggler:hover {
-			background-color: transparent !important;
-		}
+		// .navbar-toggler:focus, .navbar-toggler:hover {
+		// 	background-color: transparent !important;
+		// }
 		.navbar-toggler:hover {
 			color: $blue-highlight;
 		}

@@ -460,6 +460,8 @@ function register_menus() {
             'footer-general-menu' => 'Footer - General',
             'footer-admissions-menu' => 'Footer - Admissions',
             'footer-programs-menu' => 'Footer - Programs',
+            'student-life-child-menu' => 'Student Life Child',
+            'admissions-child-menu' => 'Admissions Child',
         )
     ); 
 }
