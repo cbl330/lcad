@@ -23,7 +23,7 @@
 
         <!-- Pull in recent news articles -->
         <div class="recent-news-container row">
-            <?php get_template_part('resources/components/lcad', 'news'); ?>
+            <?php get_template_part('resources/components/lcad', 'general-news'); ?>
         </div>
 
         <!-- Button - Mobile -->

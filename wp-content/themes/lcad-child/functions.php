@@ -92,6 +92,7 @@ function setup_custom_image_sizes()
     add_image_size('student-work', 250, 154, true);
     add_image_size('info-card', 450, 275, true);
     add_image_size('staff-card', 326, 400, true);
+    add_image_size('alumni-card', 326, 400, true);    
     
     // Home Page
 	add_image_size('home-hero-slide', 500, 750, true);
@@ -103,13 +104,9 @@ function setup_custom_image_sizes()
     add_image_size('program-logo', 250, 99, true);
 	
     // Alumni Page
-    // add_image_size('tout-image', 446, 270, true);
-    // add_image_size('blog-large-custom', 677, 525, true);
-    // add_image_size('blog-small-custom', 479, 256, true);
-    // add_image_size('prime-image', 869, 600, true);
-    // add_image_size('acc-image', 425, 370, true);
-    // add_image_size('focus-image', 900, 550, true);
-    // add_image_size('icon-image', 60, 60, true);
+    add_image_size('hero-image', 960, 1010, true);
+    add_image_size('student-work-lg', 720, 440, true);
+    add_image_size('student-work-sm', 250, 154, true);
 
     // Contact Page
     add_image_size('contact-thumbnail', 256, 256, true);

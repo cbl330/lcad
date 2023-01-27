@@ -1063,6 +1063,10 @@ img.alignright,
   color: #2baad3;
 }
 
+.blue-text {
+  color: #2baad3;
+}
+
 /* Archive Page Headers
 --------------------------------------------- */
 #archive-header {
@@ -4631,4 +4635,15 @@ div::-webkit-scrollbar {
 
 div::-webkit-scrollbar-thumb {
   background-color: #fff;
+}
+
+#alumni-hero {
+  background-color: #0C1F35;
+}
+#alumni-hero .hero-title-wrap,
+#alumni-hero .hero-text-wrap {
+  color: #fff;
+}
+#alumni-hero .hero-title-wrap h1 {
+  font-size: 48px;
 }
