@@ -121,3 +121,20 @@ let alumniStudentLifeMenu = splitUl(alumniStudentLife);
 $('.academics-menu').html(academicsMenu);
 $('.admissions-menu').html(admissionsMenu);
 $('.alumni-student-life-menu').html(alumniStudentLifeMenu);
+
+// Student/Admissions child - adds underline to correct sub nav link
+let checkValue= window.location.href;
+$(".sub-nav-repeater li a").each(function(){
+    if ($(this).attr('href') == checkValue) {
+        $(this).addClass("active")
+        console.log('aaron test')
+    }  
+});
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "310px";
+}
+  
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
