@@ -1,0 +1,271 @@
+// =================================================================
+// START STUDENT STORIES SECTION
+// =================================================================
+
+#student-stories {
+    padding: 8em 0;
+    background-color: $light-grey;
+
+    .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .student-stories-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .stories-section-header {
+        padding: 0 0 2em 0;
+    }
+
+    .section-title {
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    .section-btn {
+        text-align: right;
+    }
+
+    .featured-story-container {
+        padding: 0 2.75em 0 0;
+    }
+
+    .featured-story-image-wrap,
+    .story-video-wrap {
+        position: relative;
+    }
+
+    .featured-story-image-wrap {
+        &:hover {
+            .featured-story-image {
+                border-radius: 5px;
+                box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+            }
+
+            .dashicons-controls-play {
+                color: $light-grey;
+            }
+        }
+    }
+
+    .featured-story-image {
+        border-radius: 5px;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        transition: all .3s ease-in-out;
+    }
+
+    .dashicons-controls-play {
+        position: absolute;
+        display: block;
+        width: auto;
+        left: 50%;
+        bottom: 50%;
+        font-size: 3em;
+        color: $white;
+        transform: translate(-50%, -50%);
+        transition: all .3 ease-in-out;
+    }
+
+    .featured-story-title-wrap {
+        padding: 2em 0 0 0;
+    }
+
+    .featured-story-title,
+    .story-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: $black;
+    }
+
+    .blue-text {
+        padding: 0 .125em;
+    }
+
+    .name-graphic {
+        width: auto;
+        height: 100%;
+        max-width: 130px;
+        max-height: 42px;
+        object-fit: cover;
+    }
+
+    .featured-story-sub,
+    .story-sub {
+        padding: .5em 0 1.5em 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .student-story-container {
+        padding: 0 0 0 2.75em;
+    }
+
+    .student-story-wrap:nth-child(1) {
+        padding: 0 0 2.5em 0;
+    }
+
+    .student-story-wrap:nth-child(2) {
+        padding: 2.5em 0;
+        border-top: 1px solid $grey;
+        border-bottom: 1px solid $grey;
+    }
+
+    .student-story-wrap:nth-child(3) {
+        padding: 2.5em 0 0 0;
+    }
+
+    .story-video-wrap {
+        &:hover {
+            .student-story-image {
+                box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+            }
+
+            .dashicons-controls-play {
+                color: $light-grey;
+            }
+        }
+    }
+
+    .story-content-wrap {
+        padding: 0 1.5em 0 0;
+    }
+
+    .student-story-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        max-height: 154px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        transition: all .3s ease-in-out;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {    
+        .student-stories-container {
+            max-width: 700px;
+        }
+    
+        .section-title {
+            font-size: 50px;
+        }
+    
+        .featured-story-container {
+            padding: 0 0 2.5em 0;
+        }
+    
+        .student-story-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 .5em;
+        }
+    
+        .student-story-wrap:nth-child(1) {
+            padding: 2.5em 0;
+            border-top: 1px solid $grey;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        padding: 3em 1em;
+    
+        .row,
+        .col-xs-12 {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    
+        .student-stories-container {
+            max-width: 100%;
+        }
+
+        .stories-section-header {
+            padding: 0 0 3em 0;
+        }
+    
+        .section-title {
+            padding-bottom: 1em;
+            font-size: 36px;
+        }
+    
+        .section-btn {
+            text-align: left;
+        }
+    
+        .featured-story-container {
+            display: none;
+        }
+    
+        .dashicons-controls-play {
+            position: absolute;
+            display: block;
+            width: auto;
+            left: 50%;
+            bottom: 50%;
+            font-size: 3em;
+            color: $white;
+            transform: translate(-50%, -50%);
+            transition: all .3 ease-in-out;
+        }
+    
+        .student-story-container {
+            width: 100%;
+            padding: 0;
+        }
+    
+        .student-story-wrap:nth-child(1) {
+            padding: 0 0 1em 0;
+        }
+    
+        .student-story-wrap:nth-child(2) {
+            padding: 1em 0;
+            border-top: none;
+            border-bottom: none;
+        }
+    
+        .student-story-wrap:nth-child(3) {
+            padding: 0 0 1em 0;
+        }
+    
+        .story-video-wrap {
+            &:hover {
+                .student-story-image {
+                    box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+                }
+    
+                .dashicons-controls-play {
+                    color: $light-grey;
+                }
+            }
+        }
+    
+        .story-content-wrap {
+            padding: 1.5em;
+            background-color: $white;
+            border-radius: 0 0 5px 5px;
+        }
+    
+        .student-story-image {
+            width: 100%;
+            height: 100%;
+            max-width: 335px;
+            max-height: 203px;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}
+
+// =================================================================
+// END STUDENT STORIES SECTION
+// =================================================================

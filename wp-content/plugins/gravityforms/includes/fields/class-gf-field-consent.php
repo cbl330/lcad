@@ -42,6 +42,15 @@ class GF_Field_Consent extends GF_Field {
 	public $checked_indicator_markup = '';
 
 	/**
+	 * Indicates if this field supports state validation.
+	 *
+	 * @since 2.5.11
+	 *
+	 * @var bool
+	 */
+	protected $_supports_state_validation = true;
+
+	/**
 	 * GF_Field_Consent constructor.
 	 *
 	 * @since 2.4
@@ -267,6 +276,32 @@ class GF_Field_Consent extends GF_Field {
 		}
 
 		return parent::get_description( $description, $css_class );
+	}
+
+	/**
+	 * If a field has a description, the aria-describedby attribute for the input field is returned.
+	 * This method is specific to the consent field since the consent description has a different ID pattern.
+	 *
+	 * @since 2.6.8
+	 *
+	 * @param array|string $extra_ids Any extra ids that should be added to the describedby attribute.
+	 *
+	 * @return string
+	 */
+	public function get_aria_describedby( $extra_ids = array() ) {
+
+		$describedby_ids = is_array( $extra_ids ) ? $extra_ids : explode( ' ', $extra_ids );
+
+		if ( $this->failed_validation ) {
+			$describedby_ids[] = "validation_message_{$this->formId}_{$this->id}";
+		}
+
+		if ( empty( $describedby_ids ) ) {
+			return '';
+		}
+
+		return 'aria-describedby="' . implode( ' ', $describedby_ids ) . '"';
+
 	}
 
 	/**

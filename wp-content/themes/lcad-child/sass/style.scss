@@ -17,6 +17,7 @@
 	Text Domain: genesis-starter
 */
 
+// Global
 @import "partials/variables";
 @import "partials/resets";
 @import "partials/defaults";
@@ -30,18 +31,28 @@
 @import "partials/sidebar";
 @import "partials/footer-area";
 @import "partials/custom";
-@import "partials/home";
 @import "partials/print";
-@import "partials/posts";
-@import "partials/contact";
-@import "partials/archive-news";
-@import "partials/archive-programs";
-@import "partials/archive-stories";
-@import "partials/single-program";
+
+// Partials
 @import "partials/lightbox";
 @import "partials/student-inquiry";
 @import "partials/partial-staff";
 @import "partials/partial-alumni";
+@import "partials/partial-student-stories";
+@import "partials/partial-student-work";
+
+// Pages
+@import "partials/home";
+@import "partials/contact";
+@import "partials/archive-news";
+@import "partials/archive-programs";
+@import "partials/archive-stories";
 @import "partials/admissions";
+@import "partials/student-life";
 @import "partials/student-life-child";
 @import "partials/admissions-child";
+@import "partials/page-alumni";
+
+// Posts
+@import "partials/posts";
+@import "partials/single-program";

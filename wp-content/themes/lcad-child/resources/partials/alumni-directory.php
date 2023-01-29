@@ -17,7 +17,7 @@
 
             <!-- Start alumni Cards -->
             <div class="alumni-container row">
-                <?php get_template_part( 'resources/components/alumni-category/lcad', 'lcad-alumni' ); ?>
+                <?php get_template_part( 'resources/components/lcad', 'alumni' ); ?>
             </div>
             <!-- End alumni Cards -->
 

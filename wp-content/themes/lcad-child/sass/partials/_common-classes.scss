@@ -229,8 +229,7 @@ img.alignright,
 /* Section Tag
 --------------------------------------------- */
 .lcad-tag {
-	width: auto;
-    max-width: 285px;
+    max-width: 150px;
     background-color: $navy;
     padding: .75em 1em;
     font-size: 14px;
@@ -243,8 +242,7 @@ img.alignright,
 }
 
 .lcad-tag-dk {
-	width: auto;
-    max-width: 285px;
+    max-width: 150px;
     background-color: $white;
     padding: .75em 1em;
     font-size: 14px;
@@ -302,11 +300,24 @@ img.alignright,
 	color: $light-blue;
 }
 
+.view-more-btn {
+	padding: .5em 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: black;
+	border-bottom: 2px solid lightblue;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: $blue-highlight;
+	}
+}
+
 
 /* Archive Page Headers
 --------------------------------------------- */
 #archive-header {
-    height: 100vh;
+    height: 100%;
     max-height: 725px;
     margin: 0;
     background-image   : url("images/hero-background.png");

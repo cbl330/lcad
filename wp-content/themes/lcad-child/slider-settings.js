@@ -16,28 +16,21 @@ $(document).ready(function(){
     autoplaySpeed: 5000,
     infinite: true,
     responsive: [
-        // {
-        //     breakpoint: 1024,
-        //     settings: {
-        //     slidesToShow: 3,
-        //     slidesToScroll: 3,
-        //     infinite: true,
-        //     dots: true
-        //     }
-        // },
-        // {
-        //     breakpoint: 600,
-        //     settings: {
-        //     slidesToShow: 2,
-        //     slidesToScroll: 2
-        //     }
-        // },
+        {
+            breakpoint: 1301,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerPadding: "0px"
+            }
+        },
+
         {
             breakpoint: 768,
             settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerPadding: "60px"
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: "60px"
             }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -64,30 +57,25 @@ $(document).ready(function(){
         // fade: true,
         // cssEase: 'linear',
         responsive: [
-            // {
-            //     breakpoint: 1024,
-            //     settings: {
-            //     slidesToShow: 3,
-            //     slidesToScroll: 3,
-            //     infinite: true,
-            //     dots: true
-            //     }
-            // },
-            // {
-            //     breakpoint: 600,
-            //     settings: {
-            //     slidesToShow: 2,
-            //     slidesToScroll: 2
-            //     }
-            // },
+            {
+                breakpoint: 1301,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: "0px",
+                    infinite: true,
+                    dots: true,
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: "0px",
-                infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: "0px",
+                    infinite: true,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -119,21 +107,24 @@ $(document).ready(function(){
             //     dots: true
             //     }
             // },
-            // {
-            //     breakpoint: 600,
-            //     settings: {
-            //     slidesToShow: 2,
-            //     slidesToScroll: 2
-            //     }
-            // },
+            {
+                breakpoint: 1301,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    // centerMode: true,
+                    centerPadding: "10px",
+                    // infinite: true,
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                // centerMode: true,
-                centerPadding: "0px",
-                // infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    // centerMode: true,
+                    centerPadding: "0px",
+                    // infinite: true,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -165,19 +156,19 @@ $(document).ready(function(){
             //     dots: true
             //     }
             // },
-            // {
-            //     breakpoint: 600,
-            //     settings: {
-            //     slidesToShow: 2,
-            //     slidesToScroll: 2
-            //     }
-            // },
+            {
+                breakpoint: 1301,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerPadding: "60px"
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "60px"
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -210,19 +201,19 @@ $(document).ready(function(){
             //     dots: true
             //     }
             // },
-            // {
-            //     breakpoint: 600,
-            //     settings: {
-            //     slidesToShow: 2,
-            //     slidesToScroll: 2
-            //     }
-            // },
+            {
+                breakpoint: 1301,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerPadding: "60px"
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "60px"
                 }
             }
             // You can unslick at a given breakpoint now by adding:

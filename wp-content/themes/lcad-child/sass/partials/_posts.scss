@@ -119,7 +119,7 @@
     // ---------------------------------------------------------------------------
     @media (max-width:767px) {
         max-width: 100%;
-        padding: 0 1em;
+        padding: 3em 1em;
     
         .section-header {
                 .lcad-title-wrap h2 {
@@ -136,18 +136,18 @@
             text-align: center;
         }
 
-        .view-more-btn {
-            padding: .5em 0;
-            font-size: 16px;
-            font-weight: 600;
-            color: black;
-            border-bottom: 2px solid lightblue;
-            transition: all 0.3s ease-in-out;
+        // .view-more-btn {
+        //     padding: .5em 0;
+        //     font-size: 16px;
+        //     font-weight: 600;
+        //     color: black;
+        //     border-bottom: 2px solid lightblue;
+        //     transition: all 0.3s ease-in-out;
 
-            &:hover {
-                color: blue;
-            }
-        }
+        //     &:hover {
+        //         color: blue;
+        //     }
+        // }
     }
 }
 
