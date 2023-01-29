@@ -112,6 +112,22 @@ function splitUl(list) {
     });
     return newList;
 }
+// Function to split the sub menu items list that are > 5
+function splitUlFive(list) {
+    let newList = '';
+    list.each((index, element) => {
+        if (index === 0) {
+            newList += `<ul class="menu-sub-items"><li class="page_item"> ${element.innerHTML} </li>`;
+        } else if ([index + 1] % 5 === 0 && index !== list.length - 1) {
+            newList += `<li class="page_item"> ${element.innerHTML} </li></ul><ul class="menu-sub-items">`;
+        } else if (index === list.length - 1) {
+            newList += `<li class="page_item"> ${element.innerHTML} </li></ul>`;
+        }  else {
+            newList += `<li class="page_item"> ${element.innerHTML} </li>`;
+        }
+    });
+    return newList;
+}
 let academics = $('.academics-menu li');
 let admissions = $('.admissions-menu li');
 let alumniStudentLife = $('.alumni-student-life-menu li');
@@ -122,6 +138,10 @@ $('.academics-menu').html(academicsMenu);
 $('.admissions-menu').html(admissionsMenu);
 $('.alumni-student-life-menu').html(alumniStudentLifeMenu);
 
+// FAQ Accordion
+let faqAccordion = $('#faq ul li');
+$('#faq ul').html(splitUlFive(faqAccordion));
+
 // Student/Admissions child - adds underline to correct sub nav link
 let checkValue= window.location.href;
 $(".sub-nav-repeater li a").each(function(){
@@ -130,11 +150,10 @@ $(".sub-nav-repeater li a").each(function(){
         console.log('aaron test')
     }  
 });
-
+// Mobile Side Nav for Student Life/Admissions Child pages
 function openNav() {
     document.getElementById("mySidenav").style.width = "310px";
 }
-  
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
