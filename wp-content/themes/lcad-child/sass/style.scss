@@ -32,6 +32,8 @@
 @import "partials/footer-area";
 @import "partials/custom";
 @import "partials/print";
+@import "partials/breadcrumbs";
+@import "partials/pagination";
 
 // Partials
 @import "partials/lightbox";
@@ -40,6 +42,8 @@
 @import "partials/partial-alumni";
 @import "partials/partial-student-stories";
 @import "partials/partial-student-work";
+@import "partials/general-faq";
+@import "partials/posts";
 
 // Pages
 @import "partials/home";
@@ -51,4 +55,4 @@
 @import "partials/student-life";
 @import "partials/student-life-child";
 @import "partials/admissions-child";
-@import "partials/general-faq";
+@import "partials/page-alumni";

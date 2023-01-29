@@ -1,9 +1,13 @@
 #admissions-hero {
     // position: relative;
-    background-color: #0C1F35;
+    height: 100%;
+    max-height: 2023px;
     background-image: url('images/admissions-hero-background.jpg');
-    background-size: cover;
     padding: 5.28em 0;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: top;
+
     .hero-container {
         margin-top: 5rem;
         padding: 20rem;
@@ -16,10 +20,13 @@
             @media screen and (max-width: 768px) {
                 margin-bottom: 10rem;
             }
-            .hero-title {
-                color: $white;
-                font-size: 9rem;
-                margin-bottom: 5rem;
+            .hero-title-wrap {
+                h1 {
+                    color: $white;
+                    font-size: 60px;
+                    font-weight: 600;
+                    margin-bottom: 5rem;
+                }
             }
             .hero-content {
                 color: $white;
@@ -141,12 +148,12 @@
     }
 
     .info-card-container {
-        position: absolute;
-        width: 100%;
-        max-width: 1446px;
-        top: 370px;
-        left: 50%;
-        transform: translateX(-50%);
+        // position: absolute;
+        // width: 100%;
+        // max-width: 1446px;
+        // top: 370px;
+        // left: 50%;
+        // transform: translateX(-50%);
     }
 
     .info-card {

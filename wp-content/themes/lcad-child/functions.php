@@ -457,6 +457,7 @@ function register_menus() {
             'footer-general-menu' => 'Footer - General',
             'footer-admissions-menu' => 'Footer - Admissions',
             'footer-programs-menu' => 'Footer - Programs',
+            'admissions-parent-menu' => 'Admissions Parent',
             'student-life-child-menu' => 'Student Life Child',
             'admissions-child-menu' => 'Admissions Child',
         )
@@ -464,99 +465,99 @@ function register_menus() {
 }
 add_action( 'init', 'register_menus' );
 
-// // Create Breadcrumb
-// function the_breadcrumb() {
-//     echo '<ul id="crumbs">';
+// Create Breadcrumb
+function the_breadcrumb() {
+    echo '<ul id="crumbs">';
 
-//     if (!is_home()) {
-//         echo '<li><a href="';
-//         echo get_option('blog');
-//         echo '">';
-//         echo 'BlogHome';
-//         echo "</a>";
-//         echo "<span class='arrow-1 dashicons dashicons-arrow-right-alt2'></span><span class='arrow-2 dashicons dashicons-arrow-right-alt2'></span>";
-//         echo "</li>";
-//         if (is_category() || is_single()) {
-//             echo '<li>';
-//             the_category(' </li><li> ');
-//             if (is_single()) {
-//                 echo "</li><li>";
-//                 the_title();
-//                 echo '</li>';
-//             }
-//         } elseif (is_page()) {
-//             echo '<li>';
-//             echo the_title();
-//             echo '</li>';
-//         }
-//     }
-
-//     elseif (is_tag()) {single_tag_title();}
-//     elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
-//     elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
-//     elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
-//     elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
-//     elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
-//     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
-//     echo '</ul>';
-// }
-
-// function my_excerpt_length($length){ return 80; } add_filter('excerpt_length', 'my_excerpt_length');
-
-// Pagination Function
-function lcad_pagination() {
-
-    if( is_singular() )
-        return;
-
-    global $wp_query;
-
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
-
-    /** Add current page to the array */
-    if ( $paged >= 1 )
-        $links[] = $paged;
-
-    /** Add the pages around the current page to the array */
-    if ( $paged >= 5 ) {
-        $links[] = $paged - 1;
-        $links[] = $paged - 2;
+    if (!is_home()) {
+        echo '<li><a href="';
+        echo get_option('blog');
+        echo '">';
+        echo 'BlogHome';
+        echo '</a>';
+        echo '<div class="arrows"><span class="arrow-1 dashicons dashicons-arrow-right-alt2"></span><span class="arrow-2 dashicons dashicons-arrow-right-alt2"></span></div>';
+        echo "</li>";
+        if (is_category() || is_single()) {
+            echo '<li>';
+            the_category(' </li><li> ');
+            if (is_single()) {
+                echo "</li><li>";
+                the_title();
+                echo '</li>';
+            }
+        } elseif (is_page()) {
+            echo '<li>';
+            echo the_title();
+            echo '</li>';
+        }
     }
 
-    echo '<div class="navigation"><ul>' . "\n";
-
-    /** Previous Post Link */
-    if ( get_previous_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
-
-    /** Link to first page */
-    if ( ! in_array( 1, $links ) ) {
-        $class = 1 == $paged ? ' class="active"' : '';
-
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-    }
-
-    /** Link to current page*/
-    sort( $links );
-    foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="active"' : '';
-    }
-
-    /** Link to last page*/
-    if ( ! in_array( $max, $links ) ) {
-        if ( ! in_array( $max - 1, $links ) )
-            echo '<li>…</li>' . "\n";
-
-        $class = $paged == $max ? ' class="active"' : '';
-    }
-
-    /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
-
-    echo '</ul></div>' . "\n";
-
+    elseif (is_tag()) {single_tag_title();}
+    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+    echo '</ul>';
 }
 
-// include('register-blocks.php');
+function my_excerpt_length($length){ return 80; } add_filter('excerpt_length', 'my_excerpt_length');
+
+// // Pagination Function
+// function lcad_pagination() {
+
+//     if( is_singular() )
+//         return;
+
+//     global $wp_query;
+
+//     $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+//     $max   = intval( $wp_query->max_num_pages );
+
+//     /** Add current page to the array */
+//     if ( $paged >= 1 )
+//         $links[] = $paged;
+
+//     /** Add the pages around the current page to the array */
+//     if ( $paged >= 5 ) {
+//         $links[] = $paged - 1;
+//         $links[] = $paged - 2;
+//     }
+
+//     echo '<div class="navigation"><ul>' . "\n";
+
+//     /** Previous Post Link */
+//     if ( get_previous_posts_link() )
+//         printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+
+//     /** Link to first page */
+//     if ( ! in_array( 1, $links ) ) {
+//         $class = 1 == $paged ? ' class="active"' : '';
+
+//         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+//     }
+
+//     /** Link to current page*/
+//     sort( $links );
+//     foreach ( (array) $links as $link ) {
+//         $class = $paged == $link ? ' class="active"' : '';
+//     }
+
+//     /** Link to last page*/
+//     if ( ! in_array( $max, $links ) ) {
+//         if ( ! in_array( $max - 1, $links ) )
+//             echo '<li>…</li>' . "\n";
+
+//         $class = $paged == $max ? ' class="active"' : '';
+//     }
+
+//     /** Next Post Link */
+//     if ( get_next_posts_link() )
+//         printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+
+//     echo '</ul></div>' . "\n";
+
+// }
+
+// // include('register-blocks.php');

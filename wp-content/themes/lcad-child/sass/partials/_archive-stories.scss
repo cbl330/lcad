@@ -2,12 +2,29 @@
 // START HEADER SECTION
 // =================================================================
 
-// #archive-header {
-//     .title {
-//         font-size: 3.33em;
-//         color: $white;
-//     }
-// }
+#archive-header {
+    .lcad-experience-header-container {
+        padding-top: 10em;
+    }
+
+    .lcad-experience-title-wrap {
+        padding: 1em 0;
+    }
+    // // ---------------------------------------------------------------------------
+    // // Tablet
+    // // ---------------------------------------------------------------------------
+    // @media (min-width:768px) and (max-width:1500px) {    
+
+    // }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        .lcad-experience-header-container {
+            padding-top: 8em;
+        }
+    }
+}
 
 // =================================================================
 // END HEADER SECTION
@@ -31,9 +48,37 @@
     }
 
     .post {
+        height: 100%;
         background-color: $white;
         box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
         border-radius: 5px;
+    }
+
+    .post-video {
+        position: relative;
+
+        &:hover {
+            .featured-story-image {
+                border-radius: 5px;
+                box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+            }
+
+            .dashicons-controls-play {
+                color: $light-grey;
+            }
+        }
+    }
+
+    .dashicons-controls-play {
+        position: absolute;
+        display: block;
+        width: auto;
+        left: 50%;
+        bottom: 50%;
+        font-size: 3em;
+        color: $white;
+        transform: translate(-50%, -50%);
+        transition: all .3 ease-in-out;
     }
 
     .post-video img {
@@ -42,7 +87,7 @@
         max-height: 275px;
         max-width: 450px;
         object-fit: cover;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
     }
 
     .post-content-wrap {
@@ -61,7 +106,6 @@
             max-height: 39px;
             // max-width: 326px;
             object-fit: cover;
-            // border-radius: 5px;
         }
     }
 
@@ -71,23 +115,54 @@
         font-weight: 600;
     }
 
-    .post-btn-wrap {
-        padding-top: 1em;
+    .post-btn {
+        padding-top: 2em;
+        margin-top: auto;
     }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {    
+        .content-container {
+            max-width: 100%;
+            padding-bottom: 3em;
+        }
+    
+        .post {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        .post-video img {
+            max-width: 600px;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        margin-top: -5em;
+
+        .content-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding-bottom: 2em;
+        }
+    }
+
+    // Start Margin Adjustment - Mobile
+    // @media only screen and (max-width:350px) {margin-top: -5em;}
+    // @media (min-width:351px) and (max-width:360px) {margin-top: -5em;}
+    // @media (min-width:361px) and (max-width:430px) {margin-top: -11em;}
+    // @media (min-width:431px) and (max-width:480px) {margin-top: -14em;}
+    // @media (min-width:481px) and (max-width:520px) {margin-top: -16em;}
+    // @media (min-width:521px) and (max-width:580px) {margin-top: -18em;}
+    // @media (min-width:581px) and (max-width:620px) {margin-top: -22em;}
+    // @media (min-width:621px) and (max-width:680px) {margin-top: -24em;}
+    // @media (min-width:681px) and (max-width:767px) {margin-top: -26em;}
+    // End Margin Adjustment - Mobile
 }
 
 // =================================================================
 // END MAIN SECTION
-// =================================================================
-
-// =================================================================
-// START INQUIRY SECTION
-// =================================================================
-
-// #inquiry-form {
-
-// }
-
-// =================================================================
-// END INQUIRY SECTION
 // =================================================================

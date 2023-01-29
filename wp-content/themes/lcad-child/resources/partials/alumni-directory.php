@@ -7,7 +7,7 @@
                 <div class="header-container row">
                     <!-- Section Title -->
                     <div class="lcad-title-wrap alumni-title-wrap col">
-                        <h2 class="lcad-title title"><?php the_title(); ?> Alumni Directory</h2>
+                        <h2 class="lcad-title title"><?php //the_title(); ?>Alumni Directory</h2>
                     </div>
                     <!-- Filter -->
                     <!-- Search Bar -->

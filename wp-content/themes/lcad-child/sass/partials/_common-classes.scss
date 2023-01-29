@@ -335,6 +335,7 @@ img.alignright,
     .title {
         font-size: 3.33em;
         color: $white;
+		font-weight: 600;
     }
     
     // ---------------------------------------------------------------------------
@@ -350,7 +351,7 @@ img.alignright,
     // Mobile
     // ---------------------------------------------------------------------------
     @media only screen and (max-width:767px) {
-        max-height: 100vw;
+        max-height: 450px;
         padding: 0 1em;
         background-position: left;
     

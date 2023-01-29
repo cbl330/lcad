@@ -4,21 +4,15 @@
 
 #alumni-hero {
     background-color: $navy;
-    // height: 100vh;
-    // max-height: 725px;
-    // margin: 0;
-    // background-image   : url("images/hero-background.png");
-    // background-repeat  : no-repeat;
-    // background-size    : cover;
-    // background-position: center;
 
-    // .archive-header-container {
-    //     width: 100%;
-    //     max-width: 1440px;
-    //     padding: 7.22em 0 4.72em 0;
-    //     margin: 0 auto;
-    // }
+    .hero-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 
+    .hero-content-container {
+        padding-right: 5em;
+    }
 
     .hero-title-wrap,
     .hero-text-wrap {
@@ -26,21 +20,92 @@
     }
 
     .hero-title-wrap {
+        padding-bottom: 2em;
+
         h1 {
-            font-size: 48px;
+            font-size: 60px;
+            font-weight: 600;
+        }
+    }
+
+    .hero-text-wrap {
+        padding-bottom: 2em;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 1em 2.5em;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 5px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $blue-highlight;
+            border: 1px solid $blue-highlight;
         }
     }
     // ---------------------------------------------------------------------------
     // Tablet
     // ---------------------------------------------------------------------------
     @media (min-width:768px) and (max-width:1500px) {    
+        padding: 7em 1em 3em 1em;
 
+        .hero-container {
+            max-width: 100%;
+        }
+    
+        .hero-content-container {
+            padding-right: 0;
+        }
+    
+        .hero-title-wrap {
+            h1 {
+                font-size: 36px;
+            }
+        }
+    
+        .hero-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-image-container {
+            display: none;
+        }
     }
     // ---------------------------------------------------------------------------
     // Mobile
     // ---------------------------------------------------------------------------
     @media only screen and (max-width:767px) {
+        padding: 7em 1em 3em 1em;
 
+        .hero-container {
+            max-width: 100%;
+        }
+    
+        .hero-content-container {
+            padding-right: 0;
+        }
+    
+        .hero-title-wrap {
+            h1 {
+                font-size: 36px;
+            }
+        }
+    
+        .hero-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-image-container {
+            display: none;
+        }
     }
 }
 
@@ -48,123 +113,163 @@
 // END HERO SECTION
 // =================================================================
 
-
-
-
-
-
-
-
-
-
 // =================================================================
-// START MAIN SECTION
+// START INFO CARDS SECTION
 // =================================================================
 
-// #programs {
-//     margin-top: -26em;
+#alumni-info-cards {
+    height: 100%;
+    max-height: 600px;
+    margin-bottom: 20em;
+    background-color: $light-grey;
 
-//     .content-container {
-//         max-width: calc(1440px + 2.5em);
-//         margin: 0 auto;
-//         padding-bottom: 10em;
-//     }
+    .section-header-wrap {
+        padding-bottom: 2em;
+    }
 
-//     .post-container {
-//         padding: 1.25em;
-//     }
+    .section-header {
+        font-size: 48px;
+        font-weight: 600;
+        text-align: center;
+    }
 
-//     .post {
-//         background-color: $white;
-//         box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
-//         border-radius: 5px;
-//         border: none;
-//         transition: all .3s ease-in-out;
+    .info-card-container {
+        width: 100%;
+        max-width: 1446px;
+        margin: 0 auto;
+    }
 
-//         &:hover {
-//             box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+    .info-card {
+        width: auto;
+        max-width: 450px;
+        padding: 0;
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        transition: all .3s ease-in-out;
 
-//             .post-title {
-//                 color: $blue-highlight;
-//             }
-//         }
-//     }
+        &:hover {
+            box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+        }
+    }
 
-//     .post-thumbnail img {
-//         width: 100%;
-//         height: 100vh;
-//         max-height: 225px;
-//         max-width: 326px;
-//         object-fit: cover;
-//         border-radius: 5px 5px 0 0;
-//     }
+    .card-link {
+        padding: 0;
+    }
 
-//     .post-content-wrap {
-//         padding: 1.5em;
-//     }
+    .card-image {
+        width: 100%;
+        height: 100%;
+        max-width: 450px;
+        max-height: 275px;
+        object-fit: cover;
+        padding: 0;
+        border-radius: 5px 5px 0 0;
+    }
 
-//     .post-title {
-//         padding-bottom: 1em;
-//         color: $dark-grey;
-//         transition: all 0.3s ease-in-out
-//     }
+    .card-content {
+        padding: 1.5em;
+    }
 
-//     .post-excerpt-wrap {
-//         padding-bottom: 1em;
-//     }
+    .card-title,
+    .card-details {
+        color: $dark-grey;
+    }
 
-//     .degree-option-wrap {
-//         padding-top: .5em;
-//     }
+    .card-title {
+        padding-bottom: 1em;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .card-details {
+        color: $mid-grey;
+    }
+
+    .card-btn {
+        margin-top: auto;
+        padding-top: 2em;
+        text-decoration: underline;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {    
+        height: auto;
+        max-height: 100%;
+        padding: 0 1em 3em 1em;
+        margin-bottom: 3em;
+
+        .section-header {
+            font-size: 36px;
+        }
+
+        .info-card-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    
+        .info-card {
+            max-width: 100%;
+            margin: 0 0 1.5em 0;
+            z-index: 1;
+        }
+
+        .card-image {
+            max-width: 700px;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        height: auto;
+        max-height: 100%;
+        padding: 0 1em 3em 1em;
+        margin-bottom: 2em;
+
+        .section-header {
+            font-size: 36px;
+        }
+
+        .info-card-container {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+        .info-card {
+            max-width: 100%;
+            margin: 0 0 1.5em 0;
+            z-index: 1;
+        }
+    }
+}
+
+// =================================================================
+// END INFO CARDS SECTION
+// =================================================================
+
+// =================================================================
+// START PROGRAM PERKS SECTION
+// =================================================================
+
+// #alumni-perks {
 
 //     // ---------------------------------------------------------------------------
 //     // Tablet
 //     // ---------------------------------------------------------------------------
-//     @media (min-width:768px) and (max-width:1300px) {
-//         .post-thumbnail img {
-//             width: 100vw;
-//             max-height: 255px;
-//             max-width: 100%;
-//         }
-//     }
+//     @media (min-width:768px) and (max-width:1500px) {    
 
+//     }
 //     // ---------------------------------------------------------------------------
 //     // Mobile
 //     // ---------------------------------------------------------------------------
 //     @media only screen and (max-width:767px) {
-//         padding: 0 1em;
 
-//         .content-container {
-//             max-width: 100vw;
-//             padding-bottom: 2em;
-//         }
-    
-//         .post-container {
-//             height: 100%;
-//             padding: .5em 0;
-//         }
-    
-//         .post-thumbnail img {
-//             width: 100vw;
-//             max-width: 100%;
-//             max-height: 255px;
-//             border-radius: 5px 5px 0 0;
-//         }
 //     }
-
-//     // Start Margin Adjustment - Mobile
-//     @media only screen and (max-width:350px) {margin-top: -9em;}
-//     @media (min-width:351px) and (max-width:360px) {margin-top: -11em;}
-//     @media (min-width:361px) and (max-width:430px) {margin-top: -13em;}
-//     @media (min-width:431px) and (max-width:480px) {margin-top: -16em;}
-//     @media (min-width:481px) and (max-width:520px) {margin-top: -18em;}
-//     @media (min-width:521px) and (max-width:580px) {margin-top: -20em;}
-//     @media (min-width:581px) and (max-width:620px) {margin-top: -24em;}
-//     @media (min-width:621px) and (max-width:680px) {margin-top: -26em;}
-//     @media (min-width:681px) and (max-width:767px) {margin-top: -28em;}
-//     // End Margin Adjustment - Mobile
 // }
 
 // =================================================================
-// END MAIN SECTION
+// END PROGRAM PERKS SECTION
 // =================================================================

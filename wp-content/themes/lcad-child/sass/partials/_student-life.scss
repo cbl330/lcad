@@ -2,7 +2,8 @@
 // START HERO STYLES
 // =================================================================
 
-#archive-header {
+// #archive-header {
+.student-life-archive-header {
     .hero-header-container {
         padding: 2em 0 5em 0;
     }
@@ -182,7 +183,7 @@
     // ---------------------------------------------------------------------------
     @media only screen and (max-width:767px) {
         padding: 0 1.5em;
-        max-height: 1080px;
+        max-height: 1080px!important;
         background-position: 25%;
     
         .student-life-page-container {

@@ -9,7 +9,7 @@
 
         <!-- Start Content Container -->
         <?php while (have_rows('hero_content_pal')) : the_row();?>
-            <div class="hero-content-container col-6">
+            <div class="hero-content-container col-xs-12 col-lg-6">
                 <!-- Title Wrap -->
                 <?php if (get_sub_field('hero_header_pal')): ?>
                     <div class="hero-title-wrap">
@@ -35,7 +35,7 @@
         <!-- End Content Container -->
 
         <!-- Start Image Container -->
-        <div class="hero-image-container col-6">
+        <div class="hero-image-container col-xs-12 col-lg-6">
             <?php $image = get_field('hero_image_pal'); ?>
             <img class="hero-image" src="<?php echo $image['sizes']['hero-image']; ?>">
         </div>
@@ -72,7 +72,7 @@
 <!-- START INFO CARDS SECTION -->
 <!-- ========================================================================= -->
 
-<section id="info-cards" class="container-fluid">
+<section id="alumni-info-cards" class="container-fluid">
     <div class="info-cards-container">
 
         <!-- Start Section Header -->
@@ -150,7 +150,7 @@
     <div class="alumni-perks-container row">
 
         <!-- Start Left Cell -->
-        <?php while (have_rows('program_details_pal')) : the_row();?>
+        <?php while (have_rows('program_details_pal')) : the_row(); ?>
             <div class="alumni-program-container col-7">
                 <!-- Section Title -->
                 <?php if (get_sub_field('header_pal')): ?>

@@ -4,7 +4,7 @@
 <!-- START HERO SECTION -->
 <!-- ========================================================================= -->
 
-<section id="archive-header" class="container-fluid">
+<section id="archive-header" class="student-life-archive-header container-fluid">
     <div class="archive-header-container student-life-page-container row">
 
         <!-- Start Hero Header -->

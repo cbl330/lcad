@@ -14,7 +14,7 @@
 ?>
 
 <section id="archive-header" class="container-fluid">
-    <div class="archive-header-container row">
+    <div class="archive-header-container more-news-container row">
         
         <!-- Breadcrumbs -->
         <!-- <div class="news-breadcrumbs breadcrumbs"> -->
@@ -22,7 +22,7 @@
         <!-- </div> -->
 
         <!-- Page Title -->
-        <div class="news-title-wrap archive-title-wrap title-wrap col-8">
+        <div class="news-title-wrap archive-title-wrap title-wrap col-xs-12 col-lg-8">
             <h1 class="news-title archive-title title"><?php echo esc_html( get_the_title() ); ?></h1>
         </div>
 
@@ -39,8 +39,8 @@
         <?php if ($postsQuery->have_posts()) : ?>
             <?php while ($postsQuery->have_posts()) : $postsQuery->the_post(); ?>
         
-                <article id="post-<?php the_ID(); ?>" class="recent-news-container post-container col-4">
-                    <div class="post">
+                <article id="post-<?php the_ID(); ?>" class="recent-news-container post-container col-xs-12 col-md-6 col-lg-4">
+                    <div class="post d-flex flex-column">
                         
                         <!-- Post Image -->
                         <?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
@@ -92,17 +92,41 @@
                 </article>
 
             <?php endwhile ?>
+
+            <?php
+                // Start Pagination
+                $total_pages = $postsQuery->max_num_pages;
+                
+                if ($total_pages > 1) {
+                    $current_page = max(1, get_query_var('paged'));
+            ?>
+
+            <div class="post-pagination center">
+                <div class="pagination">
+                    <?php
+                        echo paginate_links(array(
+                            'base' => get_pagenum_link(1) . '%_%',
+                            'format' => '/page/%#%',
+                            'current' => $current_page,
+                            'total' => $total_pages,
+                            'prev_text'    => __('« prev'),
+                            'next_text'    => __('next »'),
+                            // 'prev_text'    => '<span class="arrows dashicons dashicons-arrow-left-alt"></span>',
+                            // 'next_text'    => '<span class="arrows dashicons dashicons-arrow-right-alt"></span>',
+                        ));
+                    }
+                    ?>
+                </div>
+            </div>
+
+            <?php //End Pagination ?>
+
             <?php wp_reset_postdata(); ?>
         <?php endif; ?>
     </div>
-
-    <div class="lcad-pagination archive-pagination pagination">
-        <?php lcad_pagination(); ?>
-    </div>
 </main>
 
-<section id="inquiry-form" class="container-fluid">
-    <!-- Inquiry Form -->
-</section>
+<?php //Add Student Inquiry Form ?>
+<?php get_template_part('resources/partials/student', 'inquiry'); ?>
 
 <?php get_footer();

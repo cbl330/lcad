@@ -2,8 +2,8 @@
 <!-- START HERO SECTION -->
 <!-- ========================================================================= -->
 
-<section>
-    <div>
+<section id="lcad-experience-hero" class="container-fluid">
+    <div class="lcad-experience-container row">
         <div>
 
             <!-- Start Content Container -->
@@ -96,29 +96,11 @@
 <!-- ========================================================================= -->
 
 <!-- ========================================================================= -->
-<!-- START INSTAGRAM/INQUIRY SECTION -->
+<!-- START INQUIRY SECTION -->
 <!-- ========================================================================= -->
 
-<section>
-    <div>
-        <div>
-
-            <!-- Start Instagram Section -->
-            <div>
-                <!-- Pull in instagram feed -->
-            </div>
-            <!-- End Instagram Section -->
-
-            <!-- Start Student Inquiry Container -->
-            <div>
-                <!-- Pull in template section for student inquiry -->
-            </div>
-            <!-- End Student Inquiry Container -->
-
-        </div>
-    </div>
-</section>
+<?php get_template_part('resources/partials/student', 'inquiry'); ?>
 
 <!-- ========================================================================= -->
-<!-- END INSTAGRAM/INQUIRY SECTION -->
+<!-- END INQUIRY SECTION -->
 <!-- ========================================================================= -->
