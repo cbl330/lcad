@@ -8,7 +8,7 @@
 # Ignore everything in the repository
 /*
 
-# Except for this file (the .gitignore itself)
+# Except this file (.gitignore)
 !/.gitignore
 
 # Allow the wp-content folder to be seen by Git
@@ -17,6 +17,16 @@
 # Ignore everything in wp-content
 /wp-content/*
 
-# Un-ignore the themes folder and all its contents inside wp-content
+# Un-ignore the themes folder (we need it so we can then include specific themes)
 !/wp-content/themes/
-!/wp-content/themes/**
+
+# Ignore all items inside themes by default
+/wp-content/themes/*
+
+# Un-ignore the genesis theme and all its contents
+!/wp-content/themes/genesis/
+!/wp-content/themes/genesis/**
+
+# Un-ignore the lcad-child theme and all its contents
+!/wp-content/themes/lcad-child/
+!/wp-content/themes/lcad-child/**
