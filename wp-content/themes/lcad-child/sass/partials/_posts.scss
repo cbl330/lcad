@@ -1,0 +1,156 @@
+// =================================================================
+// START RECENT/ALUMNI NEWS STYLES
+// =================================================================
+
+.post-container {
+    max-width: 1440px;
+    padding: 4em 0;
+
+    .section-header {
+        .lcad-tag-wrap {
+            padding-bottom: 1em;
+        }
+
+        .lcad-title-wrap h2 {
+            padding-bottom: 1.5em;
+            font-size: 3.33em;
+            font-weight: 600;
+        }
+
+        .view-more-wrap {
+            text-align: right;
+        }
+
+        .view-more-btn {
+            padding: .5em 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            border-bottom: 2px solid lightblue;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+
+    .view-more-mobile-wrap {
+        display: none;
+    }
+
+    .recent-post {
+        padding: 1.38em 1.25em;
+
+        .entry-header {
+            padding: 1.38em 0 1.5em 0;
+
+            .entry-title {
+                font-size: 1.16em;
+                font-weight: 600;
+            }
+        }
+
+        .entry-btn {
+            padding: .5em 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            border-bottom: 2px solid lightblue;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        // Start Individual Post selectors
+        // ------------------------------------
+        
+        // Post - 1
+        &:first-child {
+            img {
+                border-radius: 50% 50% 0 0;
+            }
+        }
+        // Post - 2
+        &:nth-child(2) {
+            img {
+                border-radius: 50%;
+            }
+        }
+        // Post - 3
+        &:nth-child(3) {
+            img {
+                border-radius: 0 0 50% 50%;
+            }
+        }
+        // Post - 4
+        &:nth-child(4) {
+            img {
+                border-radius: 50%;
+            }
+        }
+        // Post - 5
+        &:nth-child(5) {
+            img {
+                border-radius: 0 0 50% 50%;
+            }
+        }
+        // Post - 6
+        &:last-child {
+            img {
+                border-radius: 50% 50% 0 0;
+            }
+        }
+
+        // ------------------------------------
+        // End Individual Post selectors
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {
+        max-width: 100%;
+        padding: 3em 2em;
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media (max-width:767px) {
+        max-width: 100%;
+        padding: 3em 1em;
+    
+        .section-header {
+                .lcad-title-wrap h2 {
+                font-size: 36px;
+            }
+
+            .view-more-btn {
+                display: none;
+            }
+        }
+
+        .view-more-mobile-wrap {
+            padding-top: 2em;
+            text-align: center;
+        }
+
+        // .view-more-btn {
+        //     padding: .5em 0;
+        //     font-size: 16px;
+        //     font-weight: 600;
+        //     color: black;
+        //     border-bottom: 2px solid lightblue;
+        //     transition: all 0.3s ease-in-out;
+
+        //     &:hover {
+        //         color: blue;
+        //     }
+        // }
+    }
+}
+
+// =================================================================
+// END RECENT/ALUMNI NEWS STYLES
+// =================================================================

@@ -1,0 +1,369 @@
+// =================================================================
+// START HERO STYLES
+// =================================================================
+
+// #archive-header {
+.student-life-archive-header {
+    .hero-header-container {
+        padding: 2em 0 5em 0;
+    }
+
+    .student-life-title-wrap {
+        h1 {
+            font-size: 60px;
+            font-weight: 600;
+            color: $white;
+        }
+    }
+
+    .student-life-right-container {
+        padding: 0 0 0 5em;
+    }
+
+    .student-life-text-wrap {
+        p {
+            font-size: 21px;
+            color: $white;
+        }
+    }
+
+    .hero-buttons-wrap {
+        display: flex;
+        padding: 2em 0 0 0;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        padding: 1em 2.5em;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 5px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $blue-highlight;
+            border: 1px solid $blue-highlight;
+        }
+    }
+
+    .hero-btn-wrap-2 {
+        padding-left: 1em;
+    }
+
+    .info-card-container {
+        width: 100%;
+        max-width: 1446px;
+    }
+
+    .info-card {
+        width: auto;
+        max-width: 450px;
+        padding: 0;
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+        }
+    }
+
+    .card-link {
+        padding: 0;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        max-width: 450px;
+        max-height: 275px;
+        object-fit: cover;
+        padding: 0;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .card-content {
+        padding: 1.5em;
+    }
+
+    .card-title,
+    .card-details {
+        color: $dark-grey;
+    }
+
+    .card-title {
+        padding-bottom: 1em;
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .card-details {
+        color: $mid-grey;
+    }
+
+    .card-btn {
+        margin-top: auto;
+        padding-top: 2em;
+        text-decoration: underline;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {  
+        padding: 0 1.5em;
+        max-height: 1080px;
+        background-position: 25%;
+    
+        .student-life-page-container {
+            width: 100%;
+            padding: 5em 0;
+        }
+
+        .hero-header-container {
+            padding: 2em 0 3em 0;
+        }
+    
+        .student-life-title-wrap {
+            h1 {
+                font-size: 48px;
+            }
+        }
+    
+        .student-life-right-container {
+            padding: 0;
+        }
+    
+        .student-life-text-wrap {
+            padding-top: 1em;
+            
+            p {
+                font-size: 16px;
+            }
+        }
+    
+        .hero-buttons-wrap {
+            display: block;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    
+        .hero-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .hero-btn-wrap-2 {
+            padding-top: 1em;
+            padding-left: 0;
+        }
+    
+        .info-card-container {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+        .info-card {
+            max-width: 500px;
+            margin: 0 auto 1.5em auto;
+            z-index: 1;
+        }
+
+        .card-image {
+            max-width: 100%;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        padding: 0 1.5em;
+        max-height: 1080px!important;
+        background-position: 25%;
+    
+        .student-life-page-container {
+            width: 100%;
+            padding: 5em 0;
+        }
+
+        .hero-header-container {
+            padding: 2em 0 3em 0;
+        }
+    
+        .student-life-title-wrap {
+            h1 {
+                font-size: 48px;
+            }
+        }
+    
+        .student-life-right-container {
+            padding: 0;
+        }
+    
+        .student-life-text-wrap {
+            padding-top: 1em;
+            
+            p {
+                font-size: 16px;
+            }
+        }
+    
+        .hero-buttons-wrap {
+            display: block;
+        }
+    
+        .hero-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .hero-btn-wrap-2 {
+            padding-top: 1em;
+            padding-left: 0;
+        }
+    
+        .info-card-container {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+        .info-card {
+            max-width: 100%;
+            margin: 0 0 1.5em 0;
+            z-index: 1;
+        }
+    }
+}
+
+// =================================================================
+// END HERO STYLES
+// =================================================================
+
+// =================================================================
+// START VALUES STYLES
+// =================================================================
+
+#student-life-values {
+    max-width: calc(1440px + 3em);
+    padding: 22em 0 8em;
+    margin: 0 auto;
+
+    .values-header-container {
+        padding: 0 0 3em 0;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    .block {
+        padding: 1em;
+    }
+
+    .image-block {
+        .block-wrap {
+            border-radius: 5px;
+        }
+    }
+
+    .block-wrap {
+        height: 100%;
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+    }
+
+    .block-wrap-2,
+    .block-wrap-4,
+    .block-wrap-5,
+    .block-wrap-7 {
+        padding: 2.5em;
+    }
+
+    .block-wrap-2,
+    .block-wrap-5 {
+        border: 5px solid $blue-highlight;
+    }
+
+    .block-wrap-4 {
+        border: 5px solid $navy;
+    }
+
+    .block-wrap-7 {
+        border: 5px solid $dark-blue;
+    }
+
+    .block-title-wrap {
+        padding-bottom: 1.5em;
+
+        h3 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {    
+        max-width: 700px;
+        padding: 70em 1.5em 2em;
+        margin: 0 auto;
+
+        .values-header-container {
+            padding: 0 0 1em 0;
+        }
+    
+        .header-title {
+            font-size: 36px;
+        }
+    
+        .block {
+            padding: 1em;
+        }
+    
+        .image-block {
+            .block-wrap {
+                height: 335px;
+                max-height: 335px;
+            }
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        max-width: 100%;
+        padding: 100em 1.5em 2em;
+    
+        .values-header-container {
+            padding: 0 0 1em 0;
+        }
+    
+        .header-title {
+            font-size: 36px;
+        }
+    
+        .block {
+            padding: 1em;
+        }
+    
+        .image-block {
+            .block-wrap {
+                height: 335px;
+                max-height: 335px;
+            }
+        }
+    }
+}
+
+// =================================================================
+// END VALUES STYLES
+// =================================================================

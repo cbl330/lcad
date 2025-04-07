@@ -1,0 +1,146 @@
+// =================================================================
+// START HEADER SECTION
+// =================================================================
+
+#archive-header {
+    // .breadcrumbs {
+    //     padding-bottom: 1.5em;
+
+    //     li,
+    //     a {
+    //         color: $white;
+    //     }
+
+    //     li {
+    //         position: relative;
+    //         display: inline;
+    //     }
+
+    //     // #crumbs:last-child {
+    //     //     li {
+    //     //         &:before {
+    //     //             // position: absolute;
+    //     //             content: '>>';
+    //     //             width: 100%;
+    //     //             height: 100%;
+    //     //             padding: 1em;
+    //     //             // top: 0;
+    //     //             // bottom: 0;
+    //     //             // right: 0;
+    //     //             // left: 0;
+    //     //             color: $white;
+    //     //         }
+    //     //     }
+    //     // }
+    // }
+
+    .more-news-container {
+        padding: 15em 0 0 0;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1500px) {    
+
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        .more-news-container {
+            padding: 10em 0 0 0;
+        }
+    }
+}
+
+// =================================================================
+// END HEADER SECTION
+// =================================================================
+
+// =================================================================
+// START MAIN SECTION
+// =================================================================
+
+#news-main {
+    margin-top: -15em;
+
+    .content-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .post-container {
+        padding: 1.25em;
+    }
+
+    .post {
+        background-color: $white;
+        border-radius: 5px;
+    }
+
+    .post-thumbnail img {
+        width: 100%;
+        height: 100%;
+        max-height: 245px;
+        max-width: 450px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .post-category-wrap {
+        padding: 1em 0;
+
+        li {
+            display: inline;
+            padding-right: .5em;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            a {
+                color: $dark-blue;
+            }
+        }
+    }
+    // // ---------------------------------------------------------------------------
+    // // Tablet
+    // // ---------------------------------------------------------------------------
+    // @media (min-width:768px) and (max-width:1500px) {    
+
+    // }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        .content-container {
+            max-width: 100%;
+        }
+    
+        .post-container {
+            height: 100%;
+            margin-bottom: 1em;
+            border-bottom: 2px solid $grey;
+        }
+    
+        .post {
+            border-radius: 5px 5px 0 0;
+        }
+    }
+
+    // Start Margin Adjustment - Mobile
+    @media only screen and (max-width:350px) {margin-top: -9em;}
+    @media (min-width:351px) and (max-width:360px) {margin-top: -9em;}
+    @media (min-width:361px) and (max-width:430px) {margin-top: -11em;}
+    @media (min-width:431px) and (max-width:480px) {margin-top: -14em;}
+    @media (min-width:481px) and (max-width:520px) {margin-top: -16em;}
+    @media (min-width:521px) and (max-width:580px) {margin-top: -18em;}
+    @media (min-width:581px) and (max-width:620px) {margin-top: -22em;}
+    @media (min-width:621px) and (max-width:680px) {margin-top: -24em;}
+    @media (min-width:681px) and (max-width:767px) {margin-top: -26em;}
+    // End Margin Adjustment - Mobile
+}
+
+// =================================================================
+// END MAIN SECTION
+// =================================================================

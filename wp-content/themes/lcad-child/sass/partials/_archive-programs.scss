@@ -1,0 +1,167 @@
+// =================================================================
+// START HEADER SECTION
+// =================================================================
+
+// #archive-header {
+//     height: 100vh;
+//     max-height: 725px;
+//     margin: 0;
+//     background-image   : url("images/hero-background.png");
+//     background-repeat  : no-repeat;
+//     background-size    : cover;
+//     background-position: center;
+
+//     .archive-header-container {
+//         width: 100%;
+//         max-width: 1440px;
+//         padding: 7.22em 0 4.72em 0;
+//         margin: 0 auto;
+//     }
+
+//     .archive-title {
+//         font-size: 3.33em;
+//         color: $white;
+//     }
+    
+//     // ---------------------------------------------------------------------------
+//     // Tablet
+//     // ---------------------------------------------------------------------------
+//     @media (min-width:768px) and (max-width:1300px) {    
+//         .archive-header-container {
+//             padding: 7.22em 1.25em 4.72em;
+//         }
+//     }
+
+//     // ---------------------------------------------------------------------------
+//     // Mobile
+//     // ---------------------------------------------------------------------------
+//     @media only screen and (max-width:767px) {
+//         max-height: 100vw;
+//         padding: 0 1em;
+//         background-position: left;
+    
+//         .archive-header-container {
+//             padding: 3.5em 0;
+//         }
+    
+//         .archive-title {
+//             font-size: 48px;
+//         }
+//     }
+// }
+
+// =================================================================
+// END HEADER SECTION
+// =================================================================
+
+// =================================================================
+// START MAIN SECTION
+// =================================================================
+
+#programs {
+    margin-top: -26em;
+
+    .content-container {
+        max-width: calc(1440px + 2.5em);
+        margin: 0 auto;
+        padding-bottom: 10em;
+    }
+
+    .post-container {
+        padding: 1.25em;
+    }
+
+    .post {
+        background-color: $white;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        border-radius: 5px;
+        border: none;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+
+            .post-title {
+                color: $blue-highlight;
+            }
+        }
+    }
+
+    .post-thumbnail img {
+        width: 100%;
+        height: 100vh;
+        max-height: 225px;
+        max-width: 326px;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .post-content-wrap {
+        padding: 1.5em;
+    }
+
+    .post-title {
+        padding-bottom: 1em;
+        color: $dark-grey;
+        transition: all 0.3s ease-in-out
+    }
+
+    .post-excerpt-wrap {
+        padding-bottom: 1em;
+    }
+
+    .degree-option-wrap {
+        padding-top: .5em;
+    }
+
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {
+        .post-thumbnail img {
+            width: 100vw;
+            max-height: 255px;
+            max-width: 100%;
+        }
+    }
+
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        padding: 0 1em;
+
+        .content-container {
+            max-width: 100vw;
+            padding-bottom: 2em;
+        }
+    
+        .post-container {
+            height: 100%;
+            padding: .5em 0;
+        }
+    
+        .post-thumbnail img {
+            width: 100vw;
+            max-width: 100%;
+            max-height: 255px;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+
+    // Start Margin Adjustment - Mobile
+    @media only screen and (max-width:350px) {margin-top: -9em;}
+    @media (min-width:351px) and (max-width:360px) {margin-top: -11em;}
+    @media (min-width:361px) and (max-width:430px) {margin-top: -13em;}
+    @media (min-width:431px) and (max-width:480px) {margin-top: -16em;}
+    @media (min-width:481px) and (max-width:520px) {margin-top: -18em;}
+    @media (min-width:521px) and (max-width:580px) {margin-top: -20em;}
+    @media (min-width:581px) and (max-width:620px) {margin-top: -24em;}
+    @media (min-width:621px) and (max-width:680px) {margin-top: -26em;}
+    @media (min-width:681px) and (max-width:767px) {margin-top: -28em;}
+    // End Margin Adjustment - Mobile
+}
+
+// =================================================================
+// END MAIN SECTION
+// =================================================================

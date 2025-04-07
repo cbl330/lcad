@@ -1,0 +1,22 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress
+# Marshland Digital Base gitignore
+# adapted from: http://ironco.de/bare-minimum-git/
+#
+# -----------------------------------------------------------------
+
+# Ignore everything in the repository
+/*
+
+# Except for this file (the .gitignore itself)
+!/.gitignore
+
+# Allow the wp-content folder to be seen by Git
+!/wp-content/
+
+# Ignore everything in wp-content
+/wp-content/*
+
+# Un-ignore the themes folder and all its contents inside wp-content
+!/wp-content/themes/
+!/wp-content/themes/**

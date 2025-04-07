@@ -1,0 +1,1264 @@
+/* Front Page
+-------------------------------------------------- */
+
+// =================================================================
+// START GLOBAL STYLES
+// =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.blue-highlight {
+    color: $blue-highlight;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+:root {
+    --ghost-height: 50vh;
+}
+
+// =================================================================
+// END GLOBAL STYLES
+// =================================================================
+
+
+// =================================================================
+// START HERO SECTION
+// =================================================================
+
+#home-hero {
+    position: relative;
+    background-color: $navy;
+    padding: 5.28em 0;
+
+    // Start Left Content Cell
+    .content-cell {
+        position: absolute;
+        max-width: 38.89em;
+        top: 50%;
+        left: 5.56em;
+        transform: translateY(-65%);
+        z-index: 10;
+
+        .hero-title {
+            color: $white;
+            font-size: 6.67em;
+        }
+
+        .hero-you {
+            max-width: 308px;
+            max-height: 105px;
+        }
+
+        .btn-wrap {
+            padding-top: 3em;
+        }
+
+        .hero-btn {
+            padding: .75em 3em;
+            font-size: 14px;
+        }
+    }
+    // End Left Content Cell
+
+    // Start Right Slider Cell
+    .slider-cell {
+        max-width: 1600px;
+        left: 581px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            max-width: 500px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, #0c1f35 0%, rgba(12,31,53,0) 100%);
+            background-blend-mode: normal;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .slick-list {
+            pointer-events: auto;
+        }
+
+        .slide-image {
+            border-radius: 15px;
+        }
+
+        .slide-caption {
+            padding-top: 2em;
+            color: $white;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 1px
+        }
+
+        .slick-slide {
+            .slide-image {
+                transition: all .8s ease-in-out;
+            }
+        }
+
+        .slick-slide:not(.slick-current) {
+            .slide-image {
+                position: relative;
+                max-height: 500px;
+                transform: translateY(25%);
+                object-fit: cover;
+                }
+
+            .slide-caption {
+                display: none;
+            }
+        }
+    }
+    // End Right Slider Cell
+
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        padding: 6em 0 4em 0;
+    
+        // Start Left Content Cell
+        .content-cell {
+            position: relative;
+            max-width: 100vw;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            transform: translateY(0%);
+            padding: 2em 1em;
+    
+            .hero-title {
+                font-size: 60px;
+            }
+    
+            .hero-you {
+                max-width: 176px;
+                max-height: 60px;
+            }
+
+            .btn-wrap {
+                padding-top: 2em;
+            }
+
+            .hero-btn {
+                padding: 1em 2.5em;
+                font-size: 14px;
+            }
+        }
+        // End Left Content Cell
+    
+        // Start Right Slider Cell
+        .slider-cell {
+            left: 0;
+            padding-top: 3em;
+
+            .slide {
+                padding: 0 .25em;
+            }
+    
+            &:before {
+                display: none;
+            }
+    
+            .slide-caption {
+                padding-top: 2em;
+                padding-bottom: 4em;
+                padding-left: 1em;
+                padding-right: 1em;
+                text-align: center;
+                width: 200%;
+                transform: translateX(-25%);
+            }
+
+            .slick-slide:not(.slick-current) {
+                transform: scale(.8);
+
+                .slide-image {
+                    transform: translateY(0%);
+                }
+            }
+        }
+        // End Right Slider Cell
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width: 767px) {
+        padding: 4em 0;
+    
+        // Start Left Content Cell
+        .content-cell {
+            position: relative;
+            max-width: 100vw;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            transform: translateY(0%);
+            padding: 2em 1em;
+    
+            .hero-title {
+                font-size: 60px;
+            }
+    
+            .hero-you {
+                max-width: 176px;
+                max-height: 60px;
+            }
+
+            .btn-wrap {
+                padding-top: 2em;
+            }
+
+            .hero-btn {
+                padding: 1em 2.5em;
+                font-size: 14px;
+            }
+        }
+        // End Left Content Cell
+    
+        // Start Right Slider Cell
+        .slider-cell {
+            left: 0;
+
+            .slide {
+                padding: 0 .25em;
+            }
+    
+            &:before {
+                display: none;
+            }
+    
+            .slide-caption {
+                padding-top: 2em;
+                padding-bottom: 4em;
+                padding-left: 1em;
+                padding-right: 1em;
+                text-align: center;
+                width: 100vw;
+                transform: translateX(-15%);
+            }
+
+            .slick-slide:not(.slick-current) {
+                transform: scale(.8);
+
+                .slide-image {
+                    transform: translateY(0%);
+                    }
+            }
+        }
+        // End Right Slider Cell
+    }
+}
+
+// =================================================================
+// END HERO SECTION
+// =================================================================
+
+// =================================================================
+// START EXPERIENCE SECTION
+// =================================================================
+
+#experience {
+    .slide-tag {
+        max-width: 260px;
+    }
+
+    .content-wrap {
+        padding: 5.5em;
+        background-color: $white;
+    }
+
+    .slide-title-wrap {
+        max-width: 445px;
+        padding-top: 1em;
+        padding-bottom: 2em;
+
+        h2 {
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 1;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        padding: 6em 1em;
+
+        .slide-tag {
+            max-width: 260px;
+        }
+    
+        .content-wrap {
+            padding: 0 5.5em 3em 5.5em;
+            background-color: $white;
+        }
+    
+        .slide-title-wrap {
+            max-width: 445px;
+            padding-top: 1em;
+            padding-bottom: 2em;
+    
+            h2 {
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 1;
+            }
+        }
+
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            margin: 0 auto;
+            padding: 0 5.5em;
+            object-position: top;
+            object-fit: cover;
+        }
+
+        .row {
+            width: 100vw;
+            max-width: 100vw;
+            padding: 0;
+
+            --bs-gutter-x: 0;
+            --bs-gutter-y: 0;
+        }
+
+        .slick-dots {
+            bottom: -40px;
+
+            li {
+                padding: 0 2em;
+                margin: 0 .5em;
+
+                button {
+                    &:before {
+                        content: "";
+                        width: 100%;
+                        padding: 0 1em;
+                        border-bottom: 5px solid $dark-grey;
+                    }
+                }
+            }
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        padding: 0;
+
+        .content-wrap {
+            padding: 3em 2em;
+        }
+
+        .experience-slide {
+            padding: 0 -1em;
+
+            .row {
+                width: 100vw;
+                max-width: 100vw;
+                padding: 0;
+
+                --bs-gutter-x: 0;
+                --bs-gutter-y: 0;
+            }
+        }
+
+        .slide-title-wrap {
+            max-width: 100vw;
+
+            h2 {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+// =================================================================
+// START EXPERIENCE SECTION
+// =================================================================
+
+// =================================================================
+// START INDUSTRY PRO SECTION
+// =================================================================
+
+#industry-pro {
+    position: relative;
+
+    // Start Left Cell
+    .left-cell {
+        background-image   : url("images/ip-left.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+        padding: 8.33em 8.05em 41.67em 13.33em;
+
+        .left-content-container {
+            max-width: 790px;
+            margin: 0 auto;
+        }
+
+        .industry-pro-tag {
+            max-width: 250px;
+        }
+
+        .industry-pro-title {
+            padding: 2em 0 3em 0;
+
+            h2 {
+                color: $white;
+                font-size: 60px;
+                font-weight: 600;
+            }
+        }
+
+        .industry-pro-text {
+            max-width: 745px;
+            color: $white;
+        }
+    }
+    // End Left Cell
+
+    // Start Right Cell
+    .right-cell {
+        background-image   : url("images/ip-right.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+
+        .left-content-container {
+            max-width: 450px;
+            padding-top: 13.89em;
+            padding-left: 5.56em;
+        }
+
+        .industry-pro-blurb {
+            p {
+                padding-left: 1.5em;
+                font-size: 18px;
+                line-height: 36px;
+                border-left: 4px solid $dark-green;
+            }
+        }
+    }
+    // End Right Cell
+
+    // Start Pro Slider
+    .pro-slider-container {
+        position: absolute;
+        width: 100%;
+        max-width: 1440px;
+        left: 50%;
+        bottom: 5.56em;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        .pro-card {
+            position: relative;
+            padding: 0 1.25em;
+
+            &:hover {
+                .card-bio,
+                .card-button-wrap {
+                    display: block;
+                    animation: fade .3s ease-in-out;
+                }
+            }
+        }
+
+        .pro-image-wrap {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 60%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+                background-blend-mode: normal;
+                border-radius: 15px;
+                z-index: 1;
+            }
+        }
+
+        .pro-card-body {
+            position: absolute;
+            bottom: 1.5em;
+            left: 0;
+            color: $white;
+            z-index: 10;
+            padding: 2em 3em 1em 3em;
+        }
+
+        .card-name {
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .card-bio,
+        .card-button-wrap {
+            display: none;
+        }
+
+        @keyframes fade {
+            0%   { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .card-bio {
+            padding: 1em 0;
+        }
+
+        .card-name,
+        .card-bio {
+            text-shadow: $black 1px 0 30px;
+        }
+
+        .card-btn {
+            padding: .5em 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: $white;
+            border-bottom: 2px solid $blue-highlight;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $blue-highlight;
+            }
+        }
+
+        .slick-arrow {
+            z-index: 1;
+
+            &:before {
+                font-size: 100px;
+            }
+        }
+
+        .slick-next {
+            &:before {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    // End Pro Slider
+
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        // Start Left Cell
+        .left-cell {
+            padding: 3.5em 2em 13em 2em;
+    
+            .left-content-container {
+                max-width: 100vw;
+            }
+    
+            .industry-pro-title {
+                padding: 2em 0 2em 0;
+    
+                h2 {
+                    color: $white;
+                    font-size: 36px;
+                }
+            }
+    
+            .industry-pro-text {
+                max-width: 100vw;
+                color: $white;
+            }
+        }
+        // End Left Cell
+    
+        // Start Right Cell
+        .right-cell {
+            .left-content-container {
+                max-width: 100vw;
+                padding-top: 11em;
+                padding-bottom: 4em;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+        }
+        // End Right Cell
+    
+        // Start Pro Slider
+        .pro-slider-container {
+            width: 100%;
+            max-width: 100%;
+            left: 1%;
+            bottom: 12.5em;
+            transform: translateX(0%);
+    
+            .pro-card {
+                padding: 0 1em;
+
+                &:hover {
+                    .card-bio,
+                    .card-button-wrap {
+                        display: none;
+                    }
+                }
+            }
+    
+            .pro-card-body {
+                position: absolute;
+                color: $white;
+                z-index: 10;
+                padding: 2em 3em 0 3em;
+            }
+    
+            .card-name {
+                font-size: 21px;
+                font-weight: 600;
+            }
+    
+            .card-bio,
+            .card-button {
+                display: none;
+            }
+    
+            .slick-arrow {
+                &:before {
+                    font-size: 60px;
+                    opacity: 1;
+                }
+            }
+    
+            .slick-next {
+                &:before {
+                    position: absolute;
+                    right: 150%;
+                }
+            }
+
+            .slick-prev {
+                &:before {
+                    position: absolute;
+                    left: 150%;
+                }
+            }
+        }
+        // End Pro Slider
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        // Start Left Cell
+        .left-cell {
+            padding: 3.5em 2em 13em 2em;
+    
+            .left-content-container {
+                max-width: 100vw;
+            }
+    
+            .industry-pro-title {
+                padding: 2em 0 2em 0;
+    
+                h2 {
+                    color: $white;
+                    font-size: 36px;
+                }
+            }
+    
+            .industry-pro-text {
+                max-width: 100vw;
+                color: $white;
+            }
+        }
+        // End Left Cell
+    
+        // Start Right Cell
+        .right-cell {
+            .left-content-container {
+                max-width: 100vw;
+                padding-top: 11em;
+                padding-bottom: 4em;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+        }
+        // End Right Cell
+    
+        // Start Pro Slider
+        .pro-slider-container {
+            width: 100vw;
+            max-width: 100vw;
+            left: 2%;
+            bottom: 16.5em;
+            transform: translateX(0%);
+    
+            .pro-card {
+                padding: 0 2em;
+
+                &:hover {
+                    .card-bio,
+                    .card-button-wrap {
+                        display: none;
+                    }
+                }
+            }
+    
+            .pro-card-body {
+                position: absolute;
+                color: $white;
+                z-index: 10;
+                padding: 2em 3em 0 3em;
+            }
+    
+            .card-name {
+                font-size: 21px;
+                font-weight: 600;
+            }
+    
+            .card-bio,
+            .card-button {
+                display: none;
+            }
+    
+            .slick-arrow {
+                &:before {
+                    font-size: 60px;
+                    opacity: 1;
+                }
+            }
+    
+            .slick-next {
+                &:before {
+                    position: absolute;
+                    right: 150%;
+                }
+            }
+
+            .slick-prev {
+                &:before {
+                    position: absolute;
+                    left: 150%;
+                }
+            }
+        }
+        // End Pro Slider
+    }
+}
+
+// =================================================================
+// START INDUSTRY PRO SECTION
+// =================================================================
+
+// =================================================================
+// START CAROUSEL SECTION
+// =================================================================
+
+#carousel {
+    background-color: $navy;
+    padding: 3em 0;
+
+    .scroll-text-wrap {
+        padding: 5em;
+        color: $white;
+        text-align: center;
+
+        .scroll-text {
+            font-size: 48px;
+            line-height: 120px;
+        }
+
+        .scroll-you {
+            width: 100%;
+            height: auto;
+            max-width: 145px;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    }
+
+    .carousel-top-slider {
+        .slick-list {
+            width: 100vw;
+            margin: 0;
+        }
+    }
+
+    .carousel-bottom-slider {
+        .slick-list {
+            margin: 0;
+        }
+    }
+
+    .carousel-slide {
+        position: relative;
+        padding: 0 1.39em;
+
+        &:hover {
+            .carousel-body {
+                opacity: 1;
+            }
+        }
+    }
+
+    .carousel-image-wrap {
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 60%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%);
+            background-blend-mode: normal;
+            z-index: 1;
+        }
+    }
+
+    .carousel-body {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: $white;
+        z-index: 10;
+        padding: 1em 2.5em;
+        transition: all .3s ease-in-out;
+    }
+
+    .os__wrapper {
+        display: block;
+    }
+
+    .os__text-container {
+        text-align: center;
+        position: -webkit-sticky;
+        position: sticky;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .os__text-item {
+        color: $white;
+        font-size: 3rem;
+        font-family: sans-serif;
+        opacity: 0.2;
+    }
+
+    .os__text-item--on {
+        opacity: 1;
+    }
+
+    .os__ghost {
+        height: var(--ghost-height);
+    }
+
+    .last {
+        padding-top: 400vh;
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(0.5rem);
+        }
+    }
+    // // ---------------------------------------------------------------------------
+    // // Tablet
+    // // ---------------------------------------------------------------------------
+    // @media (min-width:768px) and (max-width:1300px) {    
+
+    // }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {    
+        .scroll-text-wrap {
+            padding: 2em 1em;
+            color: $white;
+            text-align: center;
+    
+            .scroll-text {
+                font-size: 28px;
+                line-height: 56px;
+            }
+    
+            .scroll-you {
+                width: 100%;
+                height: auto;
+                max-width: 100px;
+                max-height: 35px;
+                object-fit: cover;
+                vertical-align: middle;
+            }
+        }
+    
+        .carousel-top-slider {
+            .slick-list {
+                width: 100vw;
+                margin: 0;
+            }
+        }
+    
+        .carousel-bottom-slider {
+            .slick-list {
+                margin: 0;
+            }
+        }
+    
+        .carousel-slide {
+            padding: 0 1em;
+    
+            &:hover {
+                .carousel-body {
+                    opacity: 1;
+                }
+            }
+        }
+    
+        .carousel-body {
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: $white;
+            z-index: 10;
+            padding: 1em 2.5em;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+// =================================================================
+// END CAROUSEL SECTION
+// =================================================================
+
+// =================================================================
+// START STUDENT LIFE SECTION
+// =================================================================
+
+#student-life-masonry {
+    background-image   : url("images/student-life-background.png");
+
+    .student-life-container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .student-life-header {
+        margin: 2rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .header-tag-wrap,
+    .header-title-wrap,
+    .header-text-wrap {
+        padding-bottom: 1.5em;
+    }
+
+    .block-content {
+        padding: 3em;
+    }
+
+    .custom-bg {
+        background-position: center;
+        background-size: cover;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .custom-flex {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    
+    .custom-radius {
+        margin: 2rem;
+        border-radius: 10px;
+    }
+    
+    .custom-block {
+        height: 30rem;
+        width: 100%;
+    }
+
+    .block-title-wrap {
+        padding-bottom: 1.5em;
+    }
+
+    .custom-block-2 {
+        color: white;
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .custom-block-4 {
+        height: 70rem;
+    }
+    
+    .custom-block-5 {
+        height: 26.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .custom-block-6 {
+        height: 62rem;
+    }
+    
+    .custom-block-7 {
+        color: white;
+        height: 30.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .custom-block-8 {
+        height: 30.7rem;
+    }
+    
+    .custom-border {
+        margin: 2rem;
+        border-bottom: 2px solid #2BAAD3;
+        padding-bottom: 6px;
+    }
+    
+    .block-tag {
+        color: white;
+    }
+    
+    .block-btn-wrap {
+        margin: 2rem;
+        background-color: white;
+        border-radius: 50%;
+        padding: .4rem;
+    }
+
+    .block-btn {
+        color: $dark-green;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $dark-grey;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        padding: 2em 0;
+
+        .student-life-container {
+            max-width: 100%;
+        }
+
+        .custom-block {
+            width: 91%;
+        }
+
+        .custom-radius {
+            margin: 2rem auto;
+        }
+
+        .custom-block-4,
+        .custom-block-6 {
+            margin-top: 0;
+        }
+
+        .custom-block-4 {
+            height: 30rem;
+        }
+
+        .custom-block-6 {
+            height: 30rem;
+        }
+
+        .custom-block-7 {
+            height: auto;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        padding: 2em 0;
+
+        .student-life-container {
+            max-width: 100%;
+        }
+
+        .custom-block {
+            width: 91%;
+        }
+
+        .custom-block-4,
+        .custom-block-6 {
+            margin-top: 0;
+        }
+
+        .custom-block-4 {
+            height: 30rem;
+        }
+
+        .custom-block-6 {
+            height: 30rem;
+        }
+
+        .custom-block-7 {
+            height: auto;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+}
+
+// =================================================================
+// END STUDENT LIFE SECTION
+// =================================================================
+
+// =================================================================
+// START INSTAGRAM SECTION SECTION
+// =================================================================
+
+#instagram {
+    .lcad-social {
+        height: 100vh;
+        max-height: 240px;
+        margin: 0;
+        padding-right: 4.45em;
+        padding-bottom: 1em;
+        background-image   : url("images/instagram-background.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
+    }
+
+    .instagram-feed {
+        padding: 0;
+
+        .sb_instagram_header,
+        #sbi_load {
+            display: none;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        .lcad-social {
+            // height: 100vh;
+            max-height: 125px;
+            margin: 0 auto;
+            padding-right: 0;
+            padding-bottom: 1.5em;
+            // background-image   : url("images/instagram-background.jpg");
+            // background-repeat  : no-repeat;
+            // background-size    : cover;
+            // background-position: center;
+        }
+    
+        .widget {
+            display: block;
+            justify-content: center;
+            align-items: none;
+            text-align: center;
+    
+            h3 {
+                float: none;
+                padding-right: 0;
+                // text-align: center;
+                // font-size: 14px;
+                // font-weight: 600;
+                // text-transform: uppercase;
+                // color: $white;
+            }
+    
+            li {
+                margin: 0!important;
+                padding: .5em!important;
+            }
+    
+            a {
+                // color: $white;
+                font-size: 20px;
+            }
+        }
+    
+        .instagram-feed {
+            // padding: 0;
+            // height: 100vh;
+            // max-height: 768px;
+            // margin: 0;
+            // // padding: 0 4.45em;
+            // background-image   : url("images/instagram-placeholder.jpg");
+            // background-repeat  : no-repeat;
+            // background-size    : cover;
+            // background-position: center;
+    
+            // .instagram-feed-container {
+            //     padding: 0;
+            // }
+    
+            // .sb_instagram_header,
+            // #sbi_load {
+            //     display: none;
+            // }
+        }
+    }
+    
+}
+
+// =================================================================
+// END INSTAGRAM SECTION SECTION
+// =================================================================

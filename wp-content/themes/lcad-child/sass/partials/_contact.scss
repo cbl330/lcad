@@ -1,0 +1,340 @@
+// =================================================================
+// START HERO SECTION
+// =================================================================
+
+#contact-hero {
+    height: 100vh;
+    max-height: 725px;
+    margin: 0;
+    background-image   : url("images/hero-background.png");
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+
+    .hero-container {
+        padding: 7.22em 5.55em 4.72em 5.55em;
+        margin: 0 auto;
+    }
+
+    .content-container {
+        max-width: 900px;
+    }
+
+    .title,
+    .text-wrap {
+        color: $white;
+    }
+
+    .title {
+        padding-bottom: .5em;
+        font-size: 3.33em;
+        font-weight: 600;
+    }
+
+    .text-wrap p {
+        font-size: 1.16em;
+    }
+
+    .widget {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            float: left;
+            padding-right: 1em;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        li {
+            margin: 0!important;
+            padding: .5em!important;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    .lcad-social {
+        padding-top: 1em;
+    }
+
+    .info-container {
+        max-width: 340px;
+    }
+
+    .address-wrap,
+    .phone-wrap,
+    .email-wrap {
+        color: $white;
+    }
+
+    .address-wrap {
+        padding-bottom: 1em;
+    }
+
+    .email-wrap {
+        padding-top: 1em;
+    }
+
+    .icon-wrap {
+        padding: .5em;
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {
+        background-position: left;
+    
+        .hero-container {
+            padding: 7em 1em;
+        }
+    
+        .content-container {
+            max-width: 100%;
+        }
+    
+        .title {
+            font-size: 48px;
+        }
+    
+        .text-wrap p {
+            padding-bottom: 2em;
+            font-size: 16px;
+        }
+    
+        .info-container {
+            max-width: 100%;
+        }
+    
+        .icon-wrap {
+            max-width: 30px;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        padding: 0 1em;
+        max-height: 1080px;
+        background-position: 25%;
+    
+        .hero-container {
+            padding: 7em 0;
+        }
+    
+        .content-container {
+            max-width: 100%;
+        }
+    
+        .title {
+            font-size: 48px;
+        }
+    
+        .text-wrap p {
+            padding-bottom: 2em;
+            font-size: 16px;
+        }
+    
+        .widget {
+            h3 {
+                font-size: 12px;
+            }
+        }
+    
+        .info-container {
+            max-width: 100%;
+        }
+    }
+}
+
+// =================================================================
+// END HERO SECTION
+// =================================================================
+
+// =================================================================
+// START CARD SECTION
+// =================================================================
+
+#contact-cards {
+    margin-top: -16.67em;
+
+    .contact-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .contact-card-container {
+        padding: 1.25em;
+    }
+
+    .contact-card {
+        padding: 1em;
+        background-color: $white;
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.06);
+        border-radius: 5px;
+    }
+
+    .department {
+        padding-bottom: 1em;
+        font-size: 1.16em;
+        font-weight: 600;
+    }
+
+    .contact-image {
+        border-radius: 5px;
+    }
+
+    .content-container {
+        padding-left: .5em;
+    }
+
+    .name,
+    .phone,
+    .email {
+        font-size: 16px;
+    }
+
+    .name,
+    .email {
+        font-weight: 600;
+    }
+
+    .email {
+        display: inline;
+        padding-bottom: .25em;
+        border-bottom: 2px solid $medium-blue;
+    }
+
+    .contact-btn {
+        padding: 1.5em 0 0 0;
+        color: $light-blue;
+        font-size: 12px;
+        text-decoration: underline;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $dark-grey;
+            text-decoration: none;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        margin-top: -10em;
+
+        .contact-container {
+            max-width: 100%;
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        margin-top: -6em;
+        padding: 0 1em;
+
+        .contact-container {
+            max-width: 100%;
+        }
+    
+        .contact-card-container {
+            padding: 1.25em 0;
+        }
+    }
+}
+
+// =================================================================
+// END CARD SECTION
+// =================================================================
+
+// =================================================================
+// START FORM SECTION
+// =================================================================
+
+#contact-form {
+    margin-top: 8.33em;
+    margin-bottom: 8.33em;
+
+    .form-container {
+        max-width: 664px;
+        margin: 0 auto;
+    }
+
+    .form-title {
+        padding-bottom: .5em;
+        text-align: center;
+        font-size: 3.33em;
+        font-weight: 600;
+    }
+
+    form {
+        input,
+        select,
+        textarea {
+            margin-top: 1.5em;
+            border: none;
+            border-bottom: 1px solid $dark-grey;
+
+            &::placeholder {
+                text-transform: uppercase;
+                opacity: .5;
+            }
+
+            .gf_placeholder {
+                text-transform: uppercase;
+                opacity: .5;
+            }
+        }
+
+        .gform_footer {
+            margin: 0;
+            padding-top: 4em;
+            padding-bottom: 0;
+            text-align: center;
+
+            .button {
+                background-color: $medium-blue;
+                border-radius: 5px;
+                text-transform: uppercase;
+                border-bottom: none;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    background-color: $dark-grey;
+                }
+            }
+        }
+    }
+    // ---------------------------------------------------------------------------
+    // Tablet
+    // ---------------------------------------------------------------------------
+    @media (min-width:768px) and (max-width:1300px) {    
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+    // ---------------------------------------------------------------------------
+    // Mobile
+    // ---------------------------------------------------------------------------
+    @media only screen and (max-width:767px) {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 2em 1em;
+    
+        .form-container {
+            max-width: 100%;
+        }
+    
+        .form-title {
+            font-size: 36px;
+        }
+    }
+}
+
+// =================================================================
+// END FORM SECTION
+// =================================================================
